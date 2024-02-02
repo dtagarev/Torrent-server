@@ -7,7 +7,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
 // NIO, blocking
-public class TorrentClient {
+public class TorrentClientTakeOne {
 
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
