@@ -34,17 +34,4 @@ public class clientDirectory implements UserDirectory {
         return null;
     }
 
-    @Override
-    public void addFile(File file) {
-
-    }
-
-    @Override
-    public void removeFile() {
-    }
-
-    @Override
-    public void getFiles() {
-
-    }
 }

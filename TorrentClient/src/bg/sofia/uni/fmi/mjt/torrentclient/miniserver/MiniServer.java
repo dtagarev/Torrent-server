@@ -1,12 +1,11 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.miniserver;
 
-import java.net.Socket;
+import bg.sofia.uni.fmi.mjt.shared.Command;
 
-public class MiniServer {
-    //write me a server that can download and receive files from other mini servsers inside other clients
-    //and can send files to other mini servers inside other clients
+public class MiniServer implements Runnable {
 
-    public static void main(String[] args) {
+    @Override
+    public void run() {
     }
 
 }

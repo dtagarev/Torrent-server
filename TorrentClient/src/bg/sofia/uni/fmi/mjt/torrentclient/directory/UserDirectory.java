@@ -12,7 +12,4 @@ public interface UserDirectory {
     //write me all the functions that the user directory should have
 
     Path getFile(String filename); //-- synchronised ?
-    void addFile(File file); // -- synchronised ?
-    void removeFile(); // -- synchronised ?
-    void getFiles(); // -- synchronised ?
 }

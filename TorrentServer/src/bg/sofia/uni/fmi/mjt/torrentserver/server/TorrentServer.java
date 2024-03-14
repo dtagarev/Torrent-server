@@ -13,7 +13,7 @@ public class TorrentServer {
         Thread serverThread = new Thread(server);
 
         System.out.println("Starting sever");
-        System.out.println("You can stop it using \"stop\"");
+        System.out.println("You can stop it typing \"stop\"");
 
         serverThread.start();
 

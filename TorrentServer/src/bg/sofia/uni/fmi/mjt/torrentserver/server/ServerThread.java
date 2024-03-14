@@ -11,9 +11,6 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
-//import bg.sofia.uni.fmi.mjt.todo.command.CommandCreator;
-//import bg.sofia.uni.fmi.mjt.todo.command.CommandExecutor;
-
 public class ServerThread implements Runnable {
 
     private final int port;
@@ -59,7 +56,7 @@ public class ServerThread implements Runnable {
 
                             SocketChannel clientChannel = (SocketChannel) key.channel();
                             String clientInput = getClientInput(clientChannel);
-                            System.out.println("Client said <" + clientInput + ">");
+                            System.out.println("Client said  -> " + clientInput );
                             if (clientInput == null) {
                                 continue;
                             }
@@ -71,6 +68,7 @@ public class ServerThread implements Runnable {
                         } else if (key.isAcceptable()) {
                             accept(selector, key);
                         }
+
 
                         keyIterator.remove();
                     }
