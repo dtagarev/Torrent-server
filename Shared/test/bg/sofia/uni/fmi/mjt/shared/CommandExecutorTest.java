@@ -1,75 +1,31 @@
 package bg.sofia.uni.fmi.mjt.shared;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.stubbing.OngoingStubbing;
+
 import java.util.Set;
 
+@ExtendWith(MockitoExtension.class)
 public class CommandExecutorTest {
-    private CommandExecutor commandExecutor = new CommandExecutor(Set.of());
-    // @Test
-    // public void testExecute() {
-    //     Set<Command> commands = new HashSet<>();
-    //     commands.add(new Command() {
-    //         @Override
-    //         public void execute(String cmd) {
-    //             System.out.println("executed");
-    //         }
-    //
-    //         @Override
-    //         public String toString() {
-    //             return "test";
-    //         }
-    //     });
-    //     CommandExecutor commandExecutor = new CommandExecutor(commands);
-    //     commandExecutor.execute("test");
-    //     assertEquals("executed", outContent.toString().trim());
-    // }
-    //
-    // @Test
-    // public void testExecuteInvalidCommand() {
-    //     Set<Command> commands = new HashSet<>();
-    //     commands.add(new Command() {
-    //         @Override
-    //         public void execute(String cmd) {
-    //             System.out.println("executed");
-    //         }
-    //
-    //         @Override
-    //         public String toString() {
-    //             return "test";
-    //         }
-    //     });
-    //     CommandExecutor commandExecutor = new CommandExecutor(commands);
-    //     commandExecutor.execute("invalid");
-    //     assertEquals("Invalid command", outContent.toString().trim());
-    // }
-    //
-    // @Test
-    // public void testExecuteInvalidCommandSymbols() {
-    //     Set<Command> commands = new HashSet<>();
-    //     commands.add(new Command() {
-    //         @Override
-    //         public void execute(String cmd) {
-    //             System.out.println("executed");
-    //         }
-    //
-    //         @Override
-    //         public String toString() {
-    //             return "test";
-    //         }
-    //     });
-    //     CommandExecutor commandExecutor = new CommandExecutor(commands);
-    //     commandExecutor.execute("invalid!");
-    //     assertEquals("Invalid command", outContent.toString().trim());
-    // }
-    //
-    // @Test
-    // public void testExecuteInvalidCommandSymbols2() {
-    //     Set<Command> commands = new HashSet<>();
-    //     commands.add(new Command() {
-    //         @Override
-    //         public void execute(String cmd) {
-    //             System.out.println("executed");
-    //         }
-    //
-    //         @Override
-    //
+
+    @Mock
+    Command command;
+
+    @InjectMocks
+    Set<Command> commands;
+
+    @InjectMocks
+    CommandExecutor commandExecutorMock;
+
+    @Test
+    void testCommandContainsCorrectSymbols() {
+
+        commandExecutorMock.execute("test");
+    }
+
 }
