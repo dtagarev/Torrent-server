@@ -22,6 +22,8 @@ public class ServerThread implements Runnable {
 
     //private final CommandExecutor commandExecutor;
 
+
+
     //public Server(int port, CommandExecutor commandExecutor) {
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;
@@ -128,7 +130,7 @@ public class ServerThread implements Runnable {
         accept.configureBlocking(false);
         accept.register(selector, SelectionKey.OP_READ);
 
-        //i want to see which client
+        //I want to see which client
         System.out.println("Client has connected");
     }
 }
