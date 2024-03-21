@@ -3,8 +3,9 @@ package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Set;
+import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ServerStorageTest {
@@ -24,10 +25,59 @@ public class ServerStorageTest {
 
     @Test
     void testRegister() {
-        storage.register(user1, Set.of(file1, file2));
-        storage.register(user2, Set.of(file2, file3));
-        storage.register(user3, Set.of(file1, file3));
+        storage.register(user1, List.of(file1, file2));
+        storage.register(user2, List.of(file2, file3));
+        storage.register(user3, List.of(file1, file3));
 
         assertTrue(storage.getData().get(user1).contains(file1));
+        assertTrue(storage.getData().get(user1).contains(file2));
+        assertTrue(storage.getData().get(user2).contains(file2));
+        assertTrue(storage.getData().get(user2).contains(file3));
+        assertTrue(storage.getData().get(user3).contains(file1));
+        assertTrue(storage.getData().get(user3).contains(file3));
+    }
+    @Test
+    void testRegisterWithRepeatingFiles() {
+
+        storage.register(user1, List.of(file1));
+        storage.register(user1, List.of(file1));
+        storage.register(user1, List.of(file2));
+        storage.register(user2, List.of(file2));
+        storage.register(user2, List.of(file2, file3));
+        storage.register(user3, List.of(file1));
+        storage.register(user3, List.of(file3));
+
+        assertTrue(storage.getData().get(user1).contains(file1));
+        assertTrue(storage.getData().get(user1).contains(file2));
+        assertTrue(storage.getData().get(user2).contains(file2));
+        assertTrue(storage.getData().get(user2).contains(file3));
+        assertTrue(storage.getData().get(user3).contains(file1));
+        assertTrue(storage.getData().get(user3).contains(file3));
+
+    }
+    @Test
+    void testUnregister() {
+        storage.register(user1, List.of(file1, file2));
+        storage.register(user2, List.of(file2, file3));
+        storage.register(user3, List.of(file1, file3));
+
+        storage.unregister(user1);
+        storage.unregister(user2);
+        storage.unregister(user3);
+
+        assertTrue(storage.getData().isEmpty());
+    }
+
+    @Test
+    void testUnregisterThrowsException() {
+        storage.register(user1, List.of(file1, file2));
+        storage.register(user2, List.of(file2, file3));
+        storage.register(user3, List.of(file1, file3));
+
+        storage.unregister(user1);
+        storage.unregister(user2);
+        storage.unregister(user3);
+
+        assertThrows(IllegalArgumentException.class, () -> storage.unregister(user1));
     }
 }

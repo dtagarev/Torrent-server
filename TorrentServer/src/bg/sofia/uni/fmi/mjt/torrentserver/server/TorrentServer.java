@@ -12,11 +12,10 @@ public class TorrentServer {
         ServerThread server = new ServerThread(SERVER_PORT, SERVER_HOST, BUFFER_SIZE);
         Thread serverThread = new Thread(server);
 
-        System.out.println("Starting sever");
+        System.out.println("Starting server");
         System.out.println("You can stop it typing \"stop\"");
 
         serverThread.start();
-
         Scanner sc = new Scanner(System.in);
 
         while(true) {

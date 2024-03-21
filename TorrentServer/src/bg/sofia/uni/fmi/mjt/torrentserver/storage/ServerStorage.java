@@ -1,6 +1,7 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ServerStorage implements Storage {
     private Map<String, Set<String>> data;
@@ -10,14 +11,15 @@ public class ServerStorage implements Storage {
     }
 
     @Override
-    public void register(String username, Set<String> files) {
+    public void register(String username, List<String> files) {
+        Set<String> userFiles;
         if(data.containsKey(username)) {
-            Set<String> tmp = data.get(username);
-            tmp.addAll(files);
-            data.put(username, tmp);
+            userFiles = data.get(username);
+            userFiles.addAll(files);
         } else {
-            data.put(username, files);
+            userFiles = new HashSet<>(files);
         }
+        data.put(username, userFiles);
     }
 
     @Override

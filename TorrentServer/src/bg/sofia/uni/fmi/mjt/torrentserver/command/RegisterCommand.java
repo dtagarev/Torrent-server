@@ -1,10 +1,10 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.command;
 
-import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
 
+import bg.sofia.uni.fmi.mjt.shared.command.Command;
+
 import java.util.List;
-import java.util.Set;
 
 public class RegisterCommand implements Command {
 
@@ -18,7 +18,7 @@ public class RegisterCommand implements Command {
     @Override
     public void execute(List<String> list) {
         String username = list.getFirst();
-        list.removeFirst();
-        storage.register(username, Set.copyOf(list));
+        storage.register(username, list.subList(1, list.size()));
+
     }
 }
