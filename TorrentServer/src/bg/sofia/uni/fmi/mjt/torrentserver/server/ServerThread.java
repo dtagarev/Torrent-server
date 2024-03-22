@@ -1,5 +1,10 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.server;
 
+import bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.RegisterCommand;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.UnregisterCommand;
+import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
+
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.net.InetSocketAddress;
@@ -10,6 +15,7 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
+import java.util.Set;
 
 public class ServerThread implements Runnable {
 
@@ -20,17 +26,21 @@ public class ServerThread implements Runnable {
     private ByteBuffer buffer;
     private Selector selector;
 
-    //private final CommandExecutor commandExecutor;
+    private ServerStorage storage;
+    private CommandExecutor commandExecutor;
 
 
 
     //public Server(int port, CommandExecutor commandExecutor) {
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;
-        //this.commandExecutor = commandExecutor;
         this.host = host;
 
         this.bufferSize = bufferSize;
+        storage = new ServerStorage();
+        //commandExecutor = new CommandExecutor(Set.of(
+        //        new RegisterCommand(storage),
+        //        new UnregisterCommand(storage)));
     }
 
     public void run() {

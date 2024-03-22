@@ -8,7 +8,8 @@ import java.util.List;
 
 public class RegisterCommand implements Command {
 
-    private ServerStorage storage;
+    private final ServerStorage storage;
+    private final String commandNotation = "register";
 
     public RegisterCommand(ServerStorage storage) {
         this.storage = storage;
@@ -18,7 +19,16 @@ public class RegisterCommand implements Command {
     @Override
     public void execute(List<String> list) {
         String username = list.getFirst();
-        storage.register(username, list.subList(1, list.size()));
+        if(storage.getData().containsKey(username)) {
+            storage.register(username, list.subList(1, list.size()));
+            //return "Server storage updated with new user and files."
+        } else {
+            //return "There is no user with this username."
+        }
+    }
 
+    @Override
+    public String toString() {
+        return commandNotation;
     }
 }

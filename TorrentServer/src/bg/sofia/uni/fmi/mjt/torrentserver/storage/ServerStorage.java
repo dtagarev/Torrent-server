@@ -1,7 +1,11 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 
-import java.util.*;
-import java.util.stream.Collectors;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class ServerStorage implements Storage {
     private Map<String, Set<String>> data;
@@ -11,7 +15,7 @@ public class ServerStorage implements Storage {
     }
 
     @Override
-    public void register(String username, List<String> files) {
+    public synchronized void register(String username, List<String> files) {
         Set<String> userFiles;
         if(data.containsKey(username)) {
             userFiles = data.get(username);
@@ -23,14 +27,14 @@ public class ServerStorage implements Storage {
     }
 
     @Override
-    public void unregister(String username) {
+    public synchronized void unregister(String username) {
         if(!data.containsKey(username)) {
             throw new IllegalArgumentException("User does not exist");
         }
         data.remove(username);
     }
 
-    public Map<String, Set<String>> getData() {
+    public synchronized Map<String, Set<String>> getData() {
         return data;
     }
 }

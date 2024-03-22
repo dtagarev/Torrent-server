@@ -6,10 +6,13 @@ import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
 import java.util.List;
 
 public class UnregisterCommand implements Command {
-    ServerStorage storage;
+    private ServerStorage storage;
+    private final String commandNotation = "unregister";
+
     public UnregisterCommand(ServerStorage storage) {
         this.storage = storage;
     }
+
     @Override
     public void execute(List<String> list) {
         String username = list.getFirst();
@@ -20,5 +23,10 @@ public class UnregisterCommand implements Command {
             //TODO: what to do here?
             System.out.println(e.getMessage());
         }
+    }
+
+    @Override
+    public String toString() {
+        return commandNotation;
     }
 }

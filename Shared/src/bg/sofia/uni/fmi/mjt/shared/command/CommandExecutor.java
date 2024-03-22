@@ -13,7 +13,7 @@ public class CommandExecutor {
 
     private Set<Command> commands;
 
-    CommandExecutor(Set<Command> commands) {
+    public CommandExecutor(Set<Command> commands) {
         this.commands = commands;
     }
 
