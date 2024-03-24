@@ -1,10 +1,16 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.server;
 
 import bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor;
+import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.ListFilesCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.RegisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.UnregisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.net.InetSocketAddress;
@@ -14,7 +20,11 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class ServerThread implements Runnable {
@@ -27,20 +37,31 @@ public class ServerThread implements Runnable {
     private Selector selector;
 
     private ServerStorage storage;
+    private Map<SocketChannel, String> socketToNameStorage;
     private CommandExecutor commandExecutor;
 
+    private ErrorHandler errorHandler;
 
 
-    //public Server(int port, CommandExecutor commandExecutor) {
+
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;
         this.host = host;
 
         this.bufferSize = bufferSize;
         storage = new ServerStorage();
-        //commandExecutor = new CommandExecutor(Set.of(
-        //        new RegisterCommand(storage),
-        //        new UnregisterCommand(storage)));
+
+        Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "serverLogs.txt");
+
+        errorHandler = new ErrorHandler(logFilePath);
+
+        commandExecutor = new CommandExecutor(Set.of(
+                new RegisterCommand(storage),
+                new UnregisterCommand(storage, errorHandler),
+                new ListFilesCommand(storage))
+        );
+
+        socketToNameStorage = new HashMap<>();
     }
 
     public void run() {
@@ -68,14 +89,24 @@ public class ServerThread implements Runnable {
 
                             SocketChannel clientChannel = (SocketChannel) key.channel();
                             String clientInput = getClientInput(clientChannel);
+
+
                             System.out.println("Client said  -> " + clientInput );
                             if (clientInput == null) {
                                 continue;
                             }
 
-                            //String output = commandExecutor.execute(CommandCreator.newCommand(clientInput));
-                            //String output = null;
-                            writeClientOutput(clientChannel, clientInput);
+                            if(socketToNameStorage.get(clientChannel) == null) {
+                                socketToNameStorage.put(clientChannel, clientInput);
+                                storage.register(clientInput, Collections.emptyList());
+                                writeClientOutput(clientChannel, "Welcome " + clientInput);
+                            } else {
+                                //TODO: ediniq chaka i drugiq chaka i zatva se poluchava tva
+                                // otvori run otdolu i vij kvo stava ( problema beshe v klienta, klient 2 ne raboti)
+                                String result = executeCommand(clientInput, socketToNameStorage.get(clientChannel));
+
+                                writeClientOutput(clientChannel, result);
+                            }
 
                         } else if (key.isAcceptable()) {
                             accept(selector, key);
@@ -90,6 +121,33 @@ public class ServerThread implements Runnable {
             }
         } catch (IOException e) {
             throw new UncheckedIOException("failed to start server", e);
+        }
+    }
+
+    private String executeCommand(String clientInput, String clientName) {
+        try {
+            return commandExecutor.execute(clientInput);
+        } catch (EmptyCommand e) {
+            String errorMessage = "Client "
+                + clientName
+                + " has entered an invalid command: " + clientInput;
+
+            errorHandler.writeToLogFile(e, errorMessage);
+            return "Empty command! Please enter a valid command.";
+        } catch (InvalidSymbolInCommand e) {
+            String errorMessage = "Client "
+                + clientName
+                + " has entered an invalid command: " + clientInput;
+
+            errorHandler.writeToLogFile(e, errorMessage);
+            return "Invalid symbol in command! Please enter a valid command.";
+        } catch (InvalidCommand e) {
+            String errorMessage = "Client "
+                + clientName
+                + " has entered an invalid command: " + clientInput;
+
+            errorHandler.writeToLogFile(e, errorMessage);
+            return "Invalid command! Please enter a valid command.";
         }
     }
 
@@ -139,6 +197,8 @@ public class ServerThread implements Runnable {
 
         accept.configureBlocking(false);
         accept.register(selector, SelectionKey.OP_READ);
+
+        socketToNameStorage.put(accept, null);
 
         //I want to see which client
         System.out.println("Client has connected");

@@ -24,7 +24,7 @@ public class CommandExecutor {
         return cmd.matches("[a-zA-Z0-9 ,-]+");
     }
 
-    public void execute(String cmd) {
+    public String execute(String cmd) throws EmptyCommand, InvalidCommand, InvalidSymbolInCommand {
         List<String> cmdList = new ArrayList<>(List.of(cmd.split(" ")));
 
         if(cmd.isEmpty() || cmd.isBlank()) {
@@ -37,8 +37,7 @@ public class CommandExecutor {
         for (Command command : commands) {
             if(command.toString().equals(cmdList.getFirst())) {
                 cmdList.removeFirst();
-                command.execute(cmdList);
-                return;
+                return command.execute(cmdList);
             }
         }
 

@@ -9,7 +9,6 @@ import java.util.List;
 public class RegisterCommand implements Command {
 
     private final ServerStorage storage;
-    private final String commandNotation = "register";
 
     public RegisterCommand(ServerStorage storage) {
         this.storage = storage;
@@ -17,18 +16,30 @@ public class RegisterCommand implements Command {
 
 
     @Override
-    public void execute(List<String> list) {
+    public String execute(List<String> list) {
+        if(list.size() < 2) {
+            return "Invalid command. Not enough arguments." +
+                "Please use the following format: register <username> <file1,file2,fileN>";
+        } else if (list.size() > 2) {
+            return "Invalid command format. Too many arguments.\n" +
+                "Please use the following format: register <username> <file1,file2,fileN>";
+        }
+
         String username = list.getFirst();
+
+        //the command assumes that the files are in the correct formant when passed
+        List<String> args = List.of(list.get(1).split(","));
+
         if(storage.getData().containsKey(username)) {
-            storage.register(username, list.subList(1, list.size()));
-            //return "Server storage updated with new user and files."
+            storage.register(username, args);
+            return "Server storage updated with new user and files.";
         } else {
-            //return "There is no user with this username."
+            return "There is no user with this username.";
         }
     }
 
     @Override
     public String toString() {
-        return commandNotation;
+        return "register";
     }
 }

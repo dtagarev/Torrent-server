@@ -26,4 +26,16 @@ public class ErrorHandlerTest {
         String fileContent = Files.readString(tempFile);
         assertTrue(fileContent.contains("Test exception"));
     }
+
+    @Test
+    void testWriteMessageToLogFile() throws IOException {
+        Path tempFile = Files.createTempFile(tempDir, "test", ".txt");
+        ErrorHandler errorHandler = new ErrorHandler(tempFile);
+
+        RuntimeException exception = new EmptyCommand("Test exception");
+        errorHandler.writeToLogFile(exception, "Test message");
+
+        String fileContent = Files.readString(tempFile);
+        assertTrue(fileContent.contains("Test message"));
+    }
 }

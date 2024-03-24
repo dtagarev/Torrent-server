@@ -1,0 +1,10 @@
+2024-03-23 18:57
+Invalid symbol in command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand: Invalid symbol in command
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: register toni file-1<,file2
+--------------------------------------------------

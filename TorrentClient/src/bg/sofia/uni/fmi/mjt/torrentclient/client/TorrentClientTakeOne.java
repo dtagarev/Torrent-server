@@ -11,7 +11,7 @@ public class TorrentClientTakeOne {
 
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
-    private static final int BUFFER_SIZE = 512;
+    private static final int BUFFER_SIZE = 1024;
 
     private static ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
@@ -23,6 +23,12 @@ public class TorrentClientTakeOne {
             socketChannel.connect(new InetSocketAddress(SERVER_HOST, SERVER_PORT));
 
             System.out.println("Connected to the server.");
+
+            //TODO: client needs to format the files in the register command,
+            //following the format: "register <file1,file2,...,fileN>"
+            //this means the files need to be real files
+            // and the command should contain every file name separated by a comma in one string
+            // the files should not be separated by a space or any other character
 
             while (true) {
                 System.out.print("Enter message: ");
