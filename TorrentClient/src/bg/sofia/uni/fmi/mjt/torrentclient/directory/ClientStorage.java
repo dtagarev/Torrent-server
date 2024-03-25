@@ -1,18 +1,17 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.directory;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
 import static java.nio.file.Files.createDirectory;
 import static java.nio.file.Files.exists;
 
-public class clientDirectory implements UserDirectory {
+public class ClientStorage implements UserDirectory {
 
     private Path dirPath;
 
-    public clientDirectory() {
-        Path tmpPath = Path.of(System.getProperty("user.dir") + System.lineSeparator() + "clientDirectory");
+    public ClientStorage() {
+        Path tmpPath = Path.of(System.getProperty("user.dir") + System.lineSeparator() + "ClientStorage");
 
 
         if (!exists(tmpPath)) {

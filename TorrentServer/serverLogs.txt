@@ -8,3 +8,63 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand: Invalid symbol in
 
 Message: Client toni has entered an invalid command: register toni file-1<,file2
 --------------------------------------------------
+2024-03-25 18:26
+Invalid command: lsit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: lsit
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: lsit
+--------------------------------------------------
+2024-03-25 18:40
+Invalid command: lst
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: lst
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: lst
+--------------------------------------------------
+2024-03-25 18:41
+Invalid command: exit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: exit
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: exit
+--------------------------------------------------
+2024-03-25 18:41
+Invalid command: quti
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quti
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: quti
+--------------------------------------------------
+2024-03-25 19:02
+Invalid command: pernis
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: pernis
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: pernis
+--------------------------------------------------
+2024-03-25 19:02
+Invalid command: exit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: exit
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:44)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:129)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: exit
+--------------------------------------------------

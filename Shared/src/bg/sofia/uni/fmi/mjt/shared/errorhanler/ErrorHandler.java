@@ -24,7 +24,7 @@ public class ErrorHandler {
 
     }
 
-    public void writeToLogFile(RuntimeException e) {
+    public synchronized void writeToLogFile(Exception e) {
         try(FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
 
             LocalDateTime time = LocalDateTime.now();
@@ -41,7 +41,7 @@ public class ErrorHandler {
 
     }
 
-    public void writeToLogFile(RuntimeException e, String message) {
+    public synchronized void writeToLogFile(Exception e, String message) {
         try(FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
 
             LocalDateTime time = LocalDateTime.now();

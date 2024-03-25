@@ -5,6 +5,7 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.HelpCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.ListFilesCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.RegisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.UnregisterCommand;
@@ -58,7 +59,8 @@ public class ServerThread implements Runnable {
         commandExecutor = new CommandExecutor(Set.of(
                 new RegisterCommand(storage),
                 new UnregisterCommand(storage, errorHandler),
-                new ListFilesCommand(storage))
+                new ListFilesCommand(storage),
+                new HelpCommand(storage))
         );
 
         socketToNameStorage = new HashMap<>();

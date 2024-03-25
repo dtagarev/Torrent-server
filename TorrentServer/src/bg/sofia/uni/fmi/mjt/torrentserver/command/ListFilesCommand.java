@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class ListFilesCommand implements Command {
-    ServerStorage storage;
+    private ServerStorage storage;
 
     public ListFilesCommand(ServerStorage storage) {
         this.storage = storage;

@@ -29,6 +29,7 @@ public class TorrentClientTakeOne {
             //this means the files need to be real files
             // and the command should contain every file name separated by a comma in one string
             // the files should not be separated by a space or any other character
+            //TODO: client cannot register as refresher
 
             while (true) {
                 System.out.print("Enter message: ");
