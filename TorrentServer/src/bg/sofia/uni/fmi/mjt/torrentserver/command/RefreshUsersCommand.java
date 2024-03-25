@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class ListFilesCommand implements Command {
+public class RefreshUsersCommand implements Command {
     ServerStorage storage;
 
-    public ListFilesCommand(ServerStorage storage) {
+    public RefreshUsersCommand(ServerStorage storage) {
         this.storage = storage;
     }
 
@@ -21,19 +21,20 @@ public class ListFilesCommand implements Command {
             return "Invalid command. No arguments needed.";
         }
 
-        Map<String, Set<String>> data = storage.getData();
-        StringBuilder result = new StringBuilder();
-
-        for (String user : data.keySet()) {
-            result.append(user).append(" : ").append(data.get(user).toString()).append("\n");
+        Map<String , Set<String>> data = storage.getData();
+        StringBuilder sb = new StringBuilder();
+        for(String user : data.keySet()) {
+            sb.append(user);
+            for(String file : data.get(user)) {
+                sb.append(" ").append(file);
+            }
+            sb.append("\n");
         }
-        result = new StringBuilder(result.substring(0, result.length() - 1));
-
-        return result.toString();
+        return sb.toString();
     }
 
     @Override
     public String toString() {
-        return "list-files";
+        return "refresh-users";
     }
 }
