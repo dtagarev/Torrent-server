@@ -1,14 +1,12 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
-import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-// NIO, blocking
 public class Client {
 
     private static final int SERVER_PORT = 7777;
@@ -18,6 +16,7 @@ public class Client {
 
     public static void main(String[] args) {
         ClientManager clientManager = new ClientManager();
+
         //TODO: there should be try catch for errors thrown by function
         clientManager.setupNewClient();
 
@@ -37,7 +36,7 @@ public class Client {
 
         boolean firstRun = true;
         while (true) {
-            String message = "";
+            String message;
             if(firstRun) {
                 System.out.print("Enter name: ");
                 message = clientManager.enterName(scanner.nextLine());
@@ -68,7 +67,7 @@ public class Client {
 
         byte[] byteArray = new byte[buffer.remaining()];
         buffer.get(byteArray);
-        return new String(byteArray, "UTF-8"); // buffer drain
+        return new String(byteArray, StandardCharsets.UTF_8); // buffer drain
     }
 
     private static void writeToServer(SocketChannel socketChannel, String message) throws IOException {

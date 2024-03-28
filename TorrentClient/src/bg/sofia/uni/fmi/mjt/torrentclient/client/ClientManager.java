@@ -1,18 +1,27 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
+import bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor;
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.util.Set;
 
 public class ClientManager {
     ErrorHandler errorHandler;
     ClientStorage storage;
 
+    CommandExecutor commandExecutor;
+
     public ClientManager() {
 
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
+        this.storage = new ClientStorage();
+        commandExecutor = new CommandExecutor(
+                Set.of()
+        );
+
     }
 
     public String enterName(String name) {
