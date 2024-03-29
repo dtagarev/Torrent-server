@@ -63,4 +63,3 @@ public class ErrorHandler {
     }
 
 }
-//do 19-ti lekciite + zadacha za back propagation

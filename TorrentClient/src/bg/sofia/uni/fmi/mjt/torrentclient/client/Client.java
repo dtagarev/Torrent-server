@@ -1,5 +1,8 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
+import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.Cli;
+import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -15,47 +18,48 @@ public class Client {
     private static ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
     public static void main(String[] args) {
-        ClientManager clientManager = new ClientManager();
-
-        //TODO: there should be try catch for errors thrown by function
-        clientManager.setupNewClient();
+        UserInterface ui = new Cli();
+        ClientManager clientManager = new ClientManager(ui);
 
         try {
-            communicateWithServer(clientManager);
+            communicateWithServer(clientManager, ui);
         } catch (IOException e) {
             throw new RuntimeException("There is a problem with the network communication", e);
         }
     }
 
-    private static void communicateWithServer(ClientManager clientManager) throws IOException {
+    private static void communicateWithServer(ClientManager clientManager, UserInterface ui) throws IOException {
         SocketChannel socketChannel = SocketChannel.open();
         Scanner scanner = new Scanner(System.in);
         socketChannel.connect(new InetSocketAddress(SERVER_HOST, SERVER_PORT));
 
-        System.out.println("Connected to the server.");
+        ui.displayConnectedToServer();
 
         boolean firstRun = true;
         while (true) {
             String message;
             if(firstRun) {
-                System.out.print("Enter name: ");
-                message = clientManager.enterName(scanner.nextLine());
+                do {
+                    ui.displayNamePrompt();
+                    message = scanner.nextLine();
+                } while (!clientManager.checkName(message));
                 firstRun = false;
             } else {
-                System.out.print("Enter message: ");
-                message = clientManager.enterCommand(scanner.nextLine());
+                do {
+                    ui.displayMessagePrompt();
+                    message = scanner.nextLine();
+                } while (!clientManager.checkCommand(message));
             }
 
             if ("quit".equals(message)) {
                 break;
             }
 
-            System.out.println("Sending message <" + message + "> to the server...");
+            ui.displaySendingMessage(message);
             writeToServer(socketChannel, message);
 
             String reply = readFromServer(socketChannel);
-            //System.out.println("The server replied <" + reply + ">");
-            System.out.println(reply);
+            ui.displayServerReply(reply);
         }
 
     }

@@ -103,8 +103,6 @@ public class ServerThread implements Runnable {
                                 storage.register(clientInput, Collections.emptyList());
                                 writeClientOutput(clientChannel, "Welcome " + clientInput);
                             } else {
-                                //TODO: ediniq chaka i drugiq chaka i zatva se poluchava tva
-                                // otvori run otdolu i vij kvo stava ( problema beshe v klienta, klient 2 ne raboti)
                                 String result = executeCommand(clientInput, socketToNameStorage.get(clientChannel));
 
                                 writeClientOutput(clientChannel, result);
