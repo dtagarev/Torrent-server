@@ -4,20 +4,19 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 public class ClientManager {
     ErrorHandler errorHandler;
     ClientStorage storage;
 
-    CommandExecutor commandExecutor;
+    CommandChecker commandChecker;
     UserInterface ui;
 
     public ClientManager(UserInterface ui) {
@@ -26,9 +25,7 @@ public class ClientManager {
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
         this.storage = new ClientStorage();
-        commandExecutor = new CommandExecutor(
-                Set.of()
-        );
+        this.commandChecker = new CommandChecker(storage);
 
     }
 
@@ -38,17 +35,16 @@ public class ClientManager {
 
 
     public boolean checkCommand(String message) {
-        //TODO: correct format
-        //TODO: correct files
-        //TODO: is inside the serverCommandList
+        try {
+            commandChecker.check(message);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return false;
     }
 
-    public void saveServerCommands(String message) {
-        List<String> commands = new ArrayList<>(List.of(message.split("\n")));
-        for (String command : commands) {
-            List<String> args = new ArrayList<>(List.of(message.split(" ")));
-            //TODO: save the command in a data structure and also create the data structure
-        }
+    public void startServices() {
+
+
     }
 }

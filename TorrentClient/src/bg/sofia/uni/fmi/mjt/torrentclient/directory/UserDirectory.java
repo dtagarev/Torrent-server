@@ -1,16 +1,13 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.directory;
 
-import java.io.File;
 import java.nio.file.Path;
+import java.util.List;
 
 public interface UserDirectory {
-    //??? getSeedingFiles() -- send ( get in usable format) file info of all available files -- synchronised ?
-    //File getFile(String filename) -- synchronised ?
     //void addFile() -- synchronised ?
     //void removeFile() -- synchronised ?
-    //void getFiles() -- synchronised ?
-    //write me all the functions that the user directory should have
-    boolean containsFile(String filename);
 
+    List<String> getSeedingFiles(); //-- send (get in usable format) file info of all available files -- synchronised ?
     Path getFile(String filename); //-- synchronised ?
+    boolean containsFile(String filename);
 }

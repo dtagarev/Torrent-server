@@ -9,7 +9,7 @@ import java.util.List;
 public class RegisterCommand implements Command {
 
     private final ServerStorage storage;
-
+    private static final int NUMBER_OF_ARGUMENTS = 2;
     public RegisterCommand(ServerStorage storage) {
         this.storage = storage;
     }
@@ -17,10 +17,10 @@ public class RegisterCommand implements Command {
 
     @Override
     public String execute(List<String> list) {
-        if(list.size() < 2) {
+        if(list.size() < NUMBER_OF_ARGUMENTS) {
             return "Invalid command. Not enough arguments." +
                 "Please use the following format: register <username> <file1,file2,fileN>";
-        } else if (list.size() > 2) {
+        } else if (list.size() > NUMBER_OF_ARGUMENTS) {
             return "Invalid command format. Too many arguments.\n" +
                 "Please use the following format: register <username> <file1,file2,fileN>";
         }

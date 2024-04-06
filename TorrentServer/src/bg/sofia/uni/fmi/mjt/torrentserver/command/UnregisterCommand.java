@@ -11,6 +11,8 @@ public class UnregisterCommand implements Command {
 
     private ErrorHandler errorHandler;
 
+    private static final int NUMBER_OF_ARGUMENTS = 1;
+
     public UnregisterCommand(ServerStorage storage, ErrorHandler errorHandler) {
         this.errorHandler = errorHandler;
         this.storage = storage;
@@ -18,8 +20,11 @@ public class UnregisterCommand implements Command {
 
     @Override
     public String execute(List<String> list) {
-        if (list.size() < 1) {
+        if (list.isEmpty()) {
             return "Invalid command. Not enough arguments.";
+        } else if(list.size() > NUMBER_OF_ARGUMENTS) {
+            return "Invalid command format. Too many arguments.\n" +
+                "Please use the following format: unregister <username>";
         }
         String username = list.getFirst();
         try {

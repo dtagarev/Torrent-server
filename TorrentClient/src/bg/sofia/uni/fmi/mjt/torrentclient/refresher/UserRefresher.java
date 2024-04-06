@@ -1,15 +1,16 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
+import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
 public class UserRefresher implements Runnable {
 
@@ -21,13 +22,15 @@ public class UserRefresher implements Runnable {
     private String username;
     private Path filePath;
     private ErrorHandler errorHandler;
+    private UserInterface ui;
 
     public UserRefresher(int SERVER_PORT, String SERVER_HOST,
-                         String username, ErrorHandler errorHandler) {
+                         String username, ErrorHandler errorHandler, UserInterface ui) {
         this.SERVER_PORT = SERVER_PORT;
         this.SERVER_HOST = SERVER_HOST;
         this.username = username;
         this.errorHandler = errorHandler;
+        this.ui = ui;
         filePath = Path.of(System.getProperty("user.dir")
             + System.lineSeparator()
             + "connectedUsers.txt");
@@ -61,14 +64,10 @@ public class UserRefresher implements Runnable {
                 writeToFile(reply);
             }
 
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             errorHandler.writeToLogFile(e);
-            System.out.println("There is a problem with the network communication.\n"
-                + "The active users will not be updated.");
-        } catch (InterruptedException e) {
-            errorHandler.writeToLogFile(e);
-            System.out.println("There is a problem with the network communication.\n"
-                + "The active users will not be updated.");
+            ui.displayErrorMessage("There is a problem with the network communication.\n" +
+                "The active users will not be updated.");
         }
     }
 
@@ -78,14 +77,14 @@ public class UserRefresher implements Runnable {
             socketChannel.read(buffer); // buffer fill
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
-            System.out.println("Error getting active users info from server.");
+            ui.displayErrorMessage("Error getting active users info from server.");
         }
 
         buffer.flip(); // switch to reading mode
         byte[] byteArray = new byte[buffer.remaining()];
         buffer.get(byteArray);
 
-        return new String(byteArray, "UTF-8"); // buffer drain
+        return new String(byteArray, StandardCharsets.UTF_8); // buffer drain
     }
 
     private void createUserFile() {
@@ -94,7 +93,7 @@ public class UserRefresher implements Runnable {
                 Files.createFile(filePath);
             } catch (IOException e) {
                 errorHandler.writeToLogFile(e);
-                System.out.println("Error while creating active users file.");
+                ui.displayErrorMessage("Error while creating active users file.");
             }
         }
 
@@ -108,7 +107,7 @@ public class UserRefresher implements Runnable {
             socketChannel.write(buffer); // buffer drain
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
-            System.out.println("Error getting user info from server.");
+            ui.displayErrorMessage("Error sending message to server.");
         }
     }
 
@@ -119,7 +118,7 @@ public class UserRefresher implements Runnable {
             fos.close();
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
-            System.out.println("Error while updating active users.");
+            ui.displayErrorMessage("Error while updating active users.");
         }
     }
 }

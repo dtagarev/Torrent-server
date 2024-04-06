@@ -9,9 +9,14 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
 
 public class Client {
-
+    //TODO: client directory ( should be synchronized )with tests
+    // TODO: client miniserver
+    // TODO: connect all the pieces with threads
+    // TODO: pottencial problem in UserRefresher when the UserRefresher thread is writing in the file and the main thread is reading from it
+    // add a class for managing this file so that the threads can read and write from it
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
@@ -68,8 +73,8 @@ public class Client {
             ui.displayNamePrompt();
             message = scanner.nextLine();
         } while (!clientManager.checkName(message));
-        clientManager.saveServerCommands(message);
-        ui.displayWelcomeMessage(message);
+        //clientManager.saveServerCommands(message);
+        //ui.displayWelcomeMessage(message);
     }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {
