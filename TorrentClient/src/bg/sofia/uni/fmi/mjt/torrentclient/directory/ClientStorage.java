@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import static java.nio.file.Files.createDirectory;
 import static java.nio.file.Files.exists;
 
-public class ClientStorage implements UserDirectory {
+public  class  ClientStorage  implements UserDirectory {
 
     private Path dirPath;
 
@@ -23,6 +23,17 @@ public class ClientStorage implements UserDirectory {
         }
         dirPath = tmpPath;
     }
+
+    @Override
+    public boolean containsFile(String filename) {
+        for(Path file : dirPath) {
+            if(file.getFileName().toString().equals(filename)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public Path getFile(String filename) {
         for(Path file : dirPath) {

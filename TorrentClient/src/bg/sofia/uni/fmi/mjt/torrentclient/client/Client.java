@@ -37,19 +37,17 @@ public class Client {
 
         boolean firstRun = true;
         while (true) {
-            String message;
             if(firstRun) {
-                do {
-                    ui.displayNamePrompt();
-                    message = scanner.nextLine();
-                } while (!clientManager.checkName(message));
+                sendInitializerMessage(clientManager, ui, scanner);
                 firstRun = false;
-            } else {
-                do {
-                    ui.displayMessagePrompt();
-                    message = scanner.nextLine();
-                } while (!clientManager.checkCommand(message));
+                continue;
             }
+
+            String message;
+            do {
+                ui.displayMessagePrompt();
+                message = scanner.nextLine();
+            } while (!clientManager.checkCommand(message));
 
             if ("quit".equals(message)) {
                 break;
@@ -62,6 +60,16 @@ public class Client {
             ui.displayServerReply(reply);
         }
 
+    }
+
+    private static void sendInitializerMessage(ClientManager clientManager, UserInterface ui, Scanner scanner) {
+        String message;
+        do {
+            ui.displayNamePrompt();
+            message = scanner.nextLine();
+        } while (!clientManager.checkName(message));
+        clientManager.saveServerCommands(message);
+        ui.displayWelcomeMessage(message);
     }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {

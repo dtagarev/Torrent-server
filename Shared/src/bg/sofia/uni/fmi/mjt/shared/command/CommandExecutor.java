@@ -1,6 +1,5 @@
 package bg.sofia.uni.fmi.mjt.shared.command;
 
-import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
@@ -43,4 +42,15 @@ public class CommandExecutor {
 
         throw new InvalidCommand("Invalid command: " + cmdList.getFirst());
     }
+
+    public String sendCommandInformation() {
+        StringBuilder sb = new StringBuilder();
+        for (Command command : commands) {
+            sb.append(command.toString()).append(" ")
+                    .append(command.getNumberOfArguments()).append(" ")
+                    .append(command.getFileArgumentIndex()).append("\n");
+        }
+        return sb.toString();
+    }
+
 }

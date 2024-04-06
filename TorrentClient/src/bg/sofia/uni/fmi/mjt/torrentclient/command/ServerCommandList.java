@@ -6,6 +6,7 @@ public enum ServerCommandList {
     LIST_FILES("list-files"),
 
     HELP("help");
+
     private final String command;
 
     ServerCommandList(String command) {
@@ -14,5 +15,14 @@ public enum ServerCommandList {
 
     public String getCommand() {
         return command;
+    }
+
+    public static boolean contains(String command) {
+        for (ServerCommandList c : ServerCommandList.values()) {
+            if (c.getCommand().equals(command)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

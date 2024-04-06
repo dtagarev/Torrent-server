@@ -8,6 +8,11 @@ public class Cli implements UserInterface {
     }
 
     @Override
+    public void displayWelcomeMessage(String username) {
+        System.out.println("Welcome, " + username + "!");
+    }
+
+    @Override
     public void displayMessagePrompt() {
         System.out.print("Enter message: ");
     }

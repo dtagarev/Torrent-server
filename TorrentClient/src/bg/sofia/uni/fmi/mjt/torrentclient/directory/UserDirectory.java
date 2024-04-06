@@ -10,6 +10,7 @@ public interface UserDirectory {
     //void removeFile() -- synchronised ?
     //void getFiles() -- synchronised ?
     //write me all the functions that the user directory should have
+    boolean containsFile(String filename);
 
     Path getFile(String filename); //-- synchronised ?
 }

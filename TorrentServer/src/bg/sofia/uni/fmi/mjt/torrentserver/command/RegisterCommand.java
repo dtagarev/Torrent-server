@@ -39,6 +39,16 @@ public class RegisterCommand implements Command {
     }
 
     @Override
+    public int getNumberOfArguments() {
+        return 3;
+    }
+
+    @Override
+    public int getFileArgumentIndex() {
+        return 2;
+    }
+
+    @Override
     public String toString() {
         return "register";
     }

@@ -101,7 +101,9 @@ public class ServerThread implements Runnable {
                             if(socketToNameStorage.get(clientChannel) == null) {
                                 socketToNameStorage.put(clientChannel, clientInput);
                                 storage.register(clientInput, Collections.emptyList());
-                                writeClientOutput(clientChannel, "Welcome " + clientInput);
+//                                writeClientOutput(clientChannel, "Welcome " + clientInput);
+                                writeClientOutput(clientChannel, commandExecutor.sendCommandInformation());
+
                             } else {
                                 String result = executeCommand(clientInput, socketToNameStorage.get(clientChannel));
 

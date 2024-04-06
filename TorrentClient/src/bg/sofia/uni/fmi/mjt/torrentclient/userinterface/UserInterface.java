@@ -2,6 +2,7 @@ package bg.sofia.uni.fmi.mjt.torrentclient.userinterface;
 
 public interface UserInterface {
     void displayNamePrompt();
+    void displayWelcomeMessage(String username);
     void displayMessagePrompt();
     void displaySendingMessage(String message);
     void displayConnectedToServer();
@@ -10,4 +11,5 @@ public interface UserInterface {
 
     void displayErrorMessage(String message);
     void displayCommandReply(String reply);
+
 }

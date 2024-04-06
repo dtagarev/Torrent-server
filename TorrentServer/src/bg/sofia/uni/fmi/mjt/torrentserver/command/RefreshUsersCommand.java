@@ -34,6 +34,16 @@ public class RefreshUsersCommand implements Command {
     }
 
     @Override
+    public int getNumberOfArguments() {
+        return 0;
+    }
+
+    @Override
+    public int getFileArgumentIndex() {
+        return 0;
+    }
+
+    @Override
     public String toString() {
         return "refresh-users";
     }

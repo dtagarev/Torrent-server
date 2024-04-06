@@ -9,6 +9,8 @@ import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class ClientManager {
@@ -40,5 +42,13 @@ public class ClientManager {
         //TODO: correct files
         //TODO: is inside the serverCommandList
         return false;
+    }
+
+    public void saveServerCommands(String message) {
+        List<String> commands = new ArrayList<>(List.of(message.split("\n")));
+        for (String command : commands) {
+            List<String> args = new ArrayList<>(List.of(message.split(" ")));
+            //TODO: save the command in a data structure and also create the data structure
+        }
     }
 }

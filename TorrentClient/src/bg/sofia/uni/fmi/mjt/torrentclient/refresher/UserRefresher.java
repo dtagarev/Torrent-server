@@ -117,9 +117,6 @@ public class UserRefresher implements Runnable {
             FileOutputStream fos = new FileOutputStream(filePath.toString(), false);
             fos.write(message.getBytes());
             fos.close();
-        } catch (FileNotFoundException e) {
-            errorHandler.writeToLogFile(e);
-            System.out.println("Error while updating active users.");
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             System.out.println("Error while updating active users.");
