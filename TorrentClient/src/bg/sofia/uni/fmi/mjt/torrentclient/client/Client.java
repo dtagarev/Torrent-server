@@ -9,14 +9,14 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
 
 public class Client {
-    //TODO: client directory ( should be synchronized )with tests
     // TODO: client miniserver
     // TODO: connect all the pieces with threads
     // TODO: pottencial problem in UserRefresher when the UserRefresher thread is writing in the file and the main thread is reading from it
-    // add a class for managing this file so that the threads can read and write from it
+    //problem must be solved but the class should be tested
+    // TODO: test the new changes to the name writing in the beginning, name is nowhere send to the server
+
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
@@ -25,6 +25,9 @@ public class Client {
     public static void main(String[] args) {
         UserInterface ui = new Cli();
         ClientManager clientManager = new ClientManager(ui);
+
+        Scanner scanner = new Scanner(System.in);
+        sendInitializerMessage(clientManager, ui, scanner);
 
         try {
             communicateWithServer(clientManager, ui);
@@ -40,13 +43,13 @@ public class Client {
 
         ui.displayConnectedToServer();
 
-        boolean firstRun = true;
+//        boolean firstRun = true;
         while (true) {
-            if(firstRun) {
-                sendInitializerMessage(clientManager, ui, scanner);
-                firstRun = false;
-                continue;
-            }
+//            if(firstRun) {
+//                sendInitializerMessage(clientManager, ui, scanner);
+//                firstRun = false;
+//                continue;
+//            }
 
             String message;
             do {

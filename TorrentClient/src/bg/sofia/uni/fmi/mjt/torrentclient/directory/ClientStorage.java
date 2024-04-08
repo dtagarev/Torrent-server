@@ -17,6 +17,7 @@ import static java.nio.file.Files.exists;
 import static java.nio.file.Files.isRegularFile;
 
 public  class  ClientStorage  implements UserDirectory {
+    //TODO: should it be synchronized?
 
     private Path dirPath;
 
@@ -26,12 +27,12 @@ public  class  ClientStorage  implements UserDirectory {
     }
 
     @Override
-    public boolean containsFile(String filename) {
+    public synchronized boolean containsFile(String filename) {
         return exists(dirPath.resolve(filename));
     }
 
     @Override
-    public void addFile(Path file) {
+    public synchronized void addFile(Path file) {
         if(!containsFile(file.getFileName().toString())) {
             try {
                 Files.copy(file, dirPath.resolve(file.getFileName()));
@@ -43,7 +44,7 @@ public  class  ClientStorage  implements UserDirectory {
     }
 
     @Override
-    public List<Path> getSeedingFiles() {
+    public synchronized List<Path> getSeedingFiles() {
         List<Path> lst = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(dirPath)) {
             for (Path fileOrSubDir : stream) {
@@ -59,7 +60,7 @@ public  class  ClientStorage  implements UserDirectory {
     }
 
     @Override
-    public Path getFile(String filename) throws FileNotFoundException {
+    public synchronized Path getFile(String filename) throws FileNotFoundException {
         if (!containsFile(filename)) {
             throw new FileNotFoundException("File not found");
         }

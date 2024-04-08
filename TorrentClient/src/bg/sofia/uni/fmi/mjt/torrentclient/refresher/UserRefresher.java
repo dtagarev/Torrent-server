@@ -1,14 +1,12 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
+
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
@@ -20,25 +18,29 @@ public class UserRefresher implements Runnable {
     private static ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
     private String username;
-    private Path filePath;
+    private UserFileManager userFileManager;
     private ErrorHandler errorHandler;
     private UserInterface ui;
 
     public UserRefresher(int SERVER_PORT, String SERVER_HOST,
-                         String username, ErrorHandler errorHandler, UserInterface ui) {
+                         String username, ErrorHandler errorHandler, UserInterface ui, UserFileManager userFileManager) {
         this.SERVER_PORT = SERVER_PORT;
         this.SERVER_HOST = SERVER_HOST;
         this.username = username;
         this.errorHandler = errorHandler;
         this.ui = ui;
-        filePath = Path.of(System.getProperty("user.dir")
-            + System.lineSeparator()
-            + "connectedUsers.txt");
+        this.userFileManager = userFileManager;
     }
 
     @Override
     public void run() {
-        createUserFile();
+        try {
+            userFileManager.createUserFile();
+        } catch (IOException e) {
+            ui.displayErrorMessage("Error creating log file\n" +
+                    "The active users will not be updated.");
+            Thread.currentThread().interrupt();
+        }
 
         try (SocketChannel socketChannel = SocketChannel.open()) {
 
@@ -61,7 +63,7 @@ public class UserRefresher implements Runnable {
 
                 String reply = readFromServer(socketChannel);
 
-                writeToFile(reply);
+                userFileManager.writeToFile(reply);
             }
 
         } catch (IOException | InterruptedException e) {
@@ -87,17 +89,6 @@ public class UserRefresher implements Runnable {
         return new String(byteArray, StandardCharsets.UTF_8); // buffer drain
     }
 
-    private void createUserFile() {
-        if(!Files.exists(filePath)) {
-            try {
-                Files.createFile(filePath);
-            } catch (IOException e) {
-                errorHandler.writeToLogFile(e);
-                ui.displayErrorMessage("Error while creating active users file.");
-            }
-        }
-
-    }
 
     void writeToServer(SocketChannel socketChannel, String message) {
         buffer.clear(); // switch to writing mode
@@ -111,14 +102,4 @@ public class UserRefresher implements Runnable {
         }
     }
 
-    void writeToFile(String message) {
-        try {
-            FileOutputStream fos = new FileOutputStream(filePath.toString(), false);
-            fos.write(message.getBytes());
-            fos.close();
-        } catch (IOException e) {
-            errorHandler.writeToLogFile(e);
-            ui.displayErrorMessage("Error while updating active users.");
-        }
-    }
 }

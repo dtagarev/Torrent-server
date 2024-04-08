@@ -20,7 +20,6 @@ public class ClientManager {
     UserInterface ui;
 
     public ClientManager(UserInterface ui) {
-
         this.ui = ui;
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
