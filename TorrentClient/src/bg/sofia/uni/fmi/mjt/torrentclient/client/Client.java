@@ -73,8 +73,7 @@ public class Client {
             ui.displayNamePrompt();
             message = scanner.nextLine();
         } while (!clientManager.checkName(message));
-        //clientManager.saveServerCommands(message);
-        //ui.displayWelcomeMessage(message);
+        clientManager.createClientDirectory(message);
     }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {

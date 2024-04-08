@@ -24,7 +24,6 @@ public class ClientManager {
         this.ui = ui;
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
-        this.storage = new ClientStorage();
         this.commandChecker = new CommandChecker(storage);
 
     }
@@ -43,8 +42,8 @@ public class ClientManager {
         return false;
     }
 
-    public void startServices() {
-
-
+    public void createClientDirectory(String clientName) {
+        Path clientStoragePath = Path.of(System.getProperty("user.dir") + File.separator + clientName + "Directory");
+        this.storage = new ClientStorage(clientStoragePath);
     }
 }

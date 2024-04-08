@@ -1,59 +1,69 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.directory;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.file.DirectoryIteratorException;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.nio.file.Files.createDirectory;
 import static java.nio.file.Files.exists;
+import static java.nio.file.Files.isRegularFile;
 
 public  class  ClientStorage  implements UserDirectory {
 
     private Path dirPath;
 
-    public ClientStorage() {
-        dirPath = Path.of(System.getProperty("user.dir") + System.lineSeparator() + "ClientStorage");
+    public ClientStorage(Path clientStoragePath) {
+        //dirPath = Path.of(System.getProperty("user.dir") + System.lineSeparator() + "ClientStorage");
+        dirPath = clientStoragePath;
+    }
 
-        if (!exists(dirPath)) {
+    @Override
+    public boolean containsFile(String filename) {
+        return exists(dirPath.resolve(filename));
+    }
+
+    @Override
+    public void addFile(Path file) {
+        if(!containsFile(file.getFileName().toString())) {
             try {
-                createDirectory(dirPath);
+                Files.copy(file, dirPath.resolve(file.getFileName()));
             } catch (IOException e) {
+                //TODO: should fix it , and the function if the received file is not in a path format
                 throw new RuntimeException(e);
             }
         }
     }
 
     @Override
-    public boolean containsFile(String filename) {
-        //TODO: implement
-        // 100% incorrect
-        for(Path file : dirPath) {
-            if(file.getFileName().toString().equals(filename)) {
-                return true;
+    public List<Path> getSeedingFiles() {
+        List<Path> lst = new ArrayList<>();
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dirPath)) {
+            for (Path fileOrSubDir : stream) {
+                if (isRegularFile(fileOrSubDir)) {
+                    lst.add(fileOrSubDir);
+                }
             }
+        } catch (IOException | DirectoryIteratorException e) {
+            throw new RuntimeException(e);
         }
-        return false;
+
+        return lst;
     }
 
     @Override
-    public List<String> getSeedingFiles() {
-
-        //TODO: implement
-        // 100% incorrect
-        for(Path file : dirPath) {
-            System.out.println(file.getFileName().toString());
+    public Path getFile(String filename) throws FileNotFoundException {
+        if (!containsFile(filename)) {
+            throw new FileNotFoundException("File not found");
         }
-        return null;
-    }
-
-    @Override
-    public Path getFile(String filename) {
-        for(Path file : dirPath) {
-            if(file.getFileName().toString().equals(filename)) {
-                return file;
-            }
-        }
-        return null;
+        return dirPath.resolve(filename);
     }
 
 }
