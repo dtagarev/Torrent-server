@@ -43,7 +43,8 @@ public class ServerThread implements Runnable {
 
     private ErrorHandler errorHandler;
 
-
+    //Todo: fix client name storage
+    //should check if a client with this name is already registered and if it is not should register it
 
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;

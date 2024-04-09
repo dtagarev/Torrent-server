@@ -12,11 +12,10 @@ import java.util.Scanner;
 
 public class Client {
     // TODO: client miniserver
-    // TODO: connect all the pieces with threads
-    // TODO: pottencial problem in UserRefresher when the UserRefresher thread is writing in the file and the main thread is reading from it
-    //problem must be solved but the class should be tested
     // TODO: test the new changes to the name writing in the beginning, name is nowhere send to the server
-
+    // todo: a little down the code
+    // TODO: integrate the usersFileManager in the clie
+    // TODO: connect all the pieces with threads
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
@@ -25,9 +24,6 @@ public class Client {
     public static void main(String[] args) {
         UserInterface ui = new Cli();
         ClientManager clientManager = new ClientManager(ui);
-
-        Scanner scanner = new Scanner(System.in);
-        sendInitializerMessage(clientManager, ui, scanner);
 
         try {
             communicateWithServer(clientManager, ui);
@@ -43,14 +39,9 @@ public class Client {
 
         ui.displayConnectedToServer();
 
-//        boolean firstRun = true;
-        while (true) {
-//            if(firstRun) {
-//                sendInitializerMessage(clientManager, ui, scanner);
-//                firstRun = false;
-//                continue;
-//            }
+        setClientName(clientManager, ui, socketChannel);
 
+        while (true) {
             String message;
             do {
                 ui.displayMessagePrompt();
@@ -69,14 +60,26 @@ public class Client {
         }
 
     }
+        //TODO: test the new changes to the name  and make the server respond in the correct way
+    private static void setClientName(ClientManager clientManager, UserInterface ui, SocketChannel channel) {
+        String message = null;
+        Scanner scanner = new Scanner(System.in);
+        String reply = "Invalid name";
+       while (reply.contains("Invalid")) {
+           do {
+               ui.displayNamePrompt();
+               message = scanner.nextLine();
+           } while (!clientManager.checkName(message));
 
-    private static void sendInitializerMessage(ClientManager clientManager, UserInterface ui, Scanner scanner) {
-        String message;
-        do {
-            ui.displayNamePrompt();
-            message = scanner.nextLine();
-        } while (!clientManager.checkName(message));
-        clientManager.createClientDirectory(message);
+           try {
+               writeToServer(channel, message);
+               reply = readFromServer(channel);
+           } catch (IOException e) {
+               throw new RuntimeException(e);
+           }
+           ui.displayServerReply(reply);
+       }
+       clientManager.createClientDirectory(message);
     }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {

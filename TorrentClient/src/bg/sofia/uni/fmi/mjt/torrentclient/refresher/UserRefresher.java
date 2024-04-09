@@ -18,29 +18,22 @@ public class UserRefresher implements Runnable {
     private static ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
     private String username;
-    private UserFileManager userFileManager;
+    private UsersFileManager usersFileManager;
     private ErrorHandler errorHandler;
     private UserInterface ui;
 
     public UserRefresher(int SERVER_PORT, String SERVER_HOST,
-                         String username, ErrorHandler errorHandler, UserInterface ui, UserFileManager userFileManager) {
+                         String username, ErrorHandler errorHandler, UserInterface ui, UsersFileManager usersFileManager) {
         this.SERVER_PORT = SERVER_PORT;
         this.SERVER_HOST = SERVER_HOST;
         this.username = username;
         this.errorHandler = errorHandler;
         this.ui = ui;
-        this.userFileManager = userFileManager;
+        this.usersFileManager = usersFileManager;
     }
 
     @Override
     public void run() {
-        try {
-            userFileManager.createUserFile();
-        } catch (IOException e) {
-            ui.displayErrorMessage("Error creating log file\n" +
-                    "The active users will not be updated.");
-            Thread.currentThread().interrupt();
-        }
 
         try (SocketChannel socketChannel = SocketChannel.open()) {
 
@@ -63,7 +56,7 @@ public class UserRefresher implements Runnable {
 
                 String reply = readFromServer(socketChannel);
 
-                userFileManager.writeToFile(reply);
+                usersFileManager.writeToFile(reply);
             }
 
         } catch (IOException | InterruptedException e) {

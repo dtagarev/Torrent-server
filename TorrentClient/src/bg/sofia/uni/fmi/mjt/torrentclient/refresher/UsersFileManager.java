@@ -7,19 +7,14 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class UserFileManager {
+public class UsersFileManager {
     Path usersFile;
 
-    public UserFileManager(String username) {
-        usersFile = Path.of(System.getProperty("user.dir")
-        + System.lineSeparator()
-        + "connectedUsers" + username + ".txt");
-    }
-
-    public synchronized void createUserFile() throws IOException {
-        if(!Files.exists(usersFile)) {
-            Files.createFile(usersFile);
-        }
+    public UsersFileManager(Path filepath) {
+        //usersFile = Path.of(System.getProperty("user.dir")
+        //+ System.lineSeparator()
+        //+ "connectedUsers" + username + ".txt");
+        usersFile = filepath;
     }
 
     public synchronized  void  writeToFile(String message) throws IOException {
@@ -34,6 +29,8 @@ public class UserFileManager {
         if(!Files.exists(usersFile)) {
             throw new FileNotFoundException("File does not exist");
         }
-        return Files.readString(usersFile, StandardCharsets.UTF_8);
+        byte[] bytes = Files.readAllBytes(usersFile);
+        return new String(bytes, StandardCharsets.UTF_8);
+        //return Files.readString(usersFile, StandardCharsets.UTF_8);
     }
 }
