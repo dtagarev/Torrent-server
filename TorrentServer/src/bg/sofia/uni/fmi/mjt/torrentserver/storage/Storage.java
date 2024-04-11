@@ -4,7 +4,7 @@ import java.nio.channels.SocketChannel;
 import java.util.List;
 
 public interface Storage {
-    void registerNewUser(String username, SocketChannel socketChannel, List<String> files);
+    void addNewUser(String username, SocketChannel socketChannel, List<String> files);
 
     void unregister(String username, List<String> files);
 

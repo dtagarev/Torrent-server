@@ -16,7 +16,7 @@ public class ServerStorage implements Storage {
     }
 
     @Override
-    public synchronized void registerNewUser(String username, SocketChannel socketChannel, List<String> files) {
+    public synchronized void addNewUser(String username, SocketChannel socketChannel, List<String> files) {
         Set<String> userFiles;
         if(data.containsKey(username)) {
             userFiles = data.get(username).files();
@@ -50,7 +50,7 @@ public class ServerStorage implements Storage {
         data.get(username).files().addAll(files);
     }
 
-    public synchronized void removeClient(String username) {
+    public synchronized void removeUser(String username) {
         if(!data.containsKey(username)) {
             throw new IllegalArgumentException("User does not exist");
         }

@@ -40,6 +40,7 @@ public class ServerThread implements Runnable {
 
     private ServerStorage storage;
     private Map<SocketChannel, String> socketToNameStorage;
+
     private CommandExecutor commandExecutor;
 
     private ErrorHandler errorHandler;
@@ -132,7 +133,7 @@ public class ServerThread implements Runnable {
             return;
         }
         socketToNameStorage.put(clientChannel, clientInput);
-        storage.registerNewUser(clientInput, clientChannel, Collections.emptyList());
+        storage.addNewUser(clientInput, clientChannel, Collections.emptyList());
         writeClientOutput(clientChannel, "Welcome " + clientInput);
     }
 
@@ -186,7 +187,7 @@ public class ServerThread implements Runnable {
             return;
         }
 
-        storage.removeClient(socketToNameStorage.get(clientChannel));
+        storage.removeUser(socketToNameStorage.get(clientChannel));
         socketToNameStorage.remove(clientChannel);
         System.out.println(clientName + " has disconnected");
     }

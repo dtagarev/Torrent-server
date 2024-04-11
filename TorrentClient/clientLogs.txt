@@ -535,3 +535,1939 @@ java.io.IOException: Broken pipe
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
 --------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:81)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:81)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:50
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:51
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:52
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:53
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:54
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-12 01:55
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------

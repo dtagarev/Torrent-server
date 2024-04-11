@@ -15,8 +15,12 @@ import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
 
 public class Client {
     // TODO: client miniServer
-    // TODO: integrate the usersFileManager in the client
-    // TODO: connect all the pieces with threads
+    // TODO: separate MiniClient(can be integrated in the real client a function like Download file
+    //  and it is just connecting to the socket and downloanding the file but can i make the storage of the files
+    //  block only on files that it is downloading or is curretnly sending, because now the whole
+    //  storage is blocked which is not ideal, it can be like 1 min download) and MiniServer that only job is to listen
+    //  for connections and download files
+    // Todo: How to multithread management in java
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;

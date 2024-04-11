@@ -15,7 +15,7 @@ public class RegisterCommandTest {
     @BeforeEach
     void setUp() {
         storage = new ServerStorage();
-        storage.registerNewUser("user1", null, List.of("file1", "file2"));
+        storage.addNewUser("user1", null, List.of("file1", "file2"));
     }
     @Test
     void testExecute() {

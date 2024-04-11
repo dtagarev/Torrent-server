@@ -31,9 +31,9 @@ public class UnregisterCommandTest {
     @BeforeEach
     void setUp() {
         storage = new ServerStorage();
-        storage.register("user1", List.of("file1", "file2"));
-        storage.register("user2", List.of("file2", "file3"));
-        storage.register("user3", List.of("file1", "file3"));
+        storage.addNewUser("user1", null, List.of("file1", "file2"));
+        storage.addNewUser("user2", null, List.of("file2", "file3"));
+        storage.addNewUser("user3", null, List.of("file1", "file3"));
     }
 
     @Test

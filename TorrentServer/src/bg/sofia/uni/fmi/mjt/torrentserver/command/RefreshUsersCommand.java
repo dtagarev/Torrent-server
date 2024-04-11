@@ -4,6 +4,7 @@ import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.User;
 
+import java.net.Socket;
 import java.util.List;
 import java.util.Map;
 
@@ -26,9 +27,12 @@ public class RefreshUsersCommand implements Command {
         Map<String , User> data = storage.getData();
         StringBuilder sb = new StringBuilder();
         for(String user : data.keySet()) {
+            Socket userSocket = data.get(user).socketChannel().socket();
+            String inetAddress = userSocket.getInetAddress().toString();
+
             sb.append(user);
-            String inetAddress = data.get(user).socketChannel().socket().getInetAddress().toString();
             sb.append("-").append(inetAddress);
+            sb.append(":").append(userSocket.getPort());
             sb.append("\n");
         }
         return sb.toString();
