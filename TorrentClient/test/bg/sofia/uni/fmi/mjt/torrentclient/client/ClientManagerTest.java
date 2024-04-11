@@ -13,7 +13,7 @@ public class ClientManagerTest {
     ClientManager clientManager = new ClientManager(ui);
 
     @Test
-    public void checkNameTest() {
+    public void testCheckNameTest() {
         String name = "test";
         String name2 = "test2";
 
@@ -22,7 +22,7 @@ public class ClientManagerTest {
     }
 
     @Test
-    void checkNameWithInvalidCharacters() {
+    void testCheckNameWithInvalidCharacters() {
         String name = "test@";
         String name2 = "test2#";
         String name3 = "test name";
@@ -33,4 +33,5 @@ public class ClientManagerTest {
         assertFalse(clientManager.checkName(name3));
         assertFalse(clientManager.checkName(name4));
     }
+
 }

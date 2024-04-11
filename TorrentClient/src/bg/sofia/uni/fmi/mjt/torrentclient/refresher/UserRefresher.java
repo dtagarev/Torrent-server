@@ -41,17 +41,14 @@ public class UserRefresher implements Runnable {
 
             //TODO: daemon thread that sends a message to the server every 30 seconds
 
-            boolean firstRun = true;
+            //boolean firstRun = true;
 
             while (true) {
 
-                String message = "refresh";
+                String message = "refresh-users";
 
-                if(firstRun) {
-                    firstRun = false;
-                    message = "refresher " + username;
-                }
-                Thread.sleep(30000);
+                Thread.sleep(5000);
+
                 writeToServer(socketChannel, message);
 
                 String reply = readFromServer(socketChannel);

@@ -1,0 +1,537 @@
+2024-04-11 13:04
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:04
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:11
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:42)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:37
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:38
+File not found: file1
+java.io.FileNotFoundException: File not found: file1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:38
+Invalid number of arguments
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:64)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:38
+File not found: fiel1
+java.io.FileNotFoundException: File not found: fiel1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:39
+Invalid number of arguments
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:64)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:39
+File not found: file1
+java.io.FileNotFoundException: File not found: file1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:43
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:43
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:43
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:43
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:44
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:44
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:44
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:45
+File not found: file1
+java.io.FileNotFoundException: File not found: file1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:45
+File not found: file1
+java.io.FileNotFoundException: File not found: file1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 13:57
+Invalid symbol in command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand: Invalid symbol in command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 14:00
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 14:05
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 14:11
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 14:12
+Invalid number of arguments
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:64)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:49)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:29)
+--------------------------------------------------
+2024-04-11 17:23
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:50)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:30)
+--------------------------------------------------
+2024-04-11 17:23
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:50)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:30)
+--------------------------------------------------
+2024-04-11 17:23
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:50)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:30)
+--------------------------------------------------
+2024-04-11 17:25
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:50)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:30)
+--------------------------------------------------
+2024-04-11 17:25
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:50)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:30)
+--------------------------------------------------
+2024-04-11 19:29
+Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.readFromServer(Client.java:105)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.setClientName(Client.java:95)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:32)
+--------------------------------------------------
+2024-04-11 19:47
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:80)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-11 19:47
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:80)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-11 19:47
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:80)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-11 20:05
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:46)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:81)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-11 20:08
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:08
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:08
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:08
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:09
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-04-11 20:10
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.writeToServer(UserRefresher.java:88)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------

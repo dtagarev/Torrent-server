@@ -11,9 +11,6 @@ public class UsersFileManager {
     Path usersFile;
 
     public UsersFileManager(Path filepath) {
-        //usersFile = Path.of(System.getProperty("user.dir")
-        //+ System.lineSeparator()
-        //+ "connectedUsers" + username + ".txt");
         usersFile = filepath;
     }
 

@@ -18,7 +18,7 @@ public class RegisterCommand implements Command {
     @Override
     public String execute(List<String> list) {
         if(list.size() < NUMBER_OF_ARGUMENTS) {
-            return "Invalid command. Not enough arguments." +
+            return "Invalid command. Not enough arguments.\n" +
                 "Please use the following format: register <username> <file1,file2,fileN>";
         } else if (list.size() > NUMBER_OF_ARGUMENTS) {
             return "Invalid command format. Too many arguments.\n" +
@@ -36,16 +36,6 @@ public class RegisterCommand implements Command {
         } else {
             return "There is no user with this username.";
         }
-    }
-
-    @Override
-    public int getNumberOfArguments() {
-        return 3;
-    }
-
-    @Override
-    public int getFileArgumentIndex() {
-        return 2;
     }
 
     @Override

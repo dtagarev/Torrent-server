@@ -2,13 +2,14 @@ package bg.sofia.uni.fmi.mjt.torrentserver.command;
 
 import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
+import bg.sofia.uni.fmi.mjt.torrentserver.storage.User;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class RefreshUsersCommand implements Command {
-    ServerStorage storage;
+    private ServerStorage storage;
+
 
     public RefreshUsersCommand(ServerStorage storage) {
         this.storage = storage;
@@ -18,29 +19,19 @@ public class RefreshUsersCommand implements Command {
     @Override
     public String execute(List<String> list) {
         if(!list.isEmpty()) {
-            return "Invalid command. No arguments needed.";
+            return "Invalid command, No arguments needed.\n"
+                + "Please use the following format: refresh-users";
         }
 
-        Map<String , Set<String>> data = storage.getData();
+        Map<String , User> data = storage.getData();
         StringBuilder sb = new StringBuilder();
         for(String user : data.keySet()) {
             sb.append(user);
-            for(String file : data.get(user)) {
-                sb.append(" ").append(file);
-            }
+            String inetAddress = data.get(user).socketChannel().socket().getInetAddress().toString();
+            sb.append("-").append(inetAddress);
             sb.append("\n");
         }
         return sb.toString();
-    }
-
-    @Override
-    public int getNumberOfArguments() {
-        return 0;
-    }
-
-    @Override
-    public int getFileArgumentIndex() {
-        return 0;
     }
 
     @Override

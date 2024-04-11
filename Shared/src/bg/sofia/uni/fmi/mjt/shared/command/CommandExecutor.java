@@ -29,9 +29,9 @@ public class CommandExecutor {
         if(cmd.isEmpty() || cmd.isBlank()) {
             throw new EmptyCommand("Command is empty");
         }
-        if(!commandContainsCorrectSymbols(cmd)){
-            throw new InvalidSymbolInCommand("Invalid symbol in command");
-        }
+        //if(!commandContainsCorrectSymbols(cmd)){
+        //    throw new InvalidSymbolInCommand("Invalid symbol in command");
+        //}
 
         for (Command command : commands) {
             if(command.toString().equals(cmdList.getFirst())) {
@@ -41,16 +41,6 @@ public class CommandExecutor {
         }
 
         throw new InvalidCommand("Invalid command: " + cmdList.getFirst());
-    }
-
-    public String sendCommandInformation() {
-        StringBuilder sb = new StringBuilder();
-        for (Command command : commands) {
-            sb.append(command.toString()).append(" ")
-                    .append(command.getNumberOfArguments()).append(" ")
-                    .append(command.getFileArgumentIndex()).append("\n");
-        }
-        return sb.toString();
     }
 
 }

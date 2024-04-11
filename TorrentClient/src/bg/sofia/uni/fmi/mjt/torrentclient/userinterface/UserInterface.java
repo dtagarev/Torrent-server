@@ -7,7 +7,7 @@ public interface UserInterface {
     void displaySendingMessage(String message);
     void displayConnectedToServer();
 
-    void displayServerReply(String reply);
+    void displayReply(String reply);
 
     void displayErrorMessage(String message);
     void displayCommandReply(String reply);

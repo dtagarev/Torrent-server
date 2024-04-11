@@ -28,7 +28,7 @@ public class Cli implements UserInterface {
     }
 
     @Override
-    public void displayServerReply(String reply) {
+    public void displayReply(String reply) {
         System.out.println(reply);
     }
 

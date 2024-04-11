@@ -1,5 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
+import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.Cli;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
@@ -9,59 +10,86 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
 
 public class Client {
-    // TODO: client miniserver
-    // TODO: test the new changes to the name writing in the beginning, name is nowhere send to the server
-    // todo: a little down the code
-    // TODO: integrate the usersFileManager in the clie
+    // TODO: client miniServer
+    // TODO: integrate the usersFileManager in the client
     // TODO: connect all the pieces with threads
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
-    private static ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
+    private static final ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
     public static void main(String[] args) {
         UserInterface ui = new Cli();
         ClientManager clientManager = new ClientManager(ui);
 
-        try {
-            communicateWithServer(clientManager, ui);
+        try(ExecutorService executor = newVirtualThreadPerTaskExecutor();){
+            SocketChannel socketChannel = connectToServer(ui, clientManager);
+
+            String clientName = setClientName(clientManager, ui, socketChannel);
+
+            UserRefresher refresher =
+                new UserRefresher(SERVER_PORT, SERVER_HOST,
+                    clientName,
+                    clientManager.getErrorHandler(),
+                    ui, clientManager.getUsersFileManager());
+
+            Thread refresherThread = new Thread(refresher);
+            refresherThread.setDaemon(true);
+            executor.submit(refresherThread);
+
+            communicateWithServer(socketChannel, clientManager, ui);
         } catch (IOException e) {
+            clientManager.getErrorHandler().writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);
         }
     }
 
-    private static void communicateWithServer(ClientManager clientManager, UserInterface ui) throws IOException {
+    private static void sendRefreshActiveUsersCommandToServer(SocketChannel socketChannel, String username,
+                                                              ClientManager clientManager) throws IOException {
+        String message = "refresh-users";
+        writeToServer(socketChannel, message);
+        String reply = readFromServer(socketChannel);
+        clientManager.getUsersFileManager().writeToFile(reply);
+    }
+
+    private static SocketChannel connectToServer(UserInterface ui, ClientManager clientManager) throws IOException {
         SocketChannel socketChannel = SocketChannel.open();
-        Scanner scanner = new Scanner(System.in);
         socketChannel.connect(new InetSocketAddress(SERVER_HOST, SERVER_PORT));
 
         ui.displayConnectedToServer();
 
-        setClientName(clientManager, ui, socketChannel);
+        return socketChannel;
+    }
+    private static void communicateWithServer(SocketChannel socketChannel,ClientManager clientManager, UserInterface ui) throws IOException {
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             String message;
             do {
                 ui.displayMessagePrompt();
                 message = scanner.nextLine();
+
+                if ("quit".equals(message)) {
+                    break;
+
+                }
+
             } while (!clientManager.checkCommand(message));
 
-            if ("quit".equals(message)) {
-                break;
-            }
 
             ui.displaySendingMessage(message);
             writeToServer(socketChannel, message);
 
             String reply = readFromServer(socketChannel);
-            ui.displayServerReply(reply);
+            ui.displayReply(reply);
         }
-
     }
-        //TODO: test the new changes to the name  and make the server respond in the correct way
-    private static void setClientName(ClientManager clientManager, UserInterface ui, SocketChannel channel) {
+    private static String setClientName(ClientManager clientManager, UserInterface ui, SocketChannel channel)
+        throws IOException {
         String message = null;
         Scanner scanner = new Scanner(System.in);
         String reply = "Invalid name";
@@ -71,15 +99,13 @@ public class Client {
                message = scanner.nextLine();
            } while (!clientManager.checkName(message));
 
-           try {
-               writeToServer(channel, message);
-               reply = readFromServer(channel);
-           } catch (IOException e) {
-               throw new RuntimeException(e);
-           }
-           ui.displayServerReply(reply);
+           writeToServer(channel, message);
+           reply = readFromServer(channel);
+           ui.displayReply(reply);
        }
        clientManager.createClientDirectory(message);
+       clientManager.createUsersFileManager(message);
+       return message;
     }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {

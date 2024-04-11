@@ -98,3 +98,543 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: azis
 
 Message: Client toni has entered an invalid command: azis
 --------------------------------------------------
+2024-04-11 14:05
+Invalid symbol in command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand: Invalid symbol in command
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:33)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: register azis file1.txt
+--------------------------------------------------
+2024-04-11 19:50
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client refresh-users has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:54
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:55
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:56
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:57
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:57
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 19:57
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:01
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:01
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:01
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:01
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:01
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:02
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:03
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------
+2024-04-11 20:03
+Invalid command: refresh-users
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: refresh-users
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:138)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client null has entered an invalid command: refresh-users
+--------------------------------------------------

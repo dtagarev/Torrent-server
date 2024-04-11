@@ -7,6 +7,7 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.HelpCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.ListFilesCommand;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.RefreshUsersCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.RegisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.UnregisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.storage.ServerStorage;
@@ -57,14 +58,16 @@ public class ServerThread implements Runnable {
 
         errorHandler = new ErrorHandler(logFilePath);
 
+        socketToNameStorage = new HashMap<>();
+
         commandExecutor = new CommandExecutor(Set.of(
                 new RegisterCommand(storage),
                 new UnregisterCommand(storage, errorHandler),
                 new ListFilesCommand(storage),
+                new RefreshUsersCommand(storage),
                 new HelpCommand(storage))
         );
 
-        socketToNameStorage = new HashMap<>();
     }
 
     public void run() {
@@ -93,17 +96,13 @@ public class ServerThread implements Runnable {
                             SocketChannel clientChannel = (SocketChannel) key.channel();
                             String clientInput = getClientInput(clientChannel);
 
-
                             System.out.println("Client said  -> " + clientInput );
                             if (clientInput == null) {
                                 continue;
                             }
 
-                            if(socketToNameStorage.get(clientChannel) == null) {
-                                socketToNameStorage.put(clientChannel, clientInput);
-                                storage.register(clientInput, Collections.emptyList());
-                                writeClientOutput(clientChannel, "Welcome " + clientInput);
-//                                writeClientOutput(clientChannel, commandExecutor.sendCommandInformation());
+                            if(!clientInput.contains("refresh-users") && socketToNameStorage.get(clientChannel) == null) {
+                                setClientName(clientChannel, clientInput);
 
                             } else {
                                 String result = executeCommand(clientInput, socketToNameStorage.get(clientChannel));
@@ -125,6 +124,16 @@ public class ServerThread implements Runnable {
         } catch (IOException e) {
             throw new UncheckedIOException("failed to start server", e);
         }
+    }
+
+    private void setClientName(SocketChannel clientChannel, String clientInput) throws IOException {
+        if(storage.containsUser(clientInput)) {
+            writeClientOutput(clientChannel, "Invalid name. Name is already taken! Please enter a new name.");
+            return;
+        }
+        socketToNameStorage.put(clientChannel, clientInput);
+        storage.registerNewUser(clientInput, clientChannel, Collections.emptyList());
+        writeClientOutput(clientChannel, "Welcome " + clientInput);
     }
 
     private String executeCommand(String clientInput, String clientName) {
@@ -168,13 +177,25 @@ public class ServerThread implements Runnable {
         channel.register(selector, SelectionKey.OP_ACCEPT);
     }
 
+    private void closeClientChannel(SocketChannel clientChannel) throws IOException {
+        clientChannel.close();
+        String clientName = socketToNameStorage.get(clientChannel);
+
+        if(clientName == null) {
+            System.out.println("UserRefresher has disconnected");
+            return;
+        }
+
+        storage.removeClient(socketToNameStorage.get(clientChannel));
+        socketToNameStorage.remove(clientChannel);
+        System.out.println(clientName + " has disconnected");
+    }
     private String getClientInput(SocketChannel clientChannel) throws IOException {
         buffer.clear();
 
         int readBytes = clientChannel.read(buffer);
         if (readBytes < 0) {
-            clientChannel.close();
-            System.out.println("Client has closed the connection");
+            closeClientChannel(clientChannel);
             return null;
         }
 

@@ -1,10 +1,12 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 
+import java.nio.channels.SocketChannel;
 import java.util.List;
-import java.util.Set;
 
 public interface Storage {
-    void register(String username, List<String> files);
+    void registerNewUser(String username, SocketChannel socketChannel, List<String> files);
 
-    void unregister(String username);
+    void unregister(String username, List<String> files);
+
+    void register(String username, List<String> args);
 }

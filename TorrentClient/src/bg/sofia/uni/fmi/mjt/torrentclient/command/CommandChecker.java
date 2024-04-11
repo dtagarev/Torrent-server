@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CommandChecker {
 
-    private UserDirectory userDirectory;
+    private final UserDirectory userDirectory;
 
     public CommandChecker(UserDirectory userDirectory) {
         this.userDirectory = userDirectory;
@@ -22,7 +22,7 @@ public class CommandChecker {
     }
 
     private boolean commandContainsCorrectSymbols(String cmd) {
-        return cmd.matches("[a-zA-Z0-9 ,-]+");
+        return cmd.matches("[a-zA-Z0-9. ,-]+");
     }
 
     private String areFilesValid(String files) {
