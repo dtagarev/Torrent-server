@@ -56,10 +56,12 @@ public class UserRefresher implements Runnable {
                 usersFileManager.writeToFile(reply);
             }
 
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             ui.displayErrorMessage("There is a problem with the network communication.\n" +
-                "The active users will not be updated.");
+                    "The active users will not be updated.");
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 

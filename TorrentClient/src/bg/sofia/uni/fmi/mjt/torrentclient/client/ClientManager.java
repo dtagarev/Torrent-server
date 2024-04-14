@@ -5,6 +5,7 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
@@ -101,6 +102,10 @@ public class ClientManager {
 
     public ErrorHandler getErrorHandler() {
         return this.errorHandler;
+    }
+
+    public UserDirectory getStorage() {
+        return this.storage;
     }
 
 }

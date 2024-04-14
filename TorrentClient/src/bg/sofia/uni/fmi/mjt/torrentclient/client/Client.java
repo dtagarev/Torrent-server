@@ -1,5 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
+import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.Cli;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
@@ -11,6 +12,8 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
 
 public class Client {
@@ -21,17 +24,22 @@ public class Client {
     //  storage is blocked which is not ideal, it can be like 1 min download) and MiniServer that only job is to listen
     //  for connections and download files
     // Todo: How to multithread management in java
+    // Todo: ShutDown trough the name port
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
     private static final ByteBuffer buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         UserInterface ui = new Cli();
         ClientManager clientManager = new ClientManager(ui);
+        ExecutorService executor = newVirtualThreadPerTaskExecutor();
 
-        try(ExecutorService executor = newVirtualThreadPerTaskExecutor();){
+        try {
             SocketChannel socketChannel = connectToServer(ui, clientManager);
+
+            String clientHost = ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString();
+            int clientPort = ((InetSocketAddress) socketChannel.getLocalAddress()).getPort();
 
             String clientName = setClientName(clientManager, ui, socketChannel);
 
@@ -45,10 +53,23 @@ public class Client {
             refresherThread.setDaemon(true);
             executor.submit(refresherThread);
 
+            Thread miniServerThread = new Thread(
+                    new MiniServer(clientHost, clientPort, clientManager.getStorage(), clientManager.getErrorHandler()));
+            executor.submit(miniServerThread);
+
             communicateWithServer(socketChannel, clientManager, ui);
+            int test = 0;
+
+
         } catch (IOException e) {
             clientManager.getErrorHandler().writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);
+        } finally {
+            System.out.println("Client: Shutting down the client" + "Calling awaitTermination");
+            executor.shutdownNow();
+            executor.awaitTermination(5, TimeUnit.SECONDS);
+            System.out.println("Client: Time's up, shutting down the client");
+
         }
     }
 
@@ -78,8 +99,7 @@ public class Client {
                 message = scanner.nextLine();
 
                 if ("quit".equals(message)) {
-                    break;
-
+                    return;
                 }
 
             } while (!clientManager.checkCommand(message));
