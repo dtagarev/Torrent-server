@@ -2942,3 +2942,13 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:132)
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:56)
 --------------------------------------------------
+2024-04-21 21:12
+Connection refused
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:596)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:880)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.connectToServer(Client.java:113)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:43)
+--------------------------------------------------
