@@ -101,8 +101,7 @@ public class ServerThread implements Runnable {
                             if (clientInput == null) {
                                 continue;
                             }
-                            //TOdo: just testing
-                            // lorem ipsum -> register user -> list files -> unregister user -> list files   -> refresh users
+
                             if(!clientInput.contains("refresh-users") && socketToNameStorage.get(clientChannel) == null) {
                                 setClientName(clientChannel, clientInput);
 
