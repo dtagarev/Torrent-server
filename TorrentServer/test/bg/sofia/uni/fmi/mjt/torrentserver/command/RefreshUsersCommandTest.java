@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -39,13 +40,12 @@ public class RefreshUsersCommandTest {
     void testExecute() throws UnknownHostException {
         when(socketChannel.socket()).thenReturn(socket);
         when(socket.getInetAddress()).thenReturn(inetAddress);
-        when(socket.getPort()).thenReturn(1234);
         when(inetAddress.toString()).thenReturn("testAddress");
         when(storage.getData()).
-                thenReturn(Map.of("user1", new User("user1", socketChannel, Set.of("file1", "file2"))));
+                thenReturn(Map.of("user1", new User("user1", socketChannel, 4321, Set.of("file1", "file2"))));
 
         String res = refreshUsersCommand.execute(List.of());
-        assertEquals("user1-testAddress:1234\n", res);
+        assertEquals("user1-testAddress:4321\n", res);
     }
 
     @Test

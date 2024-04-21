@@ -4,7 +4,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Objects;
 import java.util.Set;
 
-public record User(String username, SocketChannel socketChannel, Set<String> files) {
+public record User(String username, SocketChannel socketChannel, Integer ClientServerPort, Set<String> files) {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -44,14 +44,14 @@ public class Client {
 
             String clientName = setClientName(clientManager, ui, socketChannel);
 
-            //submitNewDaemonUserRefresherThread(executor, clientName,
-            //    clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
+            submitNewDaemonUserRefresherThread(executor, clientName,
+                clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
 
             int miniServerPort =
                 submitNewMiniServerThread(executor, ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString(),
                     clientManager.getStorage(), clientManager.getErrorHandler());
 
-            //sendMiniServerPort(miniServerPort, socketChannel);
+            sendMiniServerPort(miniServerPort, socketChannel);
 
             communicateWithServer(socketChannel, clientManager, ui);
 

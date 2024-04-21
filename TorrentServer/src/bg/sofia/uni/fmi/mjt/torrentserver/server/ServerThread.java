@@ -122,12 +122,14 @@ public class ServerThread implements Runnable {
 
     private void handleClientRequest(SocketChannel clientChannel, String clientName, String clientInput)
         throws IOException {
+
         if(!clientInput.contains("refresh-users")) {
             if (clientName == null) {
                 setClientName(clientChannel, clientInput);
                 return;
-            //} else if () {
-                //TODO: set client port
+            } else if (storage.getData().get(clientName).ClientServerPort() == null) {
+                storage.setClientServerPort(clientName, Integer.parseInt(clientInput));
+                return;
             }
         }
 
@@ -195,7 +197,7 @@ public class ServerThread implements Runnable {
             return;
         }
 
-        storage.removeUser(socketToNameStorage.get(clientChannel));
+        storage.removeUser(clientName);
         socketToNameStorage.remove(clientChannel);
         System.out.println(clientName + " has disconnected");
     }

@@ -30,9 +30,11 @@ public class RefreshUsersCommand implements Command {
             Socket userSocket = data.get(user).socketChannel().socket();
             String inetAddress = userSocket.getInetAddress().toString();
 
+            Integer userServerPort = data.get(user).ClientServerPort();
+
             sb.append(user);
             sb.append("-").append(inetAddress);
-            sb.append(":").append(userSocket.getPort());
+            sb.append(":").append(userServerPort);
             sb.append("\n");
         }
         return sb.toString();

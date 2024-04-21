@@ -49,6 +49,19 @@ public class ServerStorageTest {
         assertEquals(socket1,storage.getData().get(user1).socketChannel());
         assertEquals(socket2,storage.getData().get(user2).socketChannel());
     }
+
+    @Test
+    void testSetClientServerPort() {
+        storage.addNewUser(user1, socket1, List.of());
+        storage.addNewUser(user2, socket2, List.of(file2, file3));
+
+        storage.setClientServerPort(user1, 1234);
+        storage.setClientServerPort(user2, 5678);
+
+        assertEquals(1234, storage.getData().get(user1).ClientServerPort());
+        assertEquals(5678, storage.getData().get(user2).ClientServerPort());
+    }
+
     @Test
     void testRegister() {
         storage.addNewUser(user1, socket1, List.of());

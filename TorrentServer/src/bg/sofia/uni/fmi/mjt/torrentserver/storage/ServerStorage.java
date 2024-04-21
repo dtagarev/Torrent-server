@@ -15,8 +15,7 @@ public class ServerStorage implements Storage {
         data = new HashMap<>();
     }
 
-    @Override
-    public synchronized void addNewUser(String username, SocketChannel socketChannel, List<String> files) {
+    public void addNewUser(String username, SocketChannel socketChannel, List<String> files) {
         Set<String> userFiles;
         if(data.containsKey(username)) {
             userFiles = data.get(username).files();
@@ -24,9 +23,16 @@ public class ServerStorage implements Storage {
         } else {
             userFiles = new HashSet<>(files);
         }
-        data.put(username ,new User(username, socketChannel, userFiles));
+        data.put(username ,new User(username, socketChannel, null, userFiles));
     }
 
+    public void setClientServerPort(String username, Integer port) {
+        if(!data.containsKey(username)) {
+            throw new IllegalArgumentException("User does not exist");
+        }
+        User OldUser = data.get(username);
+        data.put(username, new User(OldUser.username(), OldUser.socketChannel(), port, OldUser.files()));
+    }
 
     @Override
     public synchronized void unregister(String username, List<String> files) {
@@ -37,15 +43,17 @@ public class ServerStorage implements Storage {
         files.forEach(data.get(username).files()::remove);
     }
 
+    //TODO: i think it is wrong
     @Override
     public void register(String username, List<String> files) {
-        Set<String> userFiles;
-        if(data.containsKey(username)) {
-            userFiles = data.get(username).files();
-            userFiles.addAll(files);
-        } else {
-            userFiles = new HashSet<>(files);
-        }
+        //Set<String> userFiles;
+        //if(data.containsKey(username)) {
+        //    userFiles = data.get(username).files();
+        //    userFiles.addAll(files);
+        //} else {
+        //    userFiles = new HashSet<>(files);
+        //}
+
         //data.put(username ,new User(username, socketChannel, userFiles));
         data.get(username).files().addAll(files);
     }
