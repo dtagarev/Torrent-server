@@ -1,7 +1,9 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
+import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
+import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.Cli;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
@@ -39,27 +41,19 @@ public class Client {
             SocketChannel socketChannel = connectToServer(ui, clientManager);
 
             String clientHost = ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString();
-            int clientPort = ((InetSocketAddress) socketChannel.getLocalAddress()).getPort();
 
             String clientName = setClientName(clientManager, ui, socketChannel);
 
-            UserRefresher refresher =
-                new UserRefresher(SERVER_PORT, SERVER_HOST,
-                    clientName,
-                    clientManager.getErrorHandler(),
-                    ui, clientManager.getUsersFileManager());
+            submitNewDaemonUserRefresherThread(executor, clientName,
+                clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
 
-            Thread refresherThread = new Thread(refresher);
-            refresherThread.setDaemon(true);
-            executor.submit(refresherThread);
+            InetSocketAddress miniServerAddress = new InetSocketAddress(clientHost, 0);
 
             Thread miniServerThread = new Thread(
-                    new MiniServer(clientHost, clientPort, clientManager.getStorage(), clientManager.getErrorHandler()));
+                    new MiniServer(miniServerAddress ,clientManager.getStorage(), clientManager.getErrorHandler()));
             executor.submit(miniServerThread);
 
             communicateWithServer(socketChannel, clientManager, ui);
-            int test = 0;
-
 
         } catch (IOException e) {
             clientManager.getErrorHandler().writeToLogFile(e);
@@ -71,6 +65,20 @@ public class Client {
             System.out.println("Client: Time's up, shutting down the client");
 
         }
+    }
+
+    private static void submitNewDaemonUserRefresherThread(ExecutorService executor, String clientName,
+                                                           ErrorHandler errorHandler, UserInterface ui, UsersFileManager usersFileManager) {
+        UserRefresher refresher =
+            new UserRefresher(SERVER_PORT, SERVER_HOST,
+                clientName,
+                errorHandler,
+                ui,
+                usersFileManager);
+
+        Thread refresherThread = new Thread(refresher);
+        refresherThread.setDaemon(true);
+        executor.submit(refresherThread);
     }
 
     private static void sendRefreshActiveUsersCommandToServer(SocketChannel socketChannel, String username,

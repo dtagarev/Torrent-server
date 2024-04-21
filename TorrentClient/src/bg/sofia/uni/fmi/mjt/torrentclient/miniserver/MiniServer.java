@@ -15,8 +15,7 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 
 public class MiniServer implements Runnable {
 
-    private final String host;
-    private final int port;
+    private InetSocketAddress host;
     private static final int BUFFER_SIZE = 1024;
     private ByteBuffer buffer;
     private Selector selector;
@@ -26,10 +25,9 @@ public class MiniServer implements Runnable {
     private UserDirectory userDirectory;
     private final ErrorHandler errorHandler;
 
-    public MiniServer(String host, int port, UserDirectory userDirectory, ErrorHandler errorHandler) {
-        this.host = host;
-        this.port = port;
+    public MiniServer(InetSocketAddress inetSocketAddress, UserDirectory userDirectory, ErrorHandler errorHandler) {
 
+        this.host = inetSocketAddress;
         this.userDirectory = userDirectory;
         this.errorHandler = errorHandler;
 
@@ -101,7 +99,7 @@ public class MiniServer implements Runnable {
 
     private void configureServerSocketChannel(ServerSocketChannel channel) throws IOException {
         System.out.println("Miniserver: Configuring server socket channel");
-        channel.bind(new InetSocketAddress(host, port));
+        channel.bind(host);
         channel.configureBlocking(false);
         System.out.println("Miniserver: Resitering server socket channel with selector");
         channel.register(selector, SelectionKey.OP_ACCEPT);

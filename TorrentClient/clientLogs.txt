@@ -2871,3 +2871,11 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:105)
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:60)
 --------------------------------------------------
+2024-04-21 16:49
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:47)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:107)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:62)
+--------------------------------------------------
