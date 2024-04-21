@@ -2,7 +2,6 @@ package bg.sofia.uni.fmi.mjt.torrentclient.miniserver;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.charset.StandardCharsets;
@@ -15,7 +14,7 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 
 public class MiniServer implements Runnable {
 
-    private InetSocketAddress host;
+    private ServerSocketChannel serverSocketChannel;
     private static final int BUFFER_SIZE = 1024;
     private ByteBuffer buffer;
     private Selector selector;
@@ -25,9 +24,9 @@ public class MiniServer implements Runnable {
     private UserDirectory userDirectory;
     private final ErrorHandler errorHandler;
 
-    public MiniServer(InetSocketAddress inetSocketAddress, UserDirectory userDirectory, ErrorHandler errorHandler) {
+    public MiniServer(ServerSocketChannel serverSocketChannel, UserDirectory userDirectory, ErrorHandler errorHandler) {
 
-        this.host = inetSocketAddress;
+        this.serverSocketChannel = serverSocketChannel;
         this.userDirectory = userDirectory;
         this.errorHandler = errorHandler;
 
@@ -35,9 +34,9 @@ public class MiniServer implements Runnable {
     }
 
     public void run() {
-        try (ServerSocketChannel serverSocketChannel = ServerSocketChannel.open()) {
+        try {
             selector = Selector.open();
-            configureServerSocketChannel(serverSocketChannel);
+            configureServerSocketChannel();
             this.buffer = ByteBuffer.allocate(BUFFER_SIZE);
 
             while (!Thread.currentThread().isInterrupted()) {
@@ -97,12 +96,11 @@ public class MiniServer implements Runnable {
         executor.shutdownNow();
     }
 
-    private void configureServerSocketChannel(ServerSocketChannel channel) throws IOException {
+    private void configureServerSocketChannel() throws IOException {
         System.out.println("Miniserver: Configuring server socket channel");
-        channel.bind(host);
-        channel.configureBlocking(false);
+        serverSocketChannel.configureBlocking(false);
         System.out.println("Miniserver: Resitering server socket channel with selector");
-        channel.register(selector, SelectionKey.OP_ACCEPT);
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("Miniserver: Done configuring server socket channel");
     }
 

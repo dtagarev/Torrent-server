@@ -102,14 +102,7 @@ public class ServerThread implements Runnable {
                                 continue;
                             }
 
-                            if(!clientInput.contains("refresh-users") && socketToNameStorage.get(clientChannel) == null) {
-                                setClientName(clientChannel, clientInput);
-
-                            } else {
-                                String result = executeCommand(clientInput, socketToNameStorage.get(clientChannel));
-
-                                writeClientOutput(clientChannel, result);
-                            }
+                            handleClientRequest(clientChannel, socketToNameStorage.get(clientChannel), clientInput);
 
                         } else if (key.isAcceptable()) {
                             accept(selector, key);
@@ -125,6 +118,21 @@ public class ServerThread implements Runnable {
         } catch (IOException e) {
             throw new UncheckedIOException("failed to start server", e);
         }
+    }
+
+    private void handleClientRequest(SocketChannel clientChannel, String clientName, String clientInput)
+        throws IOException {
+        if(!clientInput.contains("refresh-users")) {
+            if (clientName == null) {
+                setClientName(clientChannel, clientInput);
+                return;
+            //} else if () {
+                //TODO: set client port
+            }
+        }
+
+        String result = executeCommand(clientInput, clientName);
+        writeClientOutput(clientChannel, result);
     }
 
     private void setClientName(SocketChannel clientChannel, String clientInput) throws IOException {

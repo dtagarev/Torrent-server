@@ -648,3 +648,74 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
 
 Message: Client azis has entered an invalid command: quit
 --------------------------------------------------
+2024-04-21 17:28
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:157)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.handleClientRequest(ServerThread.java:139)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:32
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:50
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:51
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:54
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:56
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------
+2024-04-21 17:57
+Invalid command: 0
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:141)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client azis has entered an invalid command: 0
+--------------------------------------------------

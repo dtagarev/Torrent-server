@@ -2879,3 +2879,45 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:107)
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:62)
 --------------------------------------------------
+2024-04-21 17:50
+Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.readFromServer(Client.java:159)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.setClientName(Client.java:149)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-21 17:50
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:47)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:127)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:55)
+--------------------------------------------------
+2024-04-21 17:50
+File not found: file1
+java.io.FileNotFoundException: File not found: file1
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:69)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:47)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:127)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:55)
+--------------------------------------------------
+2024-04-21 17:54
+Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.readFromServer(Client.java:159)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.setClientName(Client.java:149)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:44)
+--------------------------------------------------
+2024-04-21 19:28
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:47)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:132)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:56)
+--------------------------------------------------

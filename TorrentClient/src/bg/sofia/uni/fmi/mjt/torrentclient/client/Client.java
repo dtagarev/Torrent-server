@@ -1,6 +1,7 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
@@ -10,6 +11,7 @@ import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -40,18 +42,16 @@ public class Client {
         try {
             SocketChannel socketChannel = connectToServer(ui, clientManager);
 
-            String clientHost = ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString();
-
             String clientName = setClientName(clientManager, ui, socketChannel);
 
-            submitNewDaemonUserRefresherThread(executor, clientName,
-                clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
+            //submitNewDaemonUserRefresherThread(executor, clientName,
+            //    clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
 
-            InetSocketAddress miniServerAddress = new InetSocketAddress(clientHost, 0);
+            int miniServerPort =
+                submitNewMiniServerThread(executor, ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString(),
+                    clientManager.getStorage(), clientManager.getErrorHandler());
 
-            Thread miniServerThread = new Thread(
-                    new MiniServer(miniServerAddress ,clientManager.getStorage(), clientManager.getErrorHandler()));
-            executor.submit(miniServerThread);
+            //sendMiniServerPort(miniServerPort, socketChannel);
 
             communicateWithServer(socketChannel, clientManager, ui);
 
@@ -65,6 +65,25 @@ public class Client {
             System.out.println("Client: Time's up, shutting down the client");
 
         }
+    }
+
+    private static void sendMiniServerPort(int miniServerPort, SocketChannel socketChannel)
+        throws IOException {
+
+        writeToServer(socketChannel, Integer.toString(miniServerPort));
+    }
+
+    private static int submitNewMiniServerThread(ExecutorService executor, String clientHost, UserDirectory storage, ErrorHandler errorHandler)
+        throws IOException {
+        InetSocketAddress miniServerAddress = new InetSocketAddress(clientHost, 0);
+        ServerSocketChannel miniServerSocketChannel = ServerSocketChannel.open();
+        miniServerSocketChannel.bind(miniServerAddress);
+
+        Thread miniServerThread = new Thread(new MiniServer(miniServerSocketChannel ,storage, errorHandler));
+        executor.submit(miniServerThread);
+
+        return miniServerSocketChannel.socket().getLocalPort();
+
     }
 
     private static void submitNewDaemonUserRefresherThread(ExecutorService executor, String clientName,
