@@ -2863,3 +2863,11 @@ java.io.IOException: Broken pipe
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
 --------------------------------------------------
+2024-04-21 14:54
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientManager.checkCommand(ClientManager.java:47)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.communicateWithServer(Client.java:105)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:60)
+--------------------------------------------------

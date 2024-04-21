@@ -64,6 +64,7 @@ public class MiniServer implements Runnable {
 
             shutDown();
         } catch (IOException e) {
+            System.err.println("failed to start server: " + e);
             throw new UncheckedIOException("failed to start server", e);
         }
 
