@@ -29,6 +29,8 @@ public class Client {
     //  for connections and download files
     // Todo: How to multithread management in java
     // Todo: ShutDown trough the name port
+    // TOdo: change the register command to send files and the client Directory to have a file class which is a wrapper for a path
+    // so it can by syncronized and the file can be downloaded and uploaded
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
@@ -131,7 +133,9 @@ public class Client {
 
             } while (!clientManager.checkCommand(message));
 
+            if(message.contains("download")) {
 
+            }
             ui.displaySendingMessage(message);
             writeToServer(socketChannel, message);
 

@@ -22,7 +22,7 @@ public class CommandChecker {
     }
 
     private boolean commandContainsCorrectSymbols(String cmd) {
-        return cmd.matches("[a-zA-Z0-9. ,-]+");
+        return cmd.matches("[a-zA-Z0-9. \\\\/,-]+");
     }
 
     private String areFilesValid(String files) {
@@ -63,6 +63,7 @@ public class CommandChecker {
         if (cmdParameters.size() != serverCommand.getCommandArgs()) {
             throw new InvalidCommand("Invalid number of arguments");
         }
+
         if (serverCommand.getFileArgsIdx() != -1){
             String invalidFile = areFilesValid(cmdParameters.get(serverCommand.getFileArgsIdx()));
             if(invalidFile != null) {

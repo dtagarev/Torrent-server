@@ -5,7 +5,8 @@ public enum ServerCommand {
     register("register", 3, 2),
     unregister("unregister",3, 2),
     list_files("list-files",1, -1),
-    help("help",1, -1);
+    help("help",1, -1),
+    download("download", 4, 2);
 
     private final String commandName;
     private final int commandArgs;

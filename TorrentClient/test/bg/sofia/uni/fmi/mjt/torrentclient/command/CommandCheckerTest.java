@@ -109,4 +109,13 @@ public class CommandCheckerTest {
         assertThrows(InvalidSymbolInCommand.class, () -> commandChecker.check(command3));
         assertThrows(InvalidSymbolInCommand.class, () -> commandChecker.check(command4));
     }
+    @Test
+    public void testDownloadCommand() throws FileNotFoundException {
+        when(userDirectory.containsFile("file1")).thenReturn(true);
+        String commandLinux = "download user1 file1 ./this/is/a/path/to/file1";
+        String commandWindows = "download user1 file1 .\\this\\is\\a\\path\\to\\file1";
+
+        assertEquals(commandLinux, commandChecker.check(commandLinux));
+        assertEquals(commandWindows, commandChecker.check(commandWindows));
+    }
 }
