@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 
-public class ServerConnection {
+public class ServerConnection implements ServerCommunicator {
     private final int SERVER_PORT;
     private final String SERVER_HOST;
     private final ByteBuffer buffer;
@@ -35,14 +35,14 @@ public class ServerConnection {
         return socketChannel;
     }
 
-    private void writeToServer(String message) throws IOException {
+    public void writeToServer(String message) throws IOException {
         buffer.clear(); // switch to writing mode
         buffer.put(message.getBytes()); // buffer fill
         buffer.flip(); // switch to reading mode
         socketChannel.write(buffer); // buffer drain
     }
 
-    private String readFromServer() throws IOException {
+    public String readFromServer() throws IOException {
         buffer.clear(); // switch to writing mode
         socketChannel.read(buffer); // buffer fill
         buffer.flip(); // switch to reading mode
@@ -56,8 +56,13 @@ public class ServerConnection {
         socketChannel.close();
     }
 
+    @Override
     public synchronized String communicateWithServer(String message) throws IOException {
         writeToServer(message);
         return readFromServer();
+    }
+
+    public String getClientHost() throws IOException {
+        return ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString();
     }
 }

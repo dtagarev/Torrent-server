@@ -36,6 +36,12 @@ public class CommandChecker {
         return null;
     }
 
+    public boolean checkUsername(String name) {
+        if(name.matches("[a-z0-9]+")) {
+            return true;
+        }
+        return false;
+    }
 
     public String check(String cmd)
             throws EmptyCommand, InvalidCommand, InvalidSymbolInCommand, FileNotFoundException {

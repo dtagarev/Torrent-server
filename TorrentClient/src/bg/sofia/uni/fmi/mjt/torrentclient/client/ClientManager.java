@@ -31,15 +31,6 @@ public class ClientManager {
 
     }
 
-    public boolean checkName(String name) {
-        if(name.matches("[a-z0-9]+")) {
-            return true;
-        }
-
-        ui.displayErrorMessage("Invalid name" + "\n"
-            + "Name should contain only lowercase letters and digits");
-        return false;
-    }
 
 
     public boolean checkCommand(String message) {
