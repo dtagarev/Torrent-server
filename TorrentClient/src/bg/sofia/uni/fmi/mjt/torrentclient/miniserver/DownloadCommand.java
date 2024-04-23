@@ -82,6 +82,7 @@ public class DownloadCommand {
                 //TODO: process multible files
             } else {
                 //TODO: process one file
+                
             }
         } catch (FileNotFoundException e) {
             errorHandler.writeToLogFile(e);
