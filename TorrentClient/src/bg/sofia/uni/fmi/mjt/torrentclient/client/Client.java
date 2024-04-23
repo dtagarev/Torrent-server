@@ -91,12 +91,12 @@ public class Client {
 
     private static void submitNewDaemonUserRefresherThread(ExecutorService executor, String clientName,
                                                            ErrorHandler errorHandler, UserInterface ui, UsersFileManager usersFileManager) {
-        UserRefresher refresher =
-            new UserRefresher(SERVER_PORT, SERVER_HOST,
-                clientName,
-                errorHandler,
-                ui,
-                usersFileManager);
+        UserRefresher refresher = null;
+//            new UserRefresher(SERVER_PORT, SERVER_HOST,
+//                clientName,
+//                errorHandler,
+//                ui,
+//                usersFileManager);
 
         Thread refresherThread = new Thread(refresher);
         refresherThread.setDaemon(true);

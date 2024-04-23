@@ -2,7 +2,7 @@ package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
-import bg.sofia.uni.fmi.mjt.torrentclient.exception.ServerConnectionException;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
 import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -27,6 +27,11 @@ public class ClientHandler {
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
+
+    //TODO: storage fix
+    //TODO: handle commands
+    // download files
+    // transfer help command here
 
     ServerConnection serverConnection;
     ErrorHandler errorHandler;
@@ -52,9 +57,29 @@ public class ClientHandler {
         executor = newVirtualThreadPerTaskExecutor();
     }
 
-    //TODO: change name when command checker is initialized
-    private void initialize(String name) throws IOException {
-        String miniServerPort = null;
+    private void initializeUsersFileManager(String clientName) throws IOException {
+        Path usersFilePath = Path.of(System.getProperty("user.dir") + File.separator + clientName + "ActiveUsers.txt");
+
+        String errorMessage = "Cannot create active users file.\n"
+                + "Further error-free usage of the program is not guaranteed";
+
+        if(!Files.exists(usersFilePath)) {
+            Files.createFile(usersFilePath);
+        }
+
+        usersFileManager = new UsersFileManager(usersFilePath);
+    }
+
+    private void initializeUserRefresher(String name) {
+        UserRefresher refresher = new UserRefresher(serverConnection,
+                usersFileManager, errorHandler, ui);
+
+        Thread refresherThread = new Thread(refresher);
+        refresherThread.setDaemon(true);
+        executor.submit(refresherThread);
+    }
+
+    private String initializeMiniServer() {
         try {
             String clientHost = serverConnection.getClientHost();
             InetSocketAddress miniServerAddress = new InetSocketAddress(clientHost, 0);
@@ -63,33 +88,32 @@ public class ClientHandler {
 
             Thread miniServerThread = new Thread(new MiniServer(miniServerSocketChannel ,storage, errorHandler));
             executor.submit(miniServerThread);
-            miniServerPort = Integer.toString(miniServerSocketChannel.socket().getLocalPort());
+
+            return Integer.toString(miniServerSocketChannel.socket().getLocalPort());
 
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             ui.displayErrorMessage("There is problem seeding files to other clients.\n" +
                     "No files will be seeded");
+            return "0";
         }
-
-        if(miniServerPort == null) {
-            serverConnection.writeToServer("0");
-            //TODO: handle zero inside the server
-        }
-        else {
-            serverConnection.writeToServer(miniServerPort);
-        }
-
-//        UserRefresher refresher =
-//                new UserRefresher(SERVER_PORT, SERVER_HOST,
-//                        name,
-//                        errorHandler,
-//                        ui,
-//                        usersFileManager);
-//
-//        Thread refresherThread = new Thread(refresher);
-//        refresherThread.setDaemon(true);
-//        executor.submit(refresherThread);
     }
+    private void initializeAll(String name) throws IOException {
+
+        String miniServerPort = initializeMiniServer();
+        //TODO: handle zero inside the server
+        serverConnection.writeToServer(miniServerPort);
+
+        try {
+            initializeUsersFileManager(name);
+            initializeUserRefresher(name);
+        } catch (IOException e) {
+            errorHandler.writeToLogFile(e);
+            ui.displayErrorMessage("Cannot create active users file.\n"
+                    + "Further error-free usage of the program is not guaranteed");
+        }
+    }
+
 
     private String setClientName() throws IOException {
         String message = null;
@@ -110,7 +134,7 @@ public class ClientHandler {
             ui.displayReply(reply);
         }
 
-        initialize(message);
+        initializeAll(message);
         return message;
     }
 

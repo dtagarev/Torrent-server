@@ -1,4 +1,4 @@
-package bg.sofia.uni.fmi.mjt.torrentclient.exception;
+package bg.sofia.uni.fmi.mjt.torrentclient.exceptions;
 
 public class UserNotFoundInFile extends RuntimeException {
     public UserNotFoundInFile(String message) {

@@ -1,6 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.connection;
 
-import bg.sofia.uni.fmi.mjt.torrentclient.exception.ServerConnectionException;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

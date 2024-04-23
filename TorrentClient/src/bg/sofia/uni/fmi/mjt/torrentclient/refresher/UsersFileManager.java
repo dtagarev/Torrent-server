@@ -1,6 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
-import bg.sofia.uni.fmi.mjt.torrentclient.exception.UserNotFoundInFile;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.UserNotFoundInFile;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
