@@ -20,6 +20,7 @@ public  class  ClientStorage  implements UserDirectory {
     //TODO: should it be synchronized?
 
     private Path dirPath;
+    //TODO: ne directoriq a mnojestvo of paths
 
     public ClientStorage(Path clientStoragePath) {
         //dirPath = Path.of(System.getProperty("user.dir") + System.lineSeparator() + "ClientStorage");
