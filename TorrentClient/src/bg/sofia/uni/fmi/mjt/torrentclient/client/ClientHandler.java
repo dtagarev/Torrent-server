@@ -42,18 +42,18 @@ public class ClientHandler {
         } catch (ServerConnectionException e) {
             throw new RuntimeException(e);
         }
-
+        //TODO: initialize storage corecctly
+        storage = null;
+        //TODO: command checker
+        commandChecker = new CommandChecker(storage);
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
         this.ui = new Cli();
         executor = newVirtualThreadPerTaskExecutor();
     }
 
+    //TODO: change name when command checker is initialized
     private void initialize(String name) throws IOException {
-        //this.commandChecker = new CommandChecker();
-        //this.usersFileManager = new UsersFileManager();
-        //clientManager.createClientDirectory(message);
-        //clientManager.createUsersFileManager(message);
         String miniServerPort = null;
         try {
             String clientHost = serverConnection.getClientHost();
@@ -110,14 +110,19 @@ public class ClientHandler {
             ui.displayReply(reply);
         }
 
+        initialize(message);
         return message;
     }
 
     public void start() {
         try {
             String clientName = setClientName();
-
-            initialize(clientName);
+            while (true) {
+                ui.displayMessagePrompt();
+                String message = new Scanner(System.in).nextLine();
+                String reply = serverConnection.communicateWithServer(message);
+                ui.displayReply(reply);
+            }
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);

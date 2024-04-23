@@ -44,7 +44,8 @@ public class Client {
         try {
             SocketChannel socketChannel = connectToServer(ui, clientManager);
 
-            String clientName = setClientName(clientManager, ui, socketChannel);
+            //String clientName = setClientName(clientManager, ui, socketChannel);
+            String clientName = null;
 
             submitNewDaemonUserRefresherThread(executor, clientName,
                 clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
@@ -143,25 +144,25 @@ public class Client {
             ui.displayReply(reply);
         }
     }
-    private static String setClientName(ClientManager clientManager, UserInterface ui, SocketChannel channel)
-        throws IOException {
-        String message = null;
-        Scanner scanner = new Scanner(System.in);
-        String reply = "Invalid name";
-       while (reply.contains("Invalid")) {
-           do {
-               ui.displayNamePrompt();
-               message = scanner.nextLine();
-           } while (!clientManager.checkName(message));
-
-           writeToServer(channel, message);
-           reply = readFromServer(channel);
-           ui.displayReply(reply);
-       }
-       clientManager.createClientDirectory(message);
-       clientManager.createUsersFileManager(message);
-       return message;
-    }
+//    private static String setClientName(ClientManager clientManager, UserInterface ui, SocketChannel channel)
+//        throws IOException {
+//        String message = null;
+//        Scanner scanner = new Scanner(System.in);
+//        String reply = "Invalid name";
+//       while (reply.contains("Invalid")) {
+//           do {
+//               ui.displayNamePrompt();
+//               message = scanner.nextLine();
+//           } while (!clientManager.checkName(message));
+//
+//           writeToServer(channel, message);
+//           reply = readFromServer(channel);
+//           ui.displayReply(reply);
+//       }
+//       clientManager.createClientDirectory(message);
+//       clientManager.createUsersFileManager(message);
+//       return message;
+//    }
 
     private static String readFromServer(SocketChannel socketChannel) throws IOException {
         buffer.clear(); // switch to writing mode
