@@ -1,5 +1,7 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.connection;
 
+import bg.sofia.uni.fmi.mjt.torrentclient.exception.ServerConnectionException;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -9,8 +11,6 @@ import java.nio.charset.StandardCharsets;
 public class ServerConnection {
     private final int SERVER_PORT;
     private final String SERVER_HOST;
-    private final int BUFFER_SIZE;
-
     private final ByteBuffer buffer;
 
     SocketChannel socketChannel;
@@ -18,7 +18,6 @@ public class ServerConnection {
     public ServerConnection(String SERVER_HOST, int SERVER_PORT, int BUFFER_SIZE) throws ServerConnectionException {
         this.SERVER_HOST = SERVER_HOST;
         this.SERVER_PORT = SERVER_PORT;
-        this.BUFFER_SIZE = BUFFER_SIZE;
         this.buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
 
         try {

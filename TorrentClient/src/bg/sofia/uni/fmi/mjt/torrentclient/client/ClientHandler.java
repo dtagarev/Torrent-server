@@ -2,9 +2,8 @@ package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
-import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnectionException;
+import bg.sofia.uni.fmi.mjt.torrentclient.exception.ServerConnectionException;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
-import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
