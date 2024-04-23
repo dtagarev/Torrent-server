@@ -28,6 +28,7 @@ public class ClientHandler {
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
 
+    //TODO: fix tests
     //TODO: storage fix
     //TODO: handle commands
     // download files
