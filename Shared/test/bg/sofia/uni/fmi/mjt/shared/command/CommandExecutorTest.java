@@ -2,7 +2,7 @@ package bg.sofia.uni.fmi.mjt.shared.command;
 
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
-import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -42,7 +42,7 @@ public class CommandExecutorTest {
     }
 
     @Test
-    public void testExecute() {
+    public void testExecute() throws InvalidCommand, EmptyCommand {
 
         Mockito.when(command1.toString()).thenReturn("register");
         Mockito.when(command2.toString()).thenReturn("unregister");
@@ -74,7 +74,7 @@ public class CommandExecutorTest {
         verify(command4, times(1)).execute(args4);
     }
     @Test
-    public void testExecuteMultipleFiles() {
+    public void testExecuteMultipleFiles() throws InvalidCommand, EmptyCommand {
 
         Mockito.when(command4.toString()).thenReturn("download");
 
@@ -90,7 +90,7 @@ public class CommandExecutorTest {
     }
 
     @Test
-    public void testExecuteMultipleFilesNoSpaces() {
+    public void testExecuteMultipleFilesNoSpaces() throws InvalidCommand, EmptyCommand {
 
         Mockito.when(command4.toString()).thenReturn("download");
 
@@ -134,24 +134,6 @@ public class CommandExecutorTest {
         verify(command2, times(0)).execute(List.of());
         verify(command3, times(0)).execute(List.of());
         verify(command4, times(0)).execute(List.of());
-
-    }
-
-    @Test
-    public void testInvalidSymbolInCommand() {
-
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("download user1 file1!"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("&download user1 file1"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("download user1 fil!e1"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("downloa!d user1 file1"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("download! user1 file1"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("download user@1 file1"));
-        assertThrows(InvalidSymbolInCommand.class, () -> commandExecutor.execute("download #user1 file1"));
-
-        verify(command1, times(0)).execute(List.of("user1", "file1!"));
-        verify(command2, times(0)).execute(List.of("user1", "file1!"));
-        verify(command3, times(0)).execute(List.of("user1", "file1!"));
-        verify(command4, times(0)).execute(List.of("user1", "file1!"));
 
     }
 

@@ -18,7 +18,7 @@ public class CommandChecker {
     }
 
     private boolean isFileValid(String filename) {
-        return userDirectory.containsFile(filename);
+        return userDirectory.containsFilePath(filename);
     }
 
     private boolean commandContainsCorrectSymbols(String cmd) {

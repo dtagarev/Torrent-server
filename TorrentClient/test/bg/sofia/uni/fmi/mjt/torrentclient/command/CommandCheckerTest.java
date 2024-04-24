@@ -26,16 +26,16 @@ public class CommandCheckerTest {
 
     @Test
     public void testCheckWithRegister() throws FileNotFoundException {
-        when(userDirectory.containsFile("file1")).thenReturn(true);
-        when(userDirectory.containsFile("file2")).thenReturn(true);
+        when(userDirectory.containsFilePath("file1")).thenReturn(true);
+        when(userDirectory.containsFilePath("file2")).thenReturn(true);
         String command = "register user file1,file2";
 
         assertEquals(command, commandChecker.check(command));
     }
     @Test
     public void testCheckWithUnregister() throws FileNotFoundException {
-        when(userDirectory.containsFile("file1")).thenReturn(true);
-        when(userDirectory.containsFile("file2")).thenReturn(true);
+        when(userDirectory.containsFilePath("file1")).thenReturn(true);
+        when(userDirectory.containsFilePath("file2")).thenReturn(true);
         String command = "unregister user file1,file2";
 
         assertEquals(command, commandChecker.check(command));
@@ -53,8 +53,8 @@ public class CommandCheckerTest {
 
     @Test
     public void testCheckWithRegisterWithInvalidFile() {
-        when(userDirectory.containsFile("file1")).thenReturn(true);
-        when(userDirectory.containsFile("file2")).thenReturn(false);
+        when(userDirectory.containsFilePath("file1")).thenReturn(true);
+        when(userDirectory.containsFilePath("file2")).thenReturn(false);
 
         String command = "register user file1,file2";
         String command2 = "register user file2";
@@ -110,7 +110,7 @@ public class CommandCheckerTest {
     }
     @Test
     public void testDownloadCommand() throws FileNotFoundException {
-        when(userDirectory.containsFile("file1")).thenReturn(true);
+        when(userDirectory.containsFilePath("file1")).thenReturn(true);
         String commandLinux = "download user1 file1 ./this/is/a/path/to/file1";
         String commandWindows = "download user1 file1 .\\this\\is\\a\\path\\to\\file1";
 

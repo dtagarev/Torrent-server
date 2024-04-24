@@ -1,7 +1,5 @@
 package bg.sofia.uni.fmi.mjt.shared.errorhanler;
 
-import net.bytebuddy.asm.MemberSubstitution;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;

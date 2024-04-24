@@ -50,11 +50,11 @@ public class Client {
             submitNewDaemonUserRefresherThread(executor, clientName,
                 clientManager.getErrorHandler(), ui, clientManager.getUsersFileManager());
 
-            int miniServerPort =
-                submitNewMiniServerThread(executor, ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString(),
-                    clientManager.getStorage(), clientManager.getErrorHandler());
+            //int miniServerPort =
+            //    submitNewMiniServerThread(executor, ((InetSocketAddress) socketChannel.getLocalAddress()).getHostString(),
+            //        clientManager.getStorage(), clientManager.getErrorHandler());
 
-            sendMiniServerPort(miniServerPort, socketChannel);
+            //sendMiniServerPort(miniServerPort, socketChannel);
 
             communicateWithServer(socketChannel, clientManager, ui);
 

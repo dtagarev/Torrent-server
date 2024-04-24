@@ -20,7 +20,7 @@ public class ErrorHandlerTest {
         Path tempFile = Files.createTempFile(tempDir, "test", ".txt");
         ErrorHandler errorHandler = new ErrorHandler(tempFile);
 
-        RuntimeException exception = new EmptyCommand("Test exception");
+        EmptyCommand exception = new EmptyCommand("Test exception");
         errorHandler.writeToLogFile(exception);
 
         String fileContent = Files.readString(tempFile);
@@ -32,7 +32,7 @@ public class ErrorHandlerTest {
         Path tempFile = Files.createTempFile(tempDir, "test", ".txt");
         ErrorHandler errorHandler = new ErrorHandler(tempFile);
 
-        RuntimeException exception = new EmptyCommand("Test exception");
+        EmptyCommand exception = new EmptyCommand("Test exception");
         errorHandler.writeToLogFile(exception, "Test message");
 
         String fileContent = Files.readString(tempFile);

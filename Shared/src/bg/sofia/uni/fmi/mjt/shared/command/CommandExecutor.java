@@ -16,22 +16,12 @@ public class CommandExecutor {
         this.commands = commands;
     }
 
-    private boolean commandContainsCorrectSymbols(String cmd) {
-        //boolean b = cmd.matches("[a-zA-Z0-9 ,-]+");
-        //System.out.println("correct symbol check is: " + b + " for command: " + cmd);
-        //return b;
-        return cmd.matches("[a-zA-Z0-9 ,-]+");
-    }
-
-    public String execute(String cmd) throws EmptyCommand, InvalidCommand, InvalidSymbolInCommand {
+    public String execute(String cmd) throws EmptyCommand, InvalidCommand {
         List<String> cmdList = new ArrayList<>(List.of(cmd.split(" ")));
 
         if(cmd.isEmpty() || cmd.isBlank()) {
             throw new EmptyCommand("Command is empty");
         }
-        //if(!commandContainsCorrectSymbols(cmd)){
-        //    throw new InvalidSymbolInCommand("Invalid symbol in command");
-        //}
 
         for (Command command : commands) {
             if(command.toString().equals(cmdList.getFirst())) {

@@ -5,8 +5,8 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
-import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
 import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
@@ -40,7 +40,7 @@ public class ClientHandler {
 
     ServerConnection serverConnection;
     ErrorHandler errorHandler;
-    ClientStorage storage;
+    SeedingFiles storage;
     CommandChecker commandChecker;
     UserInterface ui;
     UsersFileManager usersFileManager;
@@ -53,7 +53,7 @@ public class ClientHandler {
             throw new RuntimeException(e);
         }
         //TODO: initialize storage corecctly
-        storage = null;
+        storage = new SeedingFiles();
         //TODO: command checker
         commandChecker = new CommandChecker(storage);
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");

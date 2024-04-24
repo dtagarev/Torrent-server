@@ -4,7 +4,7 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
-import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
@@ -17,7 +17,7 @@ import java.nio.file.Path;
 
 public class ClientManager {
     ErrorHandler errorHandler;
-    ClientStorage storage;
+    SeedingFiles storage;
 
     CommandChecker commandChecker;
     UserInterface ui;
@@ -53,8 +53,8 @@ public class ClientManager {
         Path clientStoragePath = Path.of(System.getProperty("user.dir") + File.separator + clientName + "Directory");
 
         createDirectory(clientStoragePath);
-        this.storage = new ClientStorage(clientStoragePath);
-        this.commandChecker = new CommandChecker(storage);
+        //this.storage = new SeedingFiles(clientStoragePath);
+        //this.commandChecker = new CommandChecker(storage);
     }
 
     private void createDirectory(Path clientStoragePath) {
@@ -95,8 +95,8 @@ public class ClientManager {
         return this.errorHandler;
     }
 
-    public UserDirectory getStorage() {
-        return this.storage;
-    }
+    //public UserDirectory getStorage() {
+    //    return this.storage;
+    //}
 
 }
