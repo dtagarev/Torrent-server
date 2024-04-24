@@ -55,13 +55,13 @@ public class CommandChecker {
             throw new InvalidSymbolInCommand("Invalid symbol in command");
         }
 
-        ServerCommand serverCommand;
+        AvailableCommands serverCommand;
         try {
             String commandName = cmdParameters.getFirst();
             if(commandName.contains("-")) {
                 commandName = commandName.replace("-", "_");
             }
-            serverCommand = ServerCommand.valueOf(commandName);
+            serverCommand = AvailableCommands.valueOf(commandName);
         } catch (IllegalArgumentException e) {
             throw new InvalidCommand("Invalid command");
         }

@@ -12,8 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.io.FileNotFoundException;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 
@@ -117,5 +116,40 @@ public class CommandCheckerTest {
 
         assertEquals(commandLinux, commandChecker.check(commandLinux));
         assertEquals(commandWindows, commandChecker.check(commandWindows));
+    }
+
+    @Test
+    public void testQuitCommand() throws FileNotFoundException {
+        String command = "quit";
+        assertEquals(command, commandChecker.check(command));
+    }
+
+    @Test
+    public void testQuitInvalidNumberOfArguments() {
+        String command = "quit user";
+        String command2 = "quit user file1";
+
+        assertThrows(InvalidCommand.class, () -> commandChecker.check(command));
+        assertThrows(InvalidCommand.class, () -> commandChecker.check(command2));
+    }
+
+    @Test
+    public void testCheckUsername() {
+        String username = "user";
+        String username2 = "user1";
+
+        assertTrue(commandChecker.checkUsername(username));
+        assertTrue(commandChecker.checkUsername(username2));
+    }
+
+    @Test
+    public void testCheckUsernameWithInvalidUsername() {
+        String username = "user!";
+        String username2 = "user_1";
+        String username3 = "user-1";
+
+        assertFalse(commandChecker.checkUsername(username));
+        assertFalse(commandChecker.checkUsername(username2));
+        assertFalse(commandChecker.checkUsername(username3));
     }
 }

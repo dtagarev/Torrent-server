@@ -719,3 +719,14 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: 0
 
 Message: Client azis has entered an invalid command: 0
 --------------------------------------------------
+2024-04-24 13:17
+Invalid command: ls
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: ls
+	at bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor.execute(CommandExecutor.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.executeCommand(ServerThread.java:152)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.handleClientRequest(ServerThread.java:136)
+	at bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread.run(ServerThread.java:105)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Message: Client toni has entered an invalid command: ls
+--------------------------------------------------

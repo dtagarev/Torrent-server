@@ -2952,3 +2952,11 @@ java.net.ConnectException: Connection refused
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.connectToServer(Client.java:113)
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.main(Client.java:43)
 --------------------------------------------------
+2024-04-24 13:17
+Invalid command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker.check(CommandChecker.java:66)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.checkCommand(ClientHandler.java:150)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:170)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.TempStarter.main(TempStarter.java:6)
+--------------------------------------------------

@@ -1,6 +1,9 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.client;
 
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
+import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.ClientStorage;
@@ -12,6 +15,7 @@ import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
@@ -88,6 +92,8 @@ public class ClientHandler {
             miniServerSocketChannel.bind(miniServerAddress);
 
             Thread miniServerThread = new Thread(new MiniServer(miniServerSocketChannel ,storage, errorHandler));
+            miniServerThread.setDaemon(true);
+
             executor.submit(miniServerThread);
 
             return Integer.toString(miniServerSocketChannel.socket().getLocalPort());
@@ -99,6 +105,7 @@ public class ClientHandler {
             return "0";
         }
     }
+
     private void initializeAll(String name) throws IOException {
 
         String miniServerPort = initializeMiniServer();
@@ -114,7 +121,6 @@ public class ClientHandler {
                     + "Further error-free usage of the program is not guaranteed");
         }
     }
-
 
     private String setClientName() throws IOException {
         String message = null;
@@ -139,18 +145,48 @@ public class ClientHandler {
         return message;
     }
 
+    private boolean checkCommand(String message) {
+        try {
+            commandChecker.check(message);
+            return true;
+        } catch (FileNotFoundException | IllegalArgumentException | EmptyCommand | InvalidCommand |
+                 InvalidSymbolInCommand e) {
+            errorHandler.writeToLogFile(e);
+            ui.displayErrorMessage(e.getMessage());
+        }
+        return false;
+    }
+
     public void start() {
         try {
             String clientName = setClientName();
+            Scanner in = new Scanner(System.in);
+            String message = null;
+
             while (true) {
-                ui.displayMessagePrompt();
-                String message = new Scanner(System.in).nextLine();
-                String reply = serverConnection.communicateWithServer(message);
-                ui.displayReply(reply);
+                do {
+                    ui.displayMessagePrompt();
+                    message = in.nextLine();
+                } while(!checkCommand(message));
+
+                if("quit".equals(message)) {
+                    shutDown();
+                    return;
+                }
+
+                if(message.contains("download")) {
+
+                } else {
+                    String reply = serverConnection.communicateWithServer(message);
+                    ui.displayReply(reply);
+                }
             }
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);
         }
+    }
+
+    private void shutDown() {
     }
 }
