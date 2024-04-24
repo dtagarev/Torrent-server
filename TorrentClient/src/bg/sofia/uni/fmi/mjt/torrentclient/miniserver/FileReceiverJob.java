@@ -64,6 +64,7 @@ public class FileReceiverJob implements Callable<Boolean> {
     //    }
     //    return null;
     //}
+    //If i have p2p architecture and every client has a server that can send files via fileChannel how should i handle the stiuation where one client is sending message to another and a third client requests the same file from the first.
     @Override
     public Boolean call() {
         //connect to server, ask for file, receive file, save file
