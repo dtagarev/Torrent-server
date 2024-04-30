@@ -13,7 +13,7 @@ public class ServerConnection implements ServerCommunicator {
     private final String SERVER_HOST;
     private final ByteBuffer buffer;
 
-    SocketChannel socketChannel;
+    private SocketChannel socketChannel;
 
     public ServerConnection(String SERVER_HOST, int SERVER_PORT, int BUFFER_SIZE) throws ServerConnectionException {
         this.SERVER_HOST = SERVER_HOST;

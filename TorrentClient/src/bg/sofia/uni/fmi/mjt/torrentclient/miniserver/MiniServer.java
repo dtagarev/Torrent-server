@@ -53,7 +53,7 @@ public class MiniServer implements Runnable {
                     handleClientRequest();
 
                 } catch (ClosedByInterruptException ignored) {
-                    shutDown();
+                    this.shutDown();
                 } catch (IOException e) {
                     errorHandler.writeToLogFile(e);
                 }
@@ -78,6 +78,7 @@ public class MiniServer implements Runnable {
             System.out.println("Miniserver: iterating the channels");
 
             if (key.isReadable()) {
+
 
                 SocketChannel clientChannel = (SocketChannel) key.channel();
                 String clientInput = getClientInput(clientChannel);
