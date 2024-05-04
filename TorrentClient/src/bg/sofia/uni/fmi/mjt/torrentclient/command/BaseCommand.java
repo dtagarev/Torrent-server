@@ -1,11 +1,12 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.command;
 
+
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 
 import java.util.List;
 
-public class BaseCommand {
+public class BaseCommand  {
 
     protected void checkCharacters(List<String> list) throws InvalidCommand {
         for (String s : list) {

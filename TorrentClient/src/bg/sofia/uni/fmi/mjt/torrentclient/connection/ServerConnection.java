@@ -29,6 +29,7 @@ public class ServerConnection implements ServerCommunicator {
     }
 
     private SocketChannel connectToServer() throws IOException {
+
         SocketChannel socketChannel = SocketChannel.open();
         socketChannel.connect(new InetSocketAddress(SERVER_HOST, SERVER_PORT));
 

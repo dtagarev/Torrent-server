@@ -1,4 +1,4 @@
-package bg.sofia.uni.fmi.mjt.torrentclient.miniserver;
+package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -14,14 +14,14 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 
 public class MiniServer implements Runnable {
 
-    private ServerSocketChannel serverSocketChannel;
+    private final ServerSocketChannel serverSocketChannel;
     private static final int BUFFER_SIZE = 1024;
     private ByteBuffer buffer;
     private Selector selector;
 
-    private ExecutorService executor;
+    private final ExecutorService executor;
 
-    private UserDirectory userDirectory;
+    private final UserDirectory userDirectory;
     private final ErrorHandler errorHandler;
 
     public MiniServer(ServerSocketChannel serverSocketChannel, UserDirectory userDirectory, ErrorHandler errorHandler) {

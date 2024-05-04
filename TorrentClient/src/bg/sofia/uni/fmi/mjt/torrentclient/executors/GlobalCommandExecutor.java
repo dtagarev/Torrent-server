@@ -3,7 +3,6 @@ package bg.sofia.uni.fmi.mjt.torrentclient.executors;
 import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
-import bg.sofia.uni.fmi.mjt.torrentclient.command.RegisterCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +15,20 @@ public class GlobalCommandExecutor {
         this.commands = commands;
     }
 
-    void execute(String cmd) {
+    public String execute(String cmd) {
         List<String> cmdList = new ArrayList<>(List.of(cmd.split(" ")));
 
         if(cmd.isEmpty() || cmd.isBlank()) {
             throw new EmptyCommand("Command is empty");
         }
-        final var command = commands.stream().findFirst().filter(c -> c.toString().equals(cmdList.getFirst()));
+        final var command = commands.stream()
+                .filter(c -> c.toString()
+                        .equals(cmdList.getFirst())
+                ).findFirst();
         if (command.isEmpty()) {
             throw new InvalidCommand("Invalid command: " + cmdList.getFirst());
         }
 
-        command.get().execute(cmdList);
+        return command.get().execute(cmdList.subList(1, cmdList.size()));
     }
 }

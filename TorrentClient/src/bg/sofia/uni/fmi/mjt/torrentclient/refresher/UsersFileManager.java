@@ -47,6 +47,6 @@ public class UsersFileManager {
                }
            }
        }
-       throw new UserNotFoundInFile("User's info was not");
+       throw new UserNotFoundInFile("User's info was not found");
    }
 }

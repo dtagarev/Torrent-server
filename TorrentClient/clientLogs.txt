@@ -2960,3 +2960,291 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:170)
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.TempStarter.main(TempStarter.java:6)
 --------------------------------------------------
+2024-05-01 15:49
+Invalid command: regiseter
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: regiseter
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:163)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:50
+Invalid command: asdf
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: asdf
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:164)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:50
+Invalid command: asdf
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: asdf
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:164)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:50
+Invalid command: af
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: af
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:164)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:50
+Invalid command: help
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: help
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:164)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:50
+Invalid number of arguments. Too many arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Too many arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:21)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:164)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:52
+Invalid number of arguments. Too many arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Too many arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:165)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:54
+File file1 does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File file1 does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkIfFilesAreReal(BaseCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:24)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:165)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:57
+Invalid command: help
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: help
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 15:57
+Invalid command: help
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: help
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:00
+Invalid command: register
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: register
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:00
+Invalid command: register
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: register
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:01
+Invalid command: unregister
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: unregister
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:01
+Invalid command: list-files
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: list-files
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:03
+Invalid command: register
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: register
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:03
+Invalid command: register
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: register
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:04
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:06
+Invalid command: help
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: help
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:07
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:07
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:10
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:10
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:168)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:47
+Invalid command: download
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: download
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:171)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:50
+Invalid command: download
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: download
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:173)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-01 16:51
+Invalid command: download
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: download
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:173)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 17:26
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:173)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 17:26
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:173)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 17:27
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:65)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:173)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 17:32
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:65)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 18:22
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 18:23
+Invalid command: list-fiels
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: list-fiels
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 18:33
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:65)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 18:57
+Command is empty
+bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand: Command is empty
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-03 18:58
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:83)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-04 16:56
+Invalid command: donwload
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: donwload
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
+	at Main.main(Main.java:14)
+--------------------------------------------------

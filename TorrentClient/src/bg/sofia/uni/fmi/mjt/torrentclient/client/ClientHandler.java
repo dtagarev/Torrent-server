@@ -4,24 +4,30 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.SyntaxChecker;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.server.ListFilesCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.ui.HelpCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
-import bg.sofia.uni.fmi.mjt.torrentclient.miniserver.MiniServer;
+import bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor;
+import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.Cli;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
-import bg.sofia.uni.fmi.mjt.torrentclient.command.CommandChecker;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 
 import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
@@ -36,15 +42,14 @@ public class ClientHandler {
     //TODO: storage fix
     //TODO: handle commands
     // download files
-    // transfer help command here
 
-    ServerConnection serverConnection;
-    ErrorHandler errorHandler;
-    SeedingFiles storage;
-    CommandChecker commandChecker;
-    UserInterface ui;
-    UsersFileManager usersFileManager;
-    ExecutorService executor;
+    private ServerConnection serverConnection;
+    private ErrorHandler errorHandler;
+    private SeedingFiles storage;
+    private UserInterface ui;
+    private UsersFileManager usersFileManager;
+    private ExecutorService executor;
+    private GlobalCommandExecutor commandExecutor;
 
     public ClientHandler() {
         try {
@@ -52,14 +57,21 @@ public class ClientHandler {
         } catch (ServerConnectionException e) {
             throw new RuntimeException(e);
         }
-        //TODO: initialize storage corecctly
         storage = new SeedingFiles();
-        //TODO: command checker
-        commandChecker = new CommandChecker(storage);
         Path logFilePath = Path.of(System.getProperty("user.dir") + File.separator + "clientLogs.txt");
         this.errorHandler = new ErrorHandler(logFilePath);
         this.ui = new Cli();
         executor = newVirtualThreadPerTaskExecutor();
+    }
+
+    private void initializeCommandExecutor() {
+        commandExecutor = new GlobalCommandExecutor(
+                Set.of(new RegisterCommand(serverConnection),
+                        new UnregisterCommand(serverConnection),
+                        new ListFilesCommand(serverConnection),
+                        new HelpCommand(),
+                        new DownloadCommand(usersFileManager)
+                ));
     }
 
     private void initializeUsersFileManager(String clientName) throws IOException {
@@ -115,6 +127,7 @@ public class ClientHandler {
         try {
             initializeUsersFileManager(name);
             initializeUserRefresher(name);
+            initializeCommandExecutor();
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             ui.displayErrorMessage("Cannot create active users file.\n"
@@ -130,7 +143,7 @@ public class ClientHandler {
             ui.displayNamePrompt();
             message = scanner.nextLine();
 
-            if(!commandChecker.checkUsername(message)) {
+            if(!SyntaxChecker.checkUsername(message)) {
                 ui.displayErrorMessage("Invalid name\n"
                         + "Name should contain only lowercase letters and digits");
                 reply = "Invalid name";
@@ -145,48 +158,34 @@ public class ClientHandler {
         return message;
     }
 
-    private boolean checkCommand(String message) {
-        try {
-            commandChecker.check(message);
-            return true;
-        } catch (FileNotFoundException | IllegalArgumentException | EmptyCommand | InvalidCommand |
-                 InvalidSymbolInCommand e) {
-            errorHandler.writeToLogFile(e);
-            ui.displayErrorMessage(e.getMessage());
-        }
-        return false;
-    }
-
     public void start() {
         try {
-            String clientName = setClientName();
-            Scanner in = new Scanner(System.in);
-            String message = null;
-
-            while (true) {
-                do {
-                    ui.displayMessagePrompt();
-                    message = in.nextLine();
-                } while(!checkCommand(message));
-
-                if("quit".equals(message)) {
-                    shutDown();
-                    return;
-                }
-
-                if(message.contains("download")) {
-
-                } else {
-                    String reply = serverConnection.communicateWithServer(message);
-                    ui.displayReply(reply);
-                }
-            }
+            setClientName();
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);
         }
+
+        Scanner in = new Scanner(System.in);
+        String message = null;
+
+        do {
+            ui.displayMessagePrompt();
+            message = in.nextLine();
+            try {
+                final String result = commandExecutor.execute(message);
+                ui.displayReply(result);
+            } catch (EmptyCommand | InvalidSymbolInCommand | InvalidCommand e) {
+                errorHandler.writeToLogFile(e);
+                ui.displayErrorMessage(e.getMessage());
+            }
+        } while (!message.equals("quit"));
+            //TODO: gasi
+
+
     }
 
     private void shutDown() {
+        //TODO: close all connections
     }
 }

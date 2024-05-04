@@ -1,6 +1,7 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.command;
 
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
@@ -14,7 +15,7 @@ import static org.mockito.ArgumentMatchers.any;
 
 public class UnregisterCommandTest {
 
-    UnregisterCommand unregisterCommand = new UnregisterCommand();
+    UnregisterCommand unregisterCommand = new UnregisterCommand(null);
 
     @Test
     void testUnregisterCommand() {

@@ -1,21 +1,17 @@
-package bg.sofia.uni.fmi.mjt.torrentclient.miniserver;
+package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.channels.AsynchronousCloseException;
-import java.nio.channels.ClosedByInterruptException;
 import java.nio.channels.FileChannel;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.security.MessageDigest;
 import java.util.concurrent.Callable;
 
-public class FileReceiverJob implements Callable<Boolean> {
+public class FileReceiver implements Callable<Boolean> {
     private Socket serverSocket;
     private Path receivedFileLocation;
 
-    public FileReceiverJob(Socket serverSocket, Path receivedFileLocation) {
+    public FileReceiver(Socket serverSocket, Path receivedFileLocation) {
         this.serverSocket = serverSocket;
         this.receivedFileLocation = receivedFileLocation;
     }

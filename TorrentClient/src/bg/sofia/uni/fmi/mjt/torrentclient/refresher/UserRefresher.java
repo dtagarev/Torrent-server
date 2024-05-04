@@ -35,7 +35,7 @@ public class UserRefresher implements Runnable {
 
                 String message = "refresh-users";
 
-                Thread.sleep(5000);
+                Thread.sleep(30_000);
 
                 String reply = serverCommunicator.communicateWithServer(message);
 

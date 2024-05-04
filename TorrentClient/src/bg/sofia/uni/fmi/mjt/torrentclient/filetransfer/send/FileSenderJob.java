@@ -1,11 +1,8 @@
-package bg.sofia.uni.fmi.mjt.torrentclient.miniserver;
+package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send;
 
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.channels.AsynchronousCloseException;
 import java.nio.channels.FileChannel;
 import java.nio.channels.SocketChannel;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.concurrent.Callable;
 
