@@ -1,20 +1,22 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send;
 
+import java.net.Socket;
 import java.nio.channels.AsynchronousCloseException;
 import java.nio.channels.FileChannel;
+import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.file.Path;
 import java.util.concurrent.Callable;
 
 import java.io.IOException;
 
-public class FileSenderJob implements Callable<Boolean> {
+public class FileSenderJob implements Runnable {
 
-    private SocketChannel clientChannel;
+    private ServerSocketChannel serverSocketChannel;
     private Path filePath;
 
-    public FileSenderJob(SocketChannel socketChannel, Path filePath) {
-        this.clientChannel = socketChannel;
+    public FileSenderJob(ServerSocketChannel serverSocketChannel, Path filePath) {
+        this.serverSocketChannel = serverSocketChannel;
         this.filePath = filePath;
     }
 
@@ -57,20 +59,19 @@ public class FileSenderJob implements Callable<Boolean> {
     //}
 
     @Override
-    public Boolean call() {
-        try(FileChannel fileChannel = FileChannel.open(filePath)) {
+    public void run() {
+        System.out.println("FileSenderJob: Thread entered run");
+        try (SocketChannel clientSocket = serverSocketChannel.accept();
+            FileChannel fileChannel = FileChannel.open(filePath)) {
 
-            //How to use correctly
-            fileChannel.transferTo(0, fileChannel.size(), clientChannel);
+            fileChannel.transferTo(0, fileChannel.size(), clientSocket);
+            System.out.println("FileSenderJob: File send");
 
-        } catch(AsynchronousCloseException e) {
-            return false;
         } catch (IOException e) {
-            //error handler . write to log file
-            System.err.println("There was a problem with the file transfer.");
-            return false;
+            Thread.currentThread().interrupt();
         }
 
-        return true;
+        System.out.println("FileSenderJob: Shutting down thread");
+
     }
 }

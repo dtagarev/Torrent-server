@@ -5,6 +5,7 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
+import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileRequest;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
 
 import java.io.File;
@@ -23,9 +24,9 @@ public class DownloadCommand extends BaseCommand implements Command {
     private final UsersFileManager usersFileManager;
 
     private static final String INVALID_FILE_RESPONSE = "ERROR";
-    private final BlockingQueue downloadQueue;
+    private final BlockingQueue<FileRequest> downloadQueue;
 
-    public DownloadCommand(UsersFileManager usersFileManager, BlockingQueue downloadQueue) {
+    public DownloadCommand(UsersFileManager usersFileManager, BlockingQueue<FileRequest> downloadQueue) {
         this.usersFileManager = usersFileManager;
         this.downloadQueue = downloadQueue;
     }
@@ -104,31 +105,39 @@ public class DownloadCommand extends BaseCommand implements Command {
         checkUsername(username);
         checkPathToSave(pathToSave);
 
-        //TODO: handle exceptions correctly
+        List<String> hostAndPort = getUserHostAndPort(username);
 
+        //TODO: handle exceptions correctly
         try {
-            // Connect to <username>
-            ServerConnection serverConnection = connectToUser(username);
+            ServerConnection serverConnection = new ServerConnection(hostAndPort.getFirst(),
+                    Integer.parseInt(hostAndPort.getLast()),
+                    1024);
 
             String portReply = serverConnection.communicateWithServer(pathToFileOnUser);
+
+            serverConnection.closeConnection();
 
             if(portReply.equals(INVALID_FILE_RESPONSE)) {
                 throw new InvalidCommand("File cannot be downloaded. File does not exist");
             }
-            downloadQueue.put();
+
+            boolean isAdded = downloadQueue.offer(
+                    new FileRequest(Path.of(pathToFileOnUser),
+                            Path.of(pathToSave),
+                            hostAndPort.getFirst(),
+                            Integer.parseInt(portReply)));
+
+            System.out.println("FileReceiver: added request with port " + portReply + " for file " + pathToFileOnUser);
+            if(!isAdded) {
+                throw new InvalidCommand("File cannot be downloaded. Too many download requests");
+            }
+
 
         } catch (ServerConnectionException | IOException e) {
             throw new InvalidCommand("File cannot be downloaded. Can't connect to user");
         }
 
-
-        // Ask for file
-        // Handle response OK | ERROR
-        // FILE MAY NOT EXIST
-        // Handle response OK | ERROR
-
-        // HANDLE CONNECTION CLOSED
-        //return "Downloaded " + list.get(1) + " from " + list.get(0);
+        return "Added new download request for file " + pathToFileOnUser;
     }
 
     @Override

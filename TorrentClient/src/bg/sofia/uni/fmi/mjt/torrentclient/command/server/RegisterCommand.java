@@ -4,6 +4,9 @@ import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.ServerCommunicationCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerCommunicator;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
+import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,8 +15,11 @@ public class RegisterCommand extends ServerCommunicationCommand implements Comma
     private static final int COMMAND_ARGUMENTS_COUNT = 2;
     private static final String correctFormat = "register <username> <file1,file2,fileN>";
 
-    public RegisterCommand(ServerCommunicator serverCommunicator) {
+    private final UserDirectory storage;
+
+    public RegisterCommand(ServerCommunicator serverCommunicator, UserDirectory storage) {
         super(serverCommunicator);
+        this.storage = storage;
     }
 
     @Override
@@ -24,7 +30,9 @@ public class RegisterCommand extends ServerCommunicationCommand implements Comma
         checkIfFilesAreReal(list.get(1));
 
         try {
-            return serverCommunicator.communicateWithServer("register " + list.get(0) + " " + list.get(1));
+            String response = serverCommunicator.communicateWithServer("register " + list.get(0) + " " + list.get(1));
+            storage.addFilePath(list.get(1));
+            return response;
         } catch (IOException e) {
             throw new InvalidCommand("Could not communicate with the server");
         }

@@ -14,6 +14,8 @@ import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
 import bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor;
+import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver;
+import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileRequest;
 import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UsersFileManager;
@@ -28,7 +30,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
 
@@ -43,13 +47,15 @@ public class ClientHandler {
     //TODO: handle commands
     // download files
 
-    private ServerConnection serverConnection;
-    private ErrorHandler errorHandler;
-    private SeedingFiles storage;
-    private UserInterface ui;
+    private final ServerConnection serverConnection;
+    private final ErrorHandler errorHandler;
+    private final SeedingFiles storage;
+    private final UserInterface ui;
     private UsersFileManager usersFileManager;
-    private ExecutorService executor;
+    private final ExecutorService executor;
     private GlobalCommandExecutor commandExecutor;
+
+    private final BlockingQueue<FileRequest> downloadQueue;
 
     public ClientHandler() {
         try {
@@ -62,15 +68,16 @@ public class ClientHandler {
         this.errorHandler = new ErrorHandler(logFilePath);
         this.ui = new Cli();
         executor = newVirtualThreadPerTaskExecutor();
+        downloadQueue = new LinkedBlockingQueue<>();
     }
 
     private void initializeCommandExecutor() {
         commandExecutor = new GlobalCommandExecutor(
-                Set.of(new RegisterCommand(serverConnection),
-                        new UnregisterCommand(serverConnection),
+                Set.of(new RegisterCommand(serverConnection, storage),
+                        new UnregisterCommand(serverConnection, storage),
                         new ListFilesCommand(serverConnection),
                         new HelpCommand(),
-                        new DownloadCommand(usersFileManager)
+                        new DownloadCommand(usersFileManager, downloadQueue)
                 ));
     }
 
@@ -94,6 +101,14 @@ public class ClientHandler {
         Thread refresherThread = new Thread(refresher);
         refresherThread.setDaemon(true);
         executor.submit(refresherThread);
+    }
+
+    private void initializeFileReceiver(String name) {
+        FileReceiver receiver = new FileReceiver(downloadQueue, errorHandler, ui, serverConnection, name);
+
+        Thread receiverThread = new Thread(receiver);
+        receiverThread.setDaemon(true);
+        executor.submit(receiverThread);
     }
 
     private String initializeMiniServer() {
@@ -128,6 +143,7 @@ public class ClientHandler {
             initializeUsersFileManager(name);
             initializeUserRefresher(name);
             initializeCommandExecutor();
+            initializeFileReceiver(name);
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             ui.displayErrorMessage("Cannot create active users file.\n"
@@ -180,12 +196,19 @@ public class ClientHandler {
                 ui.displayErrorMessage(e.getMessage());
             }
         } while (!message.equals("quit"));
-            //TODO: gasi
 
 
+        //TODO: shut down the threads too
+        try {
+            shutDown();
+        } catch (IOException e) {
+            errorHandler.writeToLogFile(e);
+            ui.displayErrorMessage("An Unexpected error occurred. The program will now shut down.");
+        }
     }
 
-    private void shutDown() {
+    private void shutDown() throws IOException {
+        serverConnection.closeConnection();
         //TODO: close all connections
     }
 }

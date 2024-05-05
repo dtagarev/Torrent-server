@@ -1,85 +1,74 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive;
 
+import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
+import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
+import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
+
 import java.io.IOException;
-import java.net.Socket;
-import java.nio.channels.AsynchronousCloseException;
+import java.net.InetSocketAddress;
 import java.nio.channels.FileChannel;
-import java.nio.file.Path;
-import java.util.concurrent.Callable;
+import java.nio.channels.SocketChannel;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
+import java.util.concurrent.BlockingQueue;
 
-public class FileReceiver implements Callable<Boolean> {
-    private Socket serverSocket;
-    private Path receivedFileLocation;
+public class FileReceiver implements Runnable {
 
-    public FileReceiver(Socket serverSocket, Path receivedFileLocation) {
-        this.serverSocket = serverSocket;
-        this.receivedFileLocation = receivedFileLocation;
+    private final BlockingQueue<FileRequest> downloadQueue;
+    private final ErrorHandler errorHandler;
+    private final UserInterface ui;
+
+    private final ServerConnection mainServerConnection;
+    private final String username;
+
+    public FileReceiver(BlockingQueue<FileRequest> downloadQueue,
+                        ErrorHandler errorHandler, UserInterface ui,
+                        ServerConnection serverConnection, String name) {
+        this.downloadQueue = downloadQueue;
+        this.errorHandler = errorHandler;
+        this.ui = ui;
+        this.mainServerConnection = serverConnection;
+        this.username = name;
     }
 
-    //@Override
-    //public Boolean call() throws Exception {
+    private SocketChannel connectToServer(String host, int port) throws IOException {
+        SocketChannel socketChannel = SocketChannel.open();
+        socketChannel.connect(new InetSocketAddress(host, port));
 
-    //    String serverAddress = "localhost"; // Change this to your server address
-    //    int serverPort = 12345; // Change this to your server port number
-    //    String filePath = "received_file.txt"; // Change this to your desired file path for saving received file
+        return socketChannel;
+    }
 
-    //    try (Socket socket = new Socket(serverAddress, serverPort);
-    //         FileOutputStream fileOutputStream = new FileOutputStream(filePath)) {
-
-    //        byte[] buffer = new byte[1024];
-    //        int bytesRead;
-    //        MessageDigest md = MessageDigest.getInstance("MD5");
-
-    //        while ((bytesRead = socket.getInputStream().read(buffer)) != -1) {
-    //            fileOutputStream.write(buffer, 0, bytesRead);
-    //            md.update(buffer, 0, bytesRead);
-    //        }
-
-    //        byte[] receivedChecksum = new byte[16]; // MD5 checksum is 16 bytes
-    //        int checksumBytesRead = socket.getInputStream().read(receivedChecksum);
-
-    //        if (checksumBytesRead == -1) {
-    //            System.out.println("Checksum not received. File transmission interrupted.");
-    //            // Optionally, you can delete the incomplete file
-    //            Files.delete(Path.of(filePath));
-    //        } else {
-    //            byte[] calculatedChecksum = md.digest();
-
-    //            if (MessageDigest.isEqual(receivedChecksum, calculatedChecksum)) {
-    //                System.out.println("File received successfully and checksum matches.");
-    //            } else {
-    //                System.out.println("Checksum mismatch. File may be corrupted.");
-    //                // Optionally, you can delete the corrupted file
-    //                Files.delete(Path.of(filePath));
-    //            }
-    //        }
-    //    } catch (IOException e) {
-    //        System.err.println("Error receiving file: " + e.getMessage());
-    //    } catch (Exception e) {
-    //        System.err.println("Error: " + e.getMessage());
-    //    }
-    //    return null;
-    //}
-    //If i have p2p architecture and every client has a server that can send files via fileChannel how should i handle the stiuation where one client is sending message to another and a third client requests the same file from the first.
     @Override
-    public Boolean call() {
-        //connect to server, ask for file, receive file, save file
+    public void run() {
+        System.out.println("FileReceiver started");
+        try {
+            while (true) {
+                FileRequest fileRequest = downloadQueue.take();
+                SocketChannel socketChannel = connectToServer(fileRequest.host(), fileRequest.port());
 
-        try(FileChannel fileChannel = FileChannel.open(receivedFileLocation)) {
+                try(FileChannel fileChannel = FileChannel.open(
+                        fileRequest.to(), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE)) {
 
-            //How to use corecctly
-            fileChannel.transferFrom(serverSocket.getChannel(), 0, Long.MAX_VALUE);
+                    ui.displayReply("FileReceiver: File " + fileRequest.from() + " is going to be received");
 
-        } catch (AsynchronousCloseException e) {
-            // try with this exception, the other option is ClosedByInterruptException
+                    //TODO: probably incorrect transfer
+                    fileChannel.transferFrom(socketChannel, 0, Long.MAX_VALUE);
 
-            //error handler . write to log file
-            //delete the file junk.
-            //return false;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+                    ui.displayReply("File " + fileRequest.from() + " was received");
+
+                } catch (IOException e) {  // TODO: AsynchronousCloseException?
+                    errorHandler.writeToLogFile(e);
+                    Files.deleteIfExists(fileRequest.to());
+                    ui.displayErrorMessage("File " + fileRequest.from() + " was not received");
+                }
+
+               String response = mainServerConnection.communicateWithServer(
+                       "register " + username + " " + fileRequest.from());
+            }
+        } catch (InterruptedException | IOException e) {
+            Thread.currentThread().interrupt();
         }
-        return true;
-    }
 
+        System.out.println("FileReceiver was closed");
+    }
 }

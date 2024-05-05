@@ -3248,3 +3248,359 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: donwload
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:177)
 	at Main.main(Main.java:14)
 --------------------------------------------------
+2024-05-04 20:45
+Invalid path to save. Path should exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid path to save. Path should exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.checkPathToSave(DownloadCommand.java:51)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:106)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-04 20:45
+Invalid path to save. Path should have a filename
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid path to save. Path should have a filename
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.checkPathToSave(DownloadCommand.java:55)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:106)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-04 20:46
+/home/dimitar/testFile
+java.nio.file.NoSuchFileException: /home/dimitar/testFile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 00:18
+/home/dimitar/toqfail
+java.nio.file.NoSuchFileException: /home/dimitar/toqfail
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:86)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 00:23
+/home/dimitar/toqfile
+java.nio.file.NoSuchFileException: /home/dimitar/toqfile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:86)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 00:39
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:136)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 00:39
+Command is empty
+bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand: Command is empty
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 00:39
+Command is empty
+bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand: Command is empty
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 00:39
+Command is empty
+bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand: Command is empty
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 00:39
+Command is empty
+bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand: Command is empty
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 00:47
+/home/dimitar/toqfile
+java.nio.file.NoSuchFileException: /home/dimitar/toqfile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:86)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 01:22
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:136)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 01:28
+/home/dimitar/toqfie
+java.nio.file.NoSuchFileException: /home/dimitar/toqfie
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:86)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 01:33
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:136)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 01:34
+/home/dimitar/toqfile
+java.nio.file.NoSuchFileException: /home/dimitar/toqfile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 01:40
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 01:41
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:136)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 01:58
+/home/dimitar/toqfile
+java.nio.file.NoSuchFileException: /home/dimitar/toqfile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:07
+/home/dimitar/tofile
+java.nio.file.NoSuchFileException: /home/dimitar/tofile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:08
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:99)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 02:16
+/home/dimitar/tofile
+java.nio.file.NoSuchFileException: /home/dimitar/tofile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:24
+/home/dimitar/fileto
+java.nio.file.NoSuchFileException: /home/dimitar/fileto
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:24
+Invalid command: donwload
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: donwload
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 02:25
+/home/dimitar/tofile
+java.nio.file.NoSuchFileException: /home/dimitar/tofile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:25
+/home/dimitar/tofile
+java.nio.file.NoSuchFileException: /home/dimitar/tofile
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:224)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:309)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:369)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver.run(FileReceiver.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 02:39
+Invalid path to save. Path should not be an existing file
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid path to save. Path should not be an existing file
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.checkPathToSave(DownloadCommand.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:106)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 02:42
+Invalid command: whoami
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: whoami
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:21
+Invalid path to save. Path should not be an existing file
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid path to save. Path should not be an existing file
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.checkPathToSave(DownloadCommand.java:60)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:106)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:21
+Invalid command: lsit-files
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: lsit-files
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:22
+Invalid number of arguments. Not enough arguments
+Please use the following format: unregister <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: unregister <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand.execute(UnregisterCommand.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:23
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:121)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:32)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:23
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 03:23
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
