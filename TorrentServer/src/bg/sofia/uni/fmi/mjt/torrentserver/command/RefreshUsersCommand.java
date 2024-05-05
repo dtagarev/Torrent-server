@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class RefreshUsersCommand implements Command {
-    private ServerStorage storage;
+    private final ServerStorage storage;
 
 
     public RefreshUsersCommand(ServerStorage storage) {
@@ -31,11 +31,12 @@ public class RefreshUsersCommand implements Command {
             String inetAddress = userSocket.getInetAddress().toString();
 
             Integer userServerPort = data.get(user).ClientServerPort();
-
-            sb.append(user);
-            sb.append("-").append(inetAddress);
-            sb.append(":").append(userServerPort);
-            sb.append("\n");
+            if(userServerPort != 0) {
+                sb.append(user);
+                sb.append("-").append(inetAddress);
+                sb.append(":").append(userServerPort);
+                sb.append("\n");
+            }
         }
         return sb.toString();
     }

@@ -49,6 +49,18 @@ public class RefreshUsersCommandTest {
     }
 
     @Test
+    void testExecuteWithZeroClientPort() {
+        when(socketChannel.socket()).thenReturn(socket);
+        when(socket.getInetAddress()).thenReturn(inetAddress);
+        when(inetAddress.toString()).thenReturn("testAddress");
+        when(storage.getData()).
+                thenReturn(Map.of("user1", new User("user1", socketChannel, 0, Set.of("file1", "file2"))));
+
+        String res = refreshUsersCommand.execute(List.of());
+        assertEquals("", res);
+    }
+
+    @Test
     void testExecuteWithArguments() {
         String res = refreshUsersCommand.execute(List.of("user1"));
         assertEquals("Invalid command, No arguments needed.\n"

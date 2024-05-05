@@ -1,8 +1,8 @@
-package bg.sofia.uni.fmi.mjt.shared.command;
+package bg.sofia.uni.fmi.mjt.torrentserver.command.executors;
 
+import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
-import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
 
 import java.util.ArrayList;
 import java.util.List;

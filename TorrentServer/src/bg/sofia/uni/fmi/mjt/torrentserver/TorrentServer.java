@@ -1,4 +1,6 @@
-package bg.sofia.uni.fmi.mjt.torrentserver.server;
+package bg.sofia.uni.fmi.mjt.torrentserver;
+
+import bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread;
 
 import java.util.Scanner;
 

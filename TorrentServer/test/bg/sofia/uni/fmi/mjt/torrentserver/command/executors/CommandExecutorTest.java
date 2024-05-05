@@ -1,8 +1,9 @@
-package bg.sofia.uni.fmi.mjt.shared.command;
+package bg.sofia.uni.fmi.mjt.torrentserver.command.executors;
 
+import bg.sofia.uni.fmi.mjt.shared.command.Command;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.executors.CommandExecutor;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

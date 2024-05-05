@@ -26,7 +26,10 @@ public class ListFilesCommand implements Command {
         StringBuilder result = new StringBuilder();
 
         for (String user : data.keySet()) {
-            result.append(user).append(" : ").append(data.get(user).files().toString()).append("\n");
+            User userData = data.get(user);
+            if(userData.ClientServerPort() != 0) {
+                result.append(user).append(" : ").append(userData.files().toString()).append("\n");
+            }
         }
         result = new StringBuilder(result.substring(0, result.length() - 1));
 

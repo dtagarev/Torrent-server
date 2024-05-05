@@ -3604,3 +3604,38 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
 	at Main.main(Main.java:14)
 --------------------------------------------------
+2024-05-05 15:06
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.ClientHandler.start(ClientHandler.java:192)
+	at Main.main(Main.java:14)
+--------------------------------------------------
+2024-05-05 15:17
+Invalid command: quti
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quti
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:192)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-05 15:18
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:192)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-05 15:30
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:191)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-05 15:30
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:191)
+	at Main.main(Main.java:7)
+--------------------------------------------------

@@ -7,6 +7,7 @@ public interface UserDirectory {
     boolean containsFilePath(String filePath);
     void removeFilePath(String file);
     void addFilePath(String file);
+
     static boolean isAFile(String file) {
         if(file == null) {
             return false;

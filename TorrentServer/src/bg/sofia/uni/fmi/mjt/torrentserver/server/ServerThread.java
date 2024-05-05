@@ -1,11 +1,10 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.server;
 
-import bg.sofia.uni.fmi.mjt.shared.command.CommandExecutor;
+import bg.sofia.uni.fmi.mjt.torrentserver.command.executors.CommandExecutor;
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.EmptyCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidSymbolInCommand;
-import bg.sofia.uni.fmi.mjt.torrentserver.command.HelpCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.ListFilesCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.RefreshUsersCommand;
 import bg.sofia.uni.fmi.mjt.torrentserver.command.RegisterCommand;
@@ -45,9 +44,6 @@ public class ServerThread implements Runnable {
 
     private ErrorHandler errorHandler;
 
-    //Todo: fix client name storage
-    //should check if a client with this name is already registered and if it is not should register it
-
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;
         this.host = host;
@@ -65,8 +61,7 @@ public class ServerThread implements Runnable {
                 new RegisterCommand(storage),
                 new UnregisterCommand(storage, errorHandler),
                 new ListFilesCommand(storage),
-                new RefreshUsersCommand(storage),
-                new HelpCommand(storage))
+                new RefreshUsersCommand(storage))
         );
 
     }
@@ -123,14 +118,12 @@ public class ServerThread implements Runnable {
     private void handleClientRequest(SocketChannel clientChannel, String clientName, String clientInput)
         throws IOException {
 
-        if(!clientInput.contains("refresh-users")) {
-            if (clientName == null) {
-                setClientName(clientChannel, clientInput);
-                return;
-            } else if (storage.getData().get(clientName).ClientServerPort() == null) {
-                storage.setClientServerPort(clientName, Integer.parseInt(clientInput));
-                return;
-            }
+        if (clientName == null) {
+            setClientName(clientChannel, clientInput);
+            return;
+        } else if (storage.getData().get(clientName).ClientServerPort() == null) {
+            storage.setClientServerPort(clientName, Integer.parseInt(clientInput));
+            return;
         }
 
         String result = executeCommand(clientInput, clientName);
@@ -201,6 +194,7 @@ public class ServerThread implements Runnable {
         socketToNameStorage.remove(clientChannel);
         System.out.println(clientName + " has disconnected");
     }
+
     private String getClientInput(SocketChannel clientChannel) throws IOException {
         buffer.clear();
 
