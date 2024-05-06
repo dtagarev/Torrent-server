@@ -186,7 +186,6 @@ public class ServerThread implements Runnable {
         String clientName = socketToNameStorage.get(clientChannel);
 
         if(clientName == null) {
-            System.out.println("UserRefresher has disconnected");
             return;
         }
 
@@ -229,7 +228,6 @@ public class ServerThread implements Runnable {
 
         socketToNameStorage.put(accept, null);
 
-        //I want to see which client
         System.out.println("Client has connected");
     }
 }

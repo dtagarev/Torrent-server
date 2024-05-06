@@ -13,7 +13,7 @@ import bg.sofia.uni.fmi.mjt.torrentclient.command.ui.HelpCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
-import bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor;
+import bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor;
 import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver;
 import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileRequest;
 import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer;
@@ -42,18 +42,13 @@ public class Client {
     private static final String SERVER_HOST = "localhost";
     private static final int BUFFER_SIZE = 1024;
 
-    //TODO: fix tests
-    //TODO: storage fix
-    //TODO: handle commands
-    // download files
-
     private final ServerConnection serverConnection;
     private final ErrorHandler errorHandler;
     private final SeedingFiles storage;
     private final UserInterface ui;
     private UsersFileManager usersFileManager;
     private final ExecutorService executor;
-    private GlobalCommandExecutor commandExecutor;
+    private ClientCommandExecutor commandExecutor;
 
     private final BlockingQueue<FileRequest> downloadQueue;
 
@@ -72,7 +67,7 @@ public class Client {
     }
 
     private void initializeCommandExecutor() {
-        commandExecutor = new GlobalCommandExecutor(
+        commandExecutor = new ClientCommandExecutor(
                 Set.of(new RegisterCommand(serverConnection, storage),
                         new UnregisterCommand(serverConnection, storage),
                         new ListFilesCommand(serverConnection),

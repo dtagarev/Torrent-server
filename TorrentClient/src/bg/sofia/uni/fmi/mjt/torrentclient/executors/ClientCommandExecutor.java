@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class GlobalCommandExecutor {
+public class ClientCommandExecutor {
     private Set<Command> commands;
 
-    public GlobalCommandExecutor(Set<Command> commands) {
+    public ClientCommandExecutor(Set<Command> commands) {
         this.commands = commands;
     }
 

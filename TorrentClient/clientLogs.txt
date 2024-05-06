@@ -3639,3 +3639,27 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:191)
 	at Main.main(Main.java:7)
 --------------------------------------------------
+2024-05-05 16:32
+Broken pipe
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:81)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection.writeToServer(ServerConnection.java:43)
+	at bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection.communicateWithServer(ServerConnection.java:62)
+	at bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher.run(UserRefresher.java:40)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-05-05 16:35
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.GlobalCommandExecutor.execute(GlobalCommandExecutor.java:29)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:191)
+	at Main.main(Main.java:7)
+--------------------------------------------------

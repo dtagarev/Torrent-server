@@ -16,10 +16,8 @@ public class ListFilesCommand extends ServerCommunicationCommand implements Comm
         super(serverCommunicator);
     }
 
-
     @Override
     public String execute(List<String> list) {
-        checkCharacters(list);
         checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, correctFormat);
 
         try {

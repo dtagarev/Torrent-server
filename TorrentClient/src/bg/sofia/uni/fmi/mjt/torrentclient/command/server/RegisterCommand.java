@@ -4,9 +4,7 @@ import bg.sofia.uni.fmi.mjt.shared.command.Command;
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.ServerCommunicationCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerCommunicator;
-import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
-import bg.sofia.uni.fmi.mjt.torrentclient.refresher.UserRefresher;
 
 import java.io.IOException;
 import java.util.List;

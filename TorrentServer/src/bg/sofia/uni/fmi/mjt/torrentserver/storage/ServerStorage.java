@@ -43,18 +43,8 @@ public class ServerStorage implements Storage {
         files.forEach(data.get(username).files()::remove);
     }
 
-    //TODO: i think it is wrong
     @Override
     public void register(String username, List<String> files) {
-        //Set<String> userFiles;
-        //if(data.containsKey(username)) {
-        //    userFiles = data.get(username).files();
-        //    userFiles.addAll(files);
-        //} else {
-        //    userFiles = new HashSet<>(files);
-        //}
-
-        //data.put(username ,new User(username, socketChannel, userFiles));
         data.get(username).files().addAll(files);
     }
 

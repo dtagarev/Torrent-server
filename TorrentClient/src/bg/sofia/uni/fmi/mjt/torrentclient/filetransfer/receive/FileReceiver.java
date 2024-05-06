@@ -62,7 +62,7 @@ public class FileReceiver implements Runnable {
                     ui.displayErrorMessage("File " + fileRequest.from() + " was not received");
                 }
 
-               String response = mainServerConnection.communicateWithServer(
+               mainServerConnection.communicateWithServer(
                        "register " + username + " " + fileRequest.from());
             }
         } catch (InterruptedException | IOException e) {

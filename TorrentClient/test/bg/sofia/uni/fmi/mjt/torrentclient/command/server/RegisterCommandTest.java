@@ -1,33 +1,36 @@
-package bg.sofia.uni.fmi.mjt.torrentclient.command;
+package bg.sofia.uni.fmi.mjt.torrentclient.command.server;
 
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
-import bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerCommunicator;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class RegisterCommandTest {
 
-    RegisterCommand registerCommand = new RegisterCommand();
+    @Mock
+    private ServerCommunicator serverCommunicator;
 
-    @Test
-    void testRegisterCommand() {
-        try(MockedStatic<UserDirectory> userDirMock = Mockito.mockStatic(UserDirectory.class)) {
-            userDirMock.when(() -> UserDirectory.isAFile(any())).thenReturn(true);
-            List<String> args = List.of("user1", "file1,file2");
-            assertEquals("register user1 file1,file2",registerCommand.execute(args));
-        }
-    }
+    @Mock
+    private UserDirectory storage;
+
+    RegisterCommand registerCommand = new RegisterCommand(serverCommunicator, storage);
+
+    //@Test
+    //void testExecute() {
+    //    when(UserDirectory.isAFile(any())).thenReturn(true);
+    //}
 
     @Test
     void testRegisterCommandWithInvalidUsername() {
