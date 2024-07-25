@@ -11,5 +11,11 @@ The server facilitates the sharing and downloading of files across a distributed
 | `list-files` | N/A                                          | Return a list of available files along with the users from whom they can be downloaded.         |
 | `download`   | `<user> <path to file on user> <path to save>` | Download a specified file from the given user. The client retrieves the file from the user's mini-server and saves it locally. |
 
+### Server Commands
+
+| Command      | Arguments                                    | Description                                                                                   |
+|--------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `list-files` | N/A                                          | Returns a list of all files available for download along with the users who have made these files available. |
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/dtagarev/Torrent-server/blob/master/LICENSE) file for more details.
