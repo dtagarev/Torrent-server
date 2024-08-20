@@ -37,12 +37,12 @@ public class ServerThread implements Runnable {
     private ByteBuffer buffer;
     private Selector selector;
 
-    private ServerStorage storage;
-    private Map<SocketChannel, String> socketToNameStorage;
+    private final ServerStorage storage;
+    private final Map<SocketChannel, String> socketToNameStorage;
 
-    private CommandExecutor commandExecutor;
+    private final CommandExecutor commandExecutor;
 
-    private ErrorHandler errorHandler;
+    private final ErrorHandler errorHandler;
 
     public ServerThread(int port, String host, int bufferSize) {
         this.port = port;
@@ -73,46 +73,53 @@ public class ServerThread implements Runnable {
             this.buffer = ByteBuffer.allocate(bufferSize);
             isServerWorking = true;
 
-            System.out.println("Server is started and waiting for connections");
+            System.out.println("Server is started and waiting for connections\n");
 
-            while (isServerWorking) {
-                try {
-                    int readyChannels = selector.select();
-                    if (readyChannels == 0) {
-                        continue;
-                    }
+            work();
 
-                    Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
-
-                    while (keyIterator.hasNext()) {
-                        SelectionKey key = keyIterator.next();
-
-                        if (key.isReadable()) {
-
-                            SocketChannel clientChannel = (SocketChannel) key.channel();
-                            String clientInput = getClientInput(clientChannel);
-
-                            System.out.println("Client said  -> " + clientInput );
-                            if (clientInput == null) {
-                                continue;
-                            }
-
-                            handleClientRequest(clientChannel, socketToNameStorage.get(clientChannel), clientInput);
-
-                        } else if (key.isAcceptable()) {
-                            accept(selector, key);
-                        }
-
-
-                        keyIterator.remove();
-                    }
-                } catch (IOException e) {
-                    System.out.println("Error occurred while processing client request: " + e.getMessage());
-                }
-            }
         } catch (IOException e) {
             throw new UncheckedIOException("failed to start server", e);
         }
+    }
+
+    private void work() {
+        while (isServerWorking) {
+            try {
+                int readyChannels = selector.select();
+                if (readyChannels == 0) {
+                    continue;
+                }
+
+                Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
+
+                while (keyIterator.hasNext()) {
+                    SelectionKey key = keyIterator.next();
+
+                    if (key.isReadable()) {
+                        handleConnectionInput(key);
+
+                    } else if (key.isAcceptable()) {
+                        accept(selector, key);
+                    }
+
+                    keyIterator.remove();
+                }
+            } catch (IOException e) {
+                System.out.println("Error occurred while processing client request: " + e.getMessage());
+            }
+        }
+    }
+
+    private void handleConnectionInput(SelectionKey key) throws IOException {
+        SocketChannel clientChannel = (SocketChannel) key.channel();
+        String clientInput = getClientInput(clientChannel);
+
+        System.out.println("Client said  -> " + clientInput );
+        if (clientInput == null) {
+            return;
+        }
+
+        handleClientRequest(clientChannel, socketToNameStorage.get(clientChannel), clientInput);
     }
 
     private void handleClientRequest(SocketChannel clientChannel, String clientName, String clientInput)
@@ -131,7 +138,7 @@ public class ServerThread implements Runnable {
     }
 
     private void setClientName(SocketChannel clientChannel, String clientInput) throws IOException {
-        if(storage.containsUser(clientInput)) {
+        if (storage.containsUser(clientInput)) {
             writeClientOutput(clientChannel, "Invalid name. Name is already taken! Please enter a new name.");
             return;
         }
@@ -185,7 +192,7 @@ public class ServerThread implements Runnable {
         clientChannel.close();
         String clientName = socketToNameStorage.get(clientChannel);
 
-        if(clientName == null) {
+        if (clientName == null) {
             return;
         }
 

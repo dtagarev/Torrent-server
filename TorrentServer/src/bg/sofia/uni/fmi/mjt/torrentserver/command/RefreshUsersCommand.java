@@ -11,27 +11,25 @@ import java.util.Map;
 public class RefreshUsersCommand implements Command {
     private final ServerStorage storage;
 
-
     public RefreshUsersCommand(ServerStorage storage) {
         this.storage = storage;
     }
 
-
     @Override
     public String execute(List<String> list) {
-        if(!list.isEmpty()) {
+        if (!list.isEmpty()) {
             return "Invalid command, No arguments needed.\n"
                 + "Please use the following format: refresh-users";
         }
 
         Map<String , User> data = storage.getData();
         StringBuilder sb = new StringBuilder();
-        for(String user : data.keySet()) {
+        for (String user : data.keySet()) {
             Socket userSocket = data.get(user).socketChannel().socket();
             String inetAddress = userSocket.getInetAddress().toString();
 
             Integer userServerPort = data.get(user).ClientServerPort();
-            if(userServerPort != 0) {
+            if (userServerPort != 0) {
                 sb.append(user);
                 sb.append("-").append(inetAddress);
                 sb.append(":").append(userServerPort);

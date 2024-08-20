@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ListFilesCommand extends ServerCommunicationCommand implements Command {
     private static final int COMMAND_ARGUMENTS_COUNT = 0;
-    private static final String correctFormat = "list-files";
+    private static final String CORRECT_FORMAT = "list-files";
 
     public ListFilesCommand(ServerCommunicator serverCommunicator) {
         super(serverCommunicator);
@@ -18,7 +18,7 @@ public class ListFilesCommand extends ServerCommunicationCommand implements Comm
 
     @Override
     public String execute(List<String> list) {
-        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, correctFormat);
+        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, CORRECT_FORMAT);
 
         try {
             return serverCommunicator.communicateWithServer("list-files");

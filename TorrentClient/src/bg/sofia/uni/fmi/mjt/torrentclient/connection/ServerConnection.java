@@ -9,16 +9,16 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 
 public class ServerConnection implements ServerCommunicator {
-    private final int SERVER_PORT;
-    private final String SERVER_HOST;
+    private final int serverPort;
+    private final String serverHost;
     private final ByteBuffer buffer;
 
-    private SocketChannel socketChannel;
+    private final SocketChannel socketChannel;
 
-    public ServerConnection(String SERVER_HOST, int SERVER_PORT, int BUFFER_SIZE) throws ServerConnectionException {
-        this.SERVER_HOST = SERVER_HOST;
-        this.SERVER_PORT = SERVER_PORT;
-        this.buffer = ByteBuffer.allocateDirect(BUFFER_SIZE);
+    public ServerConnection(String serverHost, int serverPort, int bufferSize) throws ServerConnectionException {
+        this.serverHost = serverHost;
+        this.serverPort = serverPort;
+        this.buffer = ByteBuffer.allocateDirect(bufferSize);
 
         try {
             this.socketChannel = connectToServer();
@@ -31,26 +31,26 @@ public class ServerConnection implements ServerCommunicator {
     private SocketChannel connectToServer() throws IOException {
 
         SocketChannel socketChannel = SocketChannel.open();
-        socketChannel.connect(new InetSocketAddress(SERVER_HOST, SERVER_PORT));
+        socketChannel.connect(new InetSocketAddress(serverHost, serverPort));
 
         return socketChannel;
     }
 
     public void writeToServer(String message) throws IOException {
-        buffer.clear(); // switch to writing mode
-        buffer.put(message.getBytes()); // buffer fill
-        buffer.flip(); // switch to reading mode
-        socketChannel.write(buffer); // buffer drain
+        buffer.clear();
+        buffer.put(message.getBytes());
+        buffer.flip();
+        socketChannel.write(buffer);
     }
 
     public String readFromServer() throws IOException {
-        buffer.clear(); // switch to writing mode
-        socketChannel.read(buffer); // buffer fill
-        buffer.flip(); // switch to reading mode
+        buffer.clear();
+        socketChannel.read(buffer);
+        buffer.flip();
 
         byte[] byteArray = new byte[buffer.remaining()];
         buffer.get(byteArray);
-        return new String(byteArray, StandardCharsets.UTF_8); // buffer drain
+        return new String(byteArray, StandardCharsets.UTF_8);
     }
 
     public void closeConnection() throws IOException {

@@ -1,11 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
-import java.nio.channels.SocketChannel;
-import java.nio.charset.StandardCharsets;
 
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerCommunicator;
@@ -13,10 +8,12 @@ import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
 public class UserRefresher implements Runnable {
 
-    private ServerCommunicator serverCommunicator;
-    private UsersFileManager usersFileManager;
-    private ErrorHandler errorHandler;
-    private UserInterface ui;
+    private final ServerCommunicator serverCommunicator;
+    private final UsersFileManager usersFileManager;
+    private final ErrorHandler errorHandler;
+    private final UserInterface ui;
+
+    private static final int SLEEP_MILLISECONDS = 30_000;
 
     public UserRefresher(ServerCommunicator serverCommunicator,
                          UsersFileManager usersFileManager,
@@ -35,7 +32,7 @@ public class UserRefresher implements Runnable {
 
                 String message = "refresh-users";
 
-                Thread.sleep(30_000);
+                Thread.sleep(SLEEP_MILLISECONDS);
 
                 String reply = serverCommunicator.communicateWithServer(message);
 

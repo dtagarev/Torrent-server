@@ -1,6 +1,5 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 
-
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class ServerStorage implements Storage {
-    private Map<String, User> data;
+    private final Map<String, User> data;
 
     public ServerStorage() {
         data = new HashMap<>();
@@ -17,26 +16,26 @@ public class ServerStorage implements Storage {
 
     public void addNewUser(String username, SocketChannel socketChannel, List<String> files) {
         Set<String> userFiles;
-        if(data.containsKey(username)) {
+        if (data.containsKey(username)) {
             userFiles = data.get(username).files();
             userFiles.addAll(files);
         } else {
             userFiles = new HashSet<>(files);
         }
-        data.put(username ,new User(username, socketChannel, null, userFiles));
+        data.put(username, new User(username, socketChannel, null, userFiles));
     }
 
     public void setClientServerPort(String username, Integer port) {
-        if(!data.containsKey(username)) {
+        if (!data.containsKey(username)) {
             throw new IllegalArgumentException("User does not exist");
         }
-        User OldUser = data.get(username);
-        data.put(username, new User(OldUser.username(), OldUser.socketChannel(), port, OldUser.files()));
+        User oldUser = data.get(username);
+        data.put(username, new User(oldUser.username(), oldUser.socketChannel(), port, oldUser.files()));
     }
 
     @Override
     public synchronized void unregister(String username, List<String> files) {
-        if(!data.containsKey(username)) {
+        if (!data.containsKey(username)) {
             throw new IllegalArgumentException("User does not exist");
         }
 
@@ -49,7 +48,7 @@ public class ServerStorage implements Storage {
     }
 
     public synchronized void removeUser(String username) {
-        if(!data.containsKey(username)) {
+        if (!data.containsKey(username)) {
             throw new IllegalArgumentException("User does not exist");
         }
 

@@ -26,9 +26,4 @@ public class SeedingFiles implements UserDirectory {
         files.put(file, new Object());
     }
 
-    public Object getFileKey(String file) {
-        Path filePath = Path.of(file).toAbsolutePath().normalize();
-        return files.get(filePath);
-    }
-
 }

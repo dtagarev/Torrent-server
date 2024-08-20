@@ -1,4 +1,4 @@
-package bg.sofia.uni.fmi.mjt.torrentserver;
+        package bg.sofia.uni.fmi.mjt.torrentserver;
 
 import bg.sofia.uni.fmi.mjt.torrentserver.server.ServerThread;
 
@@ -20,10 +20,10 @@ public class TorrentServer {
         serverThread.start();
         Scanner sc = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             String input = sc.nextLine();
 
-            if(input.equals("stop")) {
+            if (input.equals("stop")) {
                 server.shutDown();
                 try {
                     serverThread.join();

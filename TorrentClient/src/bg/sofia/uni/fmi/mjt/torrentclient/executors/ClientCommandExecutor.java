@@ -6,10 +6,11 @@ import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 public class ClientCommandExecutor {
-    private Set<Command> commands;
+    private final Set<Command> commands;
 
     public ClientCommandExecutor(Set<Command> commands) {
         this.commands = commands;
@@ -18,13 +19,14 @@ public class ClientCommandExecutor {
     public String execute(String cmd) {
         List<String> cmdList = new ArrayList<>(List.of(cmd.split(" ")));
 
-        if(cmd.isEmpty() || cmd.isBlank()) {
+        if (cmd.isEmpty() || cmd.isBlank()) {
             throw new EmptyCommand("Command is empty");
         }
-        final var command = commands.stream()
-                .filter(c -> c.toString()
-                        .equals(cmdList.getFirst())
-                ).findFirst();
+
+        final Optional<Command> command = commands.stream()
+            .filter(c -> c.toString().equals(cmdList.getFirst()))
+            .findFirst();
+
         if (command.isEmpty()) {
             throw new InvalidCommand("Invalid command: " + cmdList.getFirst());
         }

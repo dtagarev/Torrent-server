@@ -1,6 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
-import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.UserNotFoundInFile;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.UserNotFoundInFileException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -96,7 +96,7 @@ public class UsersFileManagerTest {
             try {
                 usersFileManager.getUserData("notFound");
             } catch (Exception e) {
-                assertEquals(e.getClass(), UserNotFoundInFile.class);
+                assertEquals(e.getClass(), UserNotFoundInFileException.class);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

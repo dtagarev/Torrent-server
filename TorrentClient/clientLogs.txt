@@ -3663,3 +3663,337 @@ bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
 	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:191)
 	at Main.main(Main.java:7)
 --------------------------------------------------
+2024-05-13 00:37
+File /home/dimitar/Media/Movies/BridgeTo.avi does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File /home/dimitar/Media/Movies/BridgeTo.avi does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkIfFilesAreReal(BaseCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:28)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 00:40
+Invalid command: donwload
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: donwload
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 00:43
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:92)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 00:44
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:92)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 00:50
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:92)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 03:24
+Invalid number of arguments. Not enough arguments
+Please use the following format: unregister <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: unregister <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand.execute(UnregisterCommand.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 03:31
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:102)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 03:32
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-05-13 03:32
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-19 17:46
+Invalid characters in command
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid characters in command
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkCharacters(BaseCommand.java:14)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-19 17:49
+Invalid path to save. Path should have a filename
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid path to save. Path should have a filename
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.checkPathToSave(DownloadCommand.java:55)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:78)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-19 19:58
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:71)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-19 19:59
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:92)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 13:46
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:92)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 13:51
+File /home/dimitar/Media/Movies/BrigeTo/BridgeTo.avi does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File /home/dimitar/Media/Movies/BrigeTo/BridgeTo.avi does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkIfFilesAreReal(BaseCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:28)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 13:57
+File /home/dimitar/from/BrdgeTo.avi does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File /home/dimitar/from/BrdgeTo.avi does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkIfFilesAreReal(BaseCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:28)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 13:58
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:102)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:06
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:102)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:09
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:102)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:15
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:102)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:29
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:30
+Invalid command: hel
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: hel
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:30
+Invalid command: exit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: exit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:30
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 14:32
+Invalid command: quit
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: quit
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:185)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 19:47
+Invalid command: eixt
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid command: eixt
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:31)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:07
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:109)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:22
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:109)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:22
+null
+java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.ensureOpen(ServerSocketChannelImpl.java:184)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.getLocalAddress(ServerSocketChannelImpl.java:204)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer.createFileSenderJob(MiniServer.java:107)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer.handleClientRequest(MiniServer.java:90)
+	at bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.send.MiniServer.run(MiniServer.java:58)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+--------------------------------------------------
+2024-08-20 20:22
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:101)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:22
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:109)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:23
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:109)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:24
+Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: register <username> <file1,file2,fileN>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand.execute(RegisterCommand.java:26)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:30
+File cannot be downloaded. Can't connect to user
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException: File cannot be downloaded. Can't connect to user
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:109)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:30
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:101)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:31
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:101)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:31
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:101)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:40
+Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: Invalid number of arguments. Not enough arguments
+Please use the following format: download <user> <path to file on user> <path to save>
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkNumberOfArguments(BaseCommand.java:22)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:86)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:41
+File cannot be downloaded. File does not exist
+bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException: File cannot be downloaded. File does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand.execute(DownloadCommand.java:101)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------
+2024-08-20 20:42
+File /home/dimitar/to/mvie.avi does not exist
+bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand: File /home/dimitar/to/mvie.avi does not exist
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.BaseCommand.checkIfFilesAreReal(BaseCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand.execute(UnregisterCommand.java:28)
+	at bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor.execute(ClientCommandExecutor.java:34)
+	at bg.sofia.uni.fmi.mjt.torrentclient.client.Client.start(Client.java:186)
+	at Main.main(Main.java:7)
+--------------------------------------------------

@@ -11,9 +11,9 @@ import java.util.List;
 
 public class UnregisterCommand extends ServerCommunicationCommand implements Command {
     private static final int COMMAND_ARGUMENTS_COUNT = 2;
-    private static final String correctFormat = "unregister <username> <file1,file2,fileN>";
+    private static final String CORRECT_FORMAT = "unregister <username> <file1,file2,fileN>";
 
-    private UserDirectory userDirectory;
+    private final UserDirectory userDirectory;
 
     public UnregisterCommand(ServerCommunicator serverCommunicator, UserDirectory userDirectory) {
         super(serverCommunicator);
@@ -23,7 +23,7 @@ public class UnregisterCommand extends ServerCommunicationCommand implements Com
     @Override
     public String execute(List<String> list) throws InvalidCommand {
         checkCharacters(list);
-        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, correctFormat);
+        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, CORRECT_FORMAT);
         checkUsername(list.get(0));
         checkIfFilesAreReal(list.get(1));
 

@@ -14,10 +14,9 @@ public class RegisterCommand implements Command {
         this.storage = storage;
     }
 
-
     @Override
     public String execute(List<String> list) {
-        if(list.size() < NUMBER_OF_ARGUMENTS) {
+        if (list.size() < NUMBER_OF_ARGUMENTS) {
             return "Invalid command. Not enough arguments.\n" +
                 "Please use the following format: register <username> <file1,file2,fileN>";
         } else if (list.size() > NUMBER_OF_ARGUMENTS) {
@@ -30,7 +29,7 @@ public class RegisterCommand implements Command {
         //the command assumes that the files are in the correct formant when passed
         List<String> args = List.of(list.get(1).split(","));
 
-        if(storage.getData().containsKey(username)) {
+        if (storage.getData().containsKey(username)) {
             storage.register(username, args);
             return "Server storage updated with new user and files.";
         } else {

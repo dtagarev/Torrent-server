@@ -6,7 +6,6 @@ import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class UnregisterCommand implements Command {
     private ServerStorage storage;
@@ -25,7 +24,7 @@ public class UnregisterCommand implements Command {
         if (list.size() < NUMBER_OF_ARGUMENTS) {
             return "Invalid command. Not enough arguments.\n" +
                 "Please use the following format: unregister <username> <file1,file2,...,fileN>";
-        } else if(list.size() > NUMBER_OF_ARGUMENTS) {
+        } else if (list.size() > NUMBER_OF_ARGUMENTS) {
             return "Invalid command format. Too many arguments.\n" +
                 "Please use the following format: unregister <username> <file1,file2,...,fileN>";
         }

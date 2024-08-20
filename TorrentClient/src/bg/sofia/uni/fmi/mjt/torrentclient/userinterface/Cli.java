@@ -8,23 +8,8 @@ public class Cli implements UserInterface {
     }
 
     @Override
-    public void displayWelcomeMessage(String username) {
-        System.out.println("Welcome, " + username + "!");
-    }
-
-    @Override
     public void displayMessagePrompt() {
         System.out.print("Enter message: ");
-    }
-
-    @Override
-    public void displaySendingMessage(String message) {
-        System.out.println("Sending message <" + message + "> to the server...");
-    }
-
-    @Override
-    public void displayConnectedToServer() {
-        System.out.println("Connected to the server.");
     }
 
     @Override
@@ -37,8 +22,4 @@ public class Cli implements UserInterface {
         System.out.println("Error: " + message);
     }
 
-    @Override
-    public void displayCommandReply(String reply) {
-        System.out.println(reply);
-    }
 }

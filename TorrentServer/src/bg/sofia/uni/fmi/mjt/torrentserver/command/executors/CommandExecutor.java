@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class CommandExecutor {
 
-    private Set<Command> commands;
+    private final Set<Command> commands;
 
     public CommandExecutor(Set<Command> commands) {
         this.commands = commands;
@@ -19,12 +19,12 @@ public class CommandExecutor {
     public String execute(String cmd) throws EmptyCommand, InvalidCommand {
         List<String> cmdList = new ArrayList<>(List.of(cmd.split(" ")));
 
-        if(cmd.isEmpty() || cmd.isBlank()) {
+        if (cmd.isEmpty() || cmd.isBlank()) {
             throw new EmptyCommand("Command is empty");
         }
 
         for (Command command : commands) {
-            if(command.toString().equals(cmdList.getFirst())) {
+            if (command.toString().equals(cmdList.getFirst())) {
                 cmdList.removeFirst();
                 return command.execute(cmdList);
             }

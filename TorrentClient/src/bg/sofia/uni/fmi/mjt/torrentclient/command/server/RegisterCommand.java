@@ -11,7 +11,7 @@ import java.util.List;
 
 public class RegisterCommand extends ServerCommunicationCommand implements Command {
     private static final int COMMAND_ARGUMENTS_COUNT = 2;
-    private static final String correctFormat = "register <username> <file1,file2,fileN>";
+    private static final String CORRECT_FORMAT = "register <username> <file1,file2,fileN>";
 
     private final UserDirectory storage;
 
@@ -23,7 +23,7 @@ public class RegisterCommand extends ServerCommunicationCommand implements Comma
     @Override
     public String execute(List<String> list) throws InvalidCommand {
         checkCharacters(list);
-        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, correctFormat);
+        checkNumberOfArguments(list, COMMAND_ARGUMENTS_COUNT, CORRECT_FORMAT);
         checkUsername(list.get(0));
         checkIfFilesAreReal(list.get(1));
 
@@ -36,7 +36,6 @@ public class RegisterCommand extends ServerCommunicationCommand implements Comma
         }
 
     }
-
 
     @Override
     public String toString() {

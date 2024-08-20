@@ -1,12 +1,14 @@
 package bg.sofia.uni.fmi.mjt.shared.errorhanler;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 
 public class ErrorHandler {
-    private Path logPath;
+    private final Path logPath;
 
     public ErrorHandler(Path logPath) {
         
@@ -23,7 +25,7 @@ public class ErrorHandler {
     }
 
     public synchronized void writeToLogFile(Exception e) {
-        try(FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
+        try (FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
 
             LocalDateTime time = LocalDateTime.now();
             String timeStamp = time.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
@@ -40,7 +42,7 @@ public class ErrorHandler {
     }
 
     public synchronized void writeToLogFile(Exception e, String message) {
-        try(FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
+        try (FileWriter fw = new FileWriter(logPath.toString(), true); PrintWriter pw = new PrintWriter(fw)) {
 
             LocalDateTime time = LocalDateTime.now();
             String timeStamp = time.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));

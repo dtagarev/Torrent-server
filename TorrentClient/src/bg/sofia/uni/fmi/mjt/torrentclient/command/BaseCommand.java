@@ -1,6 +1,5 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.command;
 
-
 import bg.sofia.uni.fmi.mjt.shared.exceptions.InvalidCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 
@@ -16,17 +15,18 @@ public abstract class BaseCommand  {
         }
     }
 
-    protected void checkNumberOfArguments(List<String> list, int numberOfArguments, String correctFormat) throws InvalidCommand {
-        if(list.size() < numberOfArguments) {
+    protected void checkNumberOfArguments(List<String> list, int numberOfArguments, String correctFormat)
+        throws InvalidCommand {
+        if (list.size() < numberOfArguments) {
 
             throw new InvalidCommand("Invalid number of arguments. Not enough arguments\n" +
                 "Please use the following format: " + correctFormat);
-        } else if(list.size() > numberOfArguments) {
+        } else if (list.size() > numberOfArguments) {
 
             throw new InvalidCommand("Invalid number of arguments. Too many arguments\n" +
                 "Please use the following format: " + correctFormat);
         }
-   }
+    }
 
     protected void checkIfFilesAreReal(String files) throws InvalidCommand {
         String[] list = files.split(",");

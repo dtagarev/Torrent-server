@@ -6,19 +6,17 @@ import bg.sofia.uni.fmi.mjt.torrentserver.storage.User;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class ListFilesCommand implements Command {
-    private ServerStorage storage;
+    private final ServerStorage storage;
 
     public ListFilesCommand(ServerStorage storage) {
         this.storage = storage;
     }
 
-
     @Override
     public String execute(List<String> list) {
-        if(!list.isEmpty()) {
+        if (!list.isEmpty()) {
             return "Invalid command. No arguments needed.";
         }
 
@@ -27,7 +25,7 @@ public class ListFilesCommand implements Command {
 
         for (String user : data.keySet()) {
             User userData = data.get(user);
-            if(userData.ClientServerPort() != 0) {
+            if (userData.ClientServerPort() != 0) {
                 result.append(user).append(" : ").append(userData.files().toString()).append("\n");
             }
         }

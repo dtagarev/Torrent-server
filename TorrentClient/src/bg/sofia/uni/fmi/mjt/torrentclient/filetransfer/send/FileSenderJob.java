@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class FileSenderJob implements Runnable {
 
-    private ServerSocketChannel serverSocketChannel;
-    private Path filePath;
+    private final ServerSocketChannel serverSocketChannel;
+    private final Path filePath;
 
     public FileSenderJob(ServerSocketChannel serverSocketChannel, Path filePath) {
         this.serverSocketChannel = serverSocketChannel;
@@ -19,18 +19,14 @@ public class FileSenderJob implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("FileSenderJob: Thread entered run");
         try (SocketChannel clientSocket = serverSocketChannel.accept();
             FileChannel fileChannel = FileChannel.open(filePath)) {
 
             fileChannel.transferTo(0, fileChannel.size(), clientSocket);
-            System.out.println("FileSenderJob: File send");
 
         } catch (IOException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.println("FileSenderJob: Shutting down thread");
 
     }
 }

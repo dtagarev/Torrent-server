@@ -10,8 +10,11 @@ import bg.sofia.uni.fmi.mjt.torrentclient.command.server.RegisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.server.UnregisterCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.transfer.DownloadCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.command.ui.HelpCommand;
+import bg.sofia.uni.fmi.mjt.torrentclient.command.ui.QuitCommand;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
 import bg.sofia.uni.fmi.mjt.torrentclient.directory.SeedingFiles;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.DownloadCommandConnectionException;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.FileDoesNotExistException;
 import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.ServerConnectionException;
 import bg.sofia.uni.fmi.mjt.torrentclient.executors.ClientCommandExecutor;
 import bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive.FileReceiver;
@@ -72,24 +75,22 @@ public class Client {
                         new UnregisterCommand(serverConnection, storage),
                         new ListFilesCommand(serverConnection),
                         new HelpCommand(),
-                        new DownloadCommand(usersFileManager, downloadQueue)
+                        new DownloadCommand(usersFileManager, downloadQueue),
+                        new QuitCommand()
                 ));
     }
 
     private void initializeUsersFileManager(String clientName) throws IOException {
         Path usersFilePath = Path.of(System.getProperty("user.dir") + File.separator + clientName + "ActiveUsers.txt");
 
-        String errorMessage = "Cannot create active users file.\n"
-                + "Further error-free usage of the program is not guaranteed";
-
-        if(!Files.exists(usersFilePath)) {
+        if (!Files.exists(usersFilePath)) {
             Files.createFile(usersFilePath);
         }
 
         usersFileManager = new UsersFileManager(usersFilePath);
     }
 
-    private void initializeUserRefresher(String name) {
+    private void initializeUserRefresher() {
         UserRefresher refresher = new UserRefresher(serverConnection,
                 usersFileManager, errorHandler, ui);
 
@@ -113,7 +114,7 @@ public class Client {
             ServerSocketChannel miniServerSocketChannel = ServerSocketChannel.open();
             miniServerSocketChannel.bind(miniServerAddress);
 
-            Thread miniServerThread = new Thread(new MiniServer(miniServerSocketChannel ,storage, errorHandler));
+            Thread miniServerThread = new Thread(new MiniServer(miniServerSocketChannel , storage, errorHandler));
             miniServerThread.setDaemon(true);
 
             executor.submit(miniServerThread);
@@ -135,7 +136,7 @@ public class Client {
 
         try {
             initializeUsersFileManager(name);
-            initializeUserRefresher(name);
+            initializeUserRefresher();
             initializeCommandExecutor();
             initializeFileReceiver(name);
         } catch (IOException e) {
@@ -145,15 +146,16 @@ public class Client {
         }
     }
 
-    private String setClientName() throws IOException {
+    private void setupClient() throws IOException {
         String message = null;
         Scanner scanner = new Scanner(System.in);
         String reply = "Invalid name";
+
         while (reply.contains("Invalid")) {
             ui.displayNamePrompt();
             message = scanner.nextLine();
 
-            if(!SyntaxChecker.checkUsername(message)) {
+            if (!SyntaxChecker.checkUsername(message)) {
                 ui.displayErrorMessage("Invalid name\n"
                         + "Name should contain only lowercase letters and digits");
                 reply = "Invalid name";
@@ -165,34 +167,31 @@ public class Client {
         }
 
         initializeAll(message);
-        return message;
     }
 
     public void start() {
         try {
-            setClientName();
+            setupClient();
         } catch (IOException e) {
             errorHandler.writeToLogFile(e);
             throw new RuntimeException("There is a problem with the network communication", e);
         }
 
         Scanner in = new Scanner(System.in);
-        String message = null;
-
+        String message;
         do {
             ui.displayMessagePrompt();
             message = in.nextLine();
             try {
                 final String result = commandExecutor.execute(message);
                 ui.displayReply(result);
-            } catch (EmptyCommand | InvalidSymbolInCommand | InvalidCommand e) {
+            } catch (EmptyCommand | InvalidSymbolInCommand | InvalidCommand |
+                     DownloadCommandConnectionException | FileDoesNotExistException e) {
                 errorHandler.writeToLogFile(e);
                 ui.displayErrorMessage(e.getMessage());
             }
         } while (!message.equals("quit"));
 
-
-        //TODO: shut down the threads too
         try {
             shutDown();
         } catch (IOException e) {
@@ -203,6 +202,6 @@ public class Client {
 
     private void shutDown() throws IOException {
         serverConnection.closeConnection();
-        //TODO: close all connections
+        executor.shutdownNow();
     }
 }

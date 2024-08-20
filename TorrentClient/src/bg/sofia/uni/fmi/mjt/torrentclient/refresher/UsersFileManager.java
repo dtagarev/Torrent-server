@@ -1,6 +1,6 @@
 package bg.sofia.uni.fmi.mjt.torrentclient.refresher;
 
-import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.UserNotFoundInFile;
+import bg.sofia.uni.fmi.mjt.torrentclient.exceptions.UserNotFoundInFileException;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -18,35 +18,37 @@ public class UsersFileManager {
     }
 
     public synchronized  void  writeToFile(String message) throws IOException {
-        if(!Files.exists(usersFile)) {
+        if (!Files.exists(usersFile)) {
             throw new FileNotFoundException("File does not exist");
         }
         FileOutputStream fos = new FileOutputStream(usersFile.toString(), false);
         fos.write(message.getBytes());
         fos.close();
     }
+
     public synchronized String readFromFile() throws IOException {
-        if(!Files.exists(usersFile)) {
+        if (!Files.exists(usersFile)) {
             throw new FileNotFoundException("File does not exist");
         }
         byte[] bytes = Files.readAllBytes(usersFile);
         return new String(bytes, StandardCharsets.UTF_8);
-        //return Files.readString(usersFile, StandardCharsets.UTF_8);
     }
 
-   public synchronized String getUserData(String userName) throws FileNotFoundException, UserNotFoundInFile, IOException {
-       if (!Files.exists(usersFile)) {
-           throw new FileNotFoundException("File does not exist");
-       }
+    public synchronized String getUserData(String userName)
+        throws FileNotFoundException, UserNotFoundInFileException, IOException {
 
-       try (BufferedReader reader = Files.newBufferedReader(usersFile)) {
-           String line;
-           while ((line = reader.readLine()) != null) {
-               if (line.contains(userName)) {
-                   return line;
-               }
-           }
-       }
-       throw new UserNotFoundInFile("User's info was not found");
-   }
+        if (!Files.exists(usersFile)) {
+            throw new FileNotFoundException("File does not exist");
+        }
+
+        try (BufferedReader reader = Files.newBufferedReader(usersFile)) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains(userName)) {
+                    return line;
+                }
+            }
+        }
+        throw new UserNotFoundInFileException("User's info was not found");
+    }
 }

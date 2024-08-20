@@ -10,10 +10,13 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.io.IOException;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -25,12 +28,23 @@ public class RegisterCommandTest {
     @Mock
     private UserDirectory storage;
 
-    RegisterCommand registerCommand = new RegisterCommand(serverCommunicator, storage);
+    private RegisterCommand registerCommand = new RegisterCommand(serverCommunicator, storage);
 
-    //@Test
-    //void testExecute() {
-    //    when(UserDirectory.isAFile(any())).thenReturn(true);
-    //}
+    @Test
+    void testExecute() throws IOException {
+        when(serverCommunicator.communicateWithServer(any())).thenReturn("test");
+
+        try(MockedStatic<UserDirectory> userDirMock = Mockito.mockStatic(UserDirectory.class)) {
+            userDirMock.when(() -> UserDirectory.isAFile(any())).thenReturn(true);
+
+            List<String> args = List.of("user1", "file1");
+            RegisterCommand otherCmd = new RegisterCommand(serverCommunicator, storage);
+            assertEquals("test",otherCmd.execute(args));
+
+            verify(storage).addFilePath("file1");
+        }
+
+    }
 
     @Test
     void testRegisterCommandWithInvalidUsername() {

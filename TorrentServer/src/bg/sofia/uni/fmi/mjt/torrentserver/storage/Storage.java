@@ -1,6 +1,5 @@
 package bg.sofia.uni.fmi.mjt.torrentserver.storage;
 
-import java.nio.channels.SocketChannel;
 import java.util.List;
 
 public interface Storage {
