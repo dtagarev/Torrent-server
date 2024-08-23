@@ -40,7 +40,7 @@ public class DownloadCommand extends BaseCommand implements Command {
             String[] hostAndPort = senderData.split("-")[1].split(":");
             return List.of(hostAndPort[0].substring(1), hostAndPort[1]);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new InvalidCommand(e.toString());
         }
     }
 

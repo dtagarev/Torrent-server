@@ -32,11 +32,11 @@ public class UserRefresher implements Runnable {
 
                 String message = "refresh-users";
 
-                Thread.sleep(SLEEP_MILLISECONDS);
-
                 String reply = serverCommunicator.communicateWithServer(message);
 
                 usersFileManager.writeToFile(reply);
+
+                Thread.sleep(SLEEP_MILLISECONDS);
             }
 
         } catch (IOException e) {

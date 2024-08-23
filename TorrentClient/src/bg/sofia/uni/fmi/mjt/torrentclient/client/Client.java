@@ -100,7 +100,8 @@ public class Client {
     }
 
     private void initializeFileReceiver(String name) {
-        FileReceiver receiver = new FileReceiver(downloadQueue, errorHandler, ui, serverConnection, name);
+        //FileReceiver receiver = new FileReceiver(downloadQueue, errorHandler, ui, serverConnection, name);
+        FileReceiver receiver = new FileReceiver(downloadQueue, errorHandler, ui, serverConnection, name, storage);
 
         Thread receiverThread = new Thread(receiver);
         receiverThread.setDaemon(true);

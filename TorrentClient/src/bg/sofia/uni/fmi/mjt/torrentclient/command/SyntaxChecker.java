@@ -6,7 +6,7 @@ public class SyntaxChecker {
     }
 
     public static boolean checkCommandContainsCorrectSymbols(String cmd) {
-        return cmd.matches("[a-zA-Z0-9. \\\\/,-]+");
+        return cmd.matches("[a-zA-Z0-9. \\\\/,-:]+");
     }
 }
 

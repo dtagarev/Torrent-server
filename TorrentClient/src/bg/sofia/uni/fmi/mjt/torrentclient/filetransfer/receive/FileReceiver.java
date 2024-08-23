@@ -3,6 +3,7 @@ package bg.sofia.uni.fmi.mjt.torrentclient.filetransfer.receive;
 import bg.sofia.uni.fmi.mjt.shared.errorhanler.ErrorHandler;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerCommunicator;
 import bg.sofia.uni.fmi.mjt.torrentclient.connection.ServerConnection;
+import bg.sofia.uni.fmi.mjt.torrentclient.directory.UserDirectory;
 import bg.sofia.uni.fmi.mjt.torrentclient.userinterface.UserInterface;
 
 import java.io.IOException;
@@ -22,14 +23,18 @@ public class FileReceiver implements Runnable {
     private final ServerCommunicator mainServerConnection;
     private final String username;
 
+
+    private final UserDirectory userDirectory;
+
     public FileReceiver(BlockingQueue<FileRequest> downloadQueue,
                         ErrorHandler errorHandler, UserInterface ui,
-                        ServerConnection serverConnection, String name) {
+                        ServerConnection serverConnection, String name, UserDirectory userDirectory) {
         this.downloadQueue = downloadQueue;
         this.errorHandler = errorHandler;
         this.ui = ui;
         this.mainServerConnection = serverConnection;
         this.username = name;
+        this.userDirectory = userDirectory;
 
     }
 
@@ -54,7 +59,6 @@ public class FileReceiver implements Runnable {
 
                     fileChannel.transferFrom(socketChannel, 0, Long.MAX_VALUE);
 
-                    ui.displayReply("File " + fileRequest.from() + " was received");
 
                 } catch (IOException e) {
                     errorHandler.writeToLogFile(e);
@@ -63,6 +67,9 @@ public class FileReceiver implements Runnable {
                 }
 
                 mainServerConnection.communicateWithServer("register " + username + " " + fileRequest.to());
+                userDirectory.addFilePath(fileRequest.to().toString());
+
+                ui.displayReply("File " + fileRequest.from() + " was received");
             }
         } catch (InterruptedException | IOException e) {
             Thread.currentThread().interrupt();
